@@ -1,4 +1,4 @@
-class ViewingParty < ApplicationRecord
+class Party < ApplicationRecord
 
   belongs_to :movie
 

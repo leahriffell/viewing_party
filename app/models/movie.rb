@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
 
-  has_many :viewing_parties
+  has_many :parties
 
 end
