@@ -1,7 +1,6 @@
 class Party < ApplicationRecord
-
   belongs_to :movie
 
-  validates_presence_of :party_date
-  validates_presence_of :start_time
+  validates :party_date
+  validates :start_time
 end
