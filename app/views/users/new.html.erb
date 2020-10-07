@@ -1,0 +1,15 @@
+<h1>Register</h1>
+
+<%= form_with model: @user, local: true do |u| %>
+
+  <%= u.label :email  %>
+  <%= u.text_field :email  %>
+
+  <%= u.label :password  %>
+  <%= u.text_field :password, value: nil  %>
+
+  <%= u.label :password_confirmation  %>
+  <%= u.text_field :password_confirmation, value: nil %>
+
+  <%= u.submit 'Create User' %>
+<% end %>
