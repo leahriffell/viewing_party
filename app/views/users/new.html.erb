@@ -1,15 +1,15 @@
 <h1>Register</h1>
 
-<%= form_with model: @user, local: true do |u| %>
+<%= form_with model: @user, local: true do |f| %>
 
-  <%= u.label :email  %>
-  <%= u.text_field :email  %>
+  <%= f.label :email  %>
+  <%= f.text_field :email  %>
 
-  <%= u.label :password  %>
-  <%= u.text_field :password, value: nil  %>
+  <%= f.label :password  %>
+  <%= f.text_field :password, value: nil  %>
 
-  <%= u.label :password_confirmation  %>
-  <%= u.text_field :password_confirmation, value: nil %>
+  <%= f.label :password_confirmation  %>
+  <%= f.text_field :password_confirmation, value: nil %>
 
-  <%= u.submit 'Create User' %>
+  <%= f.submit 'Create User' %>
 <% end %>
