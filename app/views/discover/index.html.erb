@@ -1,0 +1,12 @@
+<h1>Welcome, <%= current_user.email %>!</h1>
+
+<%= button_to 'Find Top Rated Movies', movies_path, method: :get %>
+
+<h3>OR</h3>
+
+<%= form_with url: movies_path, local: true, method: :get do |f| %>
+  <%= f.label :keyword_search  %>
+  <%= f.text_field :keyword_search, :placeholder => 'Search by movie title', required: true %>
+
+  <%= f.submit 'Find Movies' %>
+<% end %>
