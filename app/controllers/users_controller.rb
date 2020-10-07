@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome #{@user.email}!"
       redirect_to '/dashboard'
     else
-      flash[:error] = @user.errors.full_messages_to_sentence
+      flash[:error] = @user.errors.full_messages.to_sentence
       render :new
     end
   end
