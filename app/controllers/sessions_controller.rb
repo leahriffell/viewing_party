@@ -12,11 +12,7 @@ class SessionsController < ApplicationController
   private
 
   def invalid_credentials_redirect
-    if !User.find_by(email: params[:email])
-      flash[:error] = 'No user exists with that email address.'
-    else
-      flash[:error] = 'Incorrect password'
-    end
+    flash[:error] = 'Incorrect email or password.'
     redirect_to(root_path)
   end
 end

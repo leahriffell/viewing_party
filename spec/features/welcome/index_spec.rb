@@ -15,7 +15,7 @@ RSpec.describe 'Welcome page' do
         click_button 'Log In'
         
         expect(current_path).to eq(root_path)
-        expect(page).to have_content('No user exists with that email address.')
+        expect(page).to have_content('Incorrect email or password.')
       end
       
       it 'enters incorrect password' do 
@@ -26,7 +26,7 @@ RSpec.describe 'Welcome page' do
         click_button 'Log In'
         
         expect(current_path).to eq(root_path)
-        expect(page).to have_content('Incorrect password')
+        expect(page).to have_content('Incorrect email or password.')
       end
     end
 
