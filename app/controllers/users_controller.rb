@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def new
     @user = User.new
   end
@@ -11,10 +10,7 @@ class UsersController < ApplicationController
       redirect_to '/dashboard'
     else
       flash[:error] = @user.errors.full_messages_to_sentence
-      if @user.errors.details.keys.include?(:email)
-        @user.email = ''
-      end
-    render :new
+      render :new
     end
   end
 
@@ -23,5 +19,4 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
-
 end
