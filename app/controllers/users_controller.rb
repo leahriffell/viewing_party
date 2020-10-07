@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Welcome #{@user.email}!"
-      redirect_to '/dashboard'
+      redirect_to dashboard_path
     else
       flash[:error] = @user.errors.full_messages.to_sentence
       render :new
