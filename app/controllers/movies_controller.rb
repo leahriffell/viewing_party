@@ -31,7 +31,7 @@ class MoviesController < ApplicationController
 
   def top_movies_endpoint(page_num)
     sort_by = 'vote_average.desc'
-    conn.get("3/discover/movie?api_key=#{ENV['MOVIES_API_KEY']}&language=en-US&sort_by=#{sort_by}&page=#{page_num}")
+    conn.get("3/discover/movie?api_key=#{ENV['MOVIES_API_KEY']}&language=en-US&sort_by=#{sort_by}&include_adult=false&page=#{page_num}")
   end
 
   def keyword_search_endpoint(page_num)
