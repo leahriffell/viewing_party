@@ -14,7 +14,7 @@ RSpec.describe 'Discover page' do
       expect(current_path).to eq(movies_path)
     end
 
-    it "when I search for movie keyword(s) and click 'Find Movies', I am redirected to search result page" do
+    it "when I input 1 search keyword and click 'Find Movies', I am redirected to search result page" do
       visit discover_path
 
       fill_in :keyword_search, with: 'dogs'
@@ -22,7 +22,16 @@ RSpec.describe 'Discover page' do
       expect(current_path).to eq(movies_path)
     end
 
-    it "when I click 'Find Movies' without entering any keyword(s) I am not redirected to search result page" do
+    it "when I input 2 search keyword(s) and click 'Find Movies', I am redirected to search result page" do
+      visit discover_path
+
+      fill_in :keyword_search, with: 'toy story'
+      click_button('Find Movies')
+
+      expect(current_path).to eq(movies_path)
+    end
+
+    xit "when I click 'Find Movies' without entering any keyword(s) I am not redirected to search result page" do
       visit discover_path
 
       click_button('Find Movies')

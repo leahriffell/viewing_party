@@ -1,1 +1,13 @@
 <h1>Movies</h1>
+
+<% @movies_1.each do |movie| %>
+  <%= movie[:title] %><br>
+  <span>Vote average:</span>
+  <%= movie[:vote_average] %><br>
+<% end %>
+
+<% @movies_2.each do |movie| %>
+  <%= movie[:title] %><br>
+  <span>Vote average:</span>
+  <%= movie[:vote_average] %><br>
+<% end %>
