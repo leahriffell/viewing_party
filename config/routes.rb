@@ -8,4 +8,7 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'dashboard#index'
 
+  get '/discover', to: 'discover#index'
+
+  get '/movies', to: 'movies#index'
 end
