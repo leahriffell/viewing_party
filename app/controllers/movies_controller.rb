@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    if params[:top_40]
+    if params[:top_40] || !params[:top_40] && !params[:keyword_search]
       fetch_movies('top')
     elsif params[:keyword_search] != ''
       fetch_movies('search')
