@@ -17,13 +17,13 @@ gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt'
 gem 'figaro'
+gem 'faraday'
 
 group :development, :test do
   gem 'pry'
   gem 'travis'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'faraday'
 end
 
 group :development do
