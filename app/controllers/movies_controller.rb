@@ -2,8 +2,10 @@ class MoviesController < ApplicationController
   def index
     if params[:top_40]
       fetch_movies('top')
-    else
+    elsif params[:keyword_search] != ""
       fetch_movies('search')
+    else
+      redirect_to discover_path
     end
   end
 

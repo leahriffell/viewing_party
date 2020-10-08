@@ -31,17 +31,12 @@ RSpec.describe 'Discover page' do
       expect(current_path).to eq(movies_path)
     end
 
-    xit "when I click 'Find Movies' without entering any keyword(s) I am not redirected to search result page" do
+    it "when I click 'Find Movies' without entering any keyword(s) I am not redirected to search result page" do
       visit discover_path
 
       click_button('Find Movies')
 
-      # page.find("#keyword_search").native.attribute("validationMessage")
-      # expect(message).to eq "Please fill out this field."
-      # expect(current_path).to eq edit_link_path(user.links.first)
-
-      # expect(current_path).to eq(discover_path)
-      # look into this test as it is working in local host but this test is failing and shows that user is on /movies
+      expect(current_path).to eq(discover_path)
     end
   end
 end

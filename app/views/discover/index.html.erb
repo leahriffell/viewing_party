@@ -6,7 +6,7 @@
 
 <%= form_with url: movies_path, local: true, method: :get do |f| %>
   <%= f.label :keyword_search  %>
-  <%= f.text_field :keyword_search, :placeholder => 'Search by movie title' %>
+  <%= f.text_field :keyword_search, :placeholder => 'Search by movie title', required: true %>
 
   <%= f.submit 'Find Movies' %>
 <% end %>
