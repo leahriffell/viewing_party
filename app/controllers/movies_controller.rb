@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   def index
     if params[:top_40]
       fetch_movies('top')
-    elsif params[:keyword_search] != ""
+    elsif params[:keyword_search] != ''
       fetch_movies('search')
     else
       redirect_to discover_path
@@ -29,13 +29,25 @@ class MoviesController < ApplicationController
     Faraday.new(url: 'https://api.themoviedb.org')
   end
 
+  def language(language)
+    "language=#{language}"
+  end
+
+  def exclude_adult
+    'include_adult=false'
+  end
+
+  def movies_api_key
+    ENV['MOVIES_API_KEY']
+  end
+
   def top_movies_endpoint(page_num)
     sort_by = 'vote_average.desc'
-    conn.get("3/discover/movie?api_key=#{ENV['MOVIES_API_KEY']}&language=en-US&sort_by=#{sort_by}&include_adult=false&page=#{page_num}")
+    conn.get("3/discover/movie?api_key=#{movies_api_key}&#{language('en-US')}&sort_by=#{sort_by}&#{exclude_adult}&page=#{page_num}")
   end
 
   def keyword_search_endpoint(page_num)
-    conn.get("3/search/movie?api_key=#{ENV['MOVIES_API_KEY']}&query=#{params[:keyword_search]}&include_adult=false&page=#{page_num}")
+    conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&query=#{params[:keyword_search]}&#{exclude_adult}&page=#{page_num}")
   end
 
   def parse(response)
