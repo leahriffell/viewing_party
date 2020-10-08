@@ -1,13 +1,19 @@
-<h1>Movies</h1>
+<% if params[:top_40] || !params[:top_40] && !params[:keyword_search] %>
+  <h1>Top Movies</h1>
+<% else %>
+  <h1>Search Results</h1>
+<% end %>
 
-<% @movies_1.each do |movie| %>
+<% @movies1.each do |movie| %>
   <%= movie[:title] %><br>
   <span>Vote average:</span>
   <%= movie[:vote_average] %><br>
 <% end %>
 
-<% @movies_2.each do |movie| %>
-  <%= movie[:title] %><br>
-  <span>Vote average:</span>
-  <%= movie[:vote_average] %><br>
+<% unless @movies2.nil?  %>
+  <% @movies2.each do |movie| %>
+    <%= movie[:title] %><br>
+    <span>Vote average:</span>
+    <%= movie[:vote_average] %><br>
+  <% end %>
 <% end %>

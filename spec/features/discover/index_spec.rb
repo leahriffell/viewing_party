@@ -12,6 +12,7 @@ RSpec.describe 'Discover page' do
 
       click_button('Find Top Rated Movies')
       expect(current_path).to eq(movies_path)
+      expect(page).to have_content('Top Movies')
     end
 
     it "when I input 1 search keyword and click 'Find Movies', I am redirected to search result page" do
@@ -20,6 +21,7 @@ RSpec.describe 'Discover page' do
       fill_in :keyword_search, with: 'dogs'
       click_button('Find Movies')
       expect(current_path).to eq(movies_path)
+      expect(page).to have_content('Search Results')
     end
 
     it "when I input 2 search keyword(s) and click 'Find Movies', I am redirected to search result page" do
@@ -29,19 +31,22 @@ RSpec.describe 'Discover page' do
       click_button('Find Movies')
 
       expect(current_path).to eq(movies_path)
+      expect(page).to have_content('Search Results')
     end
 
-    xit "when I click 'Find Movies' without entering any keyword(s) I am not redirected to search result page" do
+    it "when I click 'Find Movies' without entering any keyword(s) I am not redirected to search result page" do
       visit discover_path
 
       click_button('Find Movies')
 
-      # page.find("#keyword_search").native.attribute("validationMessage")
-      # expect(message).to eq "Please fill out this field."
-      # expect(current_path).to eq edit_link_path(user.links.first)
+      expect(current_path).to eq(discover_path)
+    end
 
-      # expect(current_path).to eq(discover_path)
-      # look into this test as it is working in local host but this test is failing and shows that user is on /movies
+    it "when I type movies_path in browser, I am shown the top movies" do
+      visit movies_path
+
+      expect(current_path).to eq(movies_path)
+      expect(page).to have_content('Top Movies')
     end
   end
 end
