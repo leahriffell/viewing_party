@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    if params[:top]
+    if params[:top_40]
       fetch_movies('top')
     else
       fetch_movies('search')
@@ -9,11 +9,11 @@ class MoviesController < ApplicationController
 
   def fetch_movies(request_type)
     if request_type == 'top'
-      response1 = top_40_endpoint(1)
-      response2 = top_40_endpoint(2)
+      response1 = top_movies_endpoint(1)
+      response2 = top_movies_endpoint(2)
     else
-      response1 = top_40_endpoint(1)
-      response2 = top_40_endpoint(2)
+      response1 = keyword_search_endpoint(1)
+      response2 = keyword_search_endpoint(2)
     end
     json1 = parse(response1)
     json2 = parse(response2)
@@ -27,7 +27,7 @@ class MoviesController < ApplicationController
     Faraday.new(url: 'https://api.themoviedb.org')
   end
 
-  def top_40_endpoint(page_num)
+  def top_movies_endpoint(page_num)
     conn.get("3/discover/movie?api_key=#{ENV['MOVIES_API_KEY']}&language=en-US&sort_by=vote_average.desc&include_adult=false&include_video=false&page=#{page_num}")
   end
 
