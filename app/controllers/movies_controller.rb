@@ -9,6 +9,8 @@ class MoviesController < ApplicationController
     end
   end
 
+  def show; end
+
   def fetch_movies(request_type)
     if request_type == 'top'
       response1 = top_movies_endpoint(1)
