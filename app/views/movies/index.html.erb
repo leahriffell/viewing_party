@@ -5,15 +5,19 @@
 <% end %>
 
 <% @movies1.each do |movie| %>
-  <%= movie[:title] %><br>
-  <span>Vote average:</span>
-  <%= movie[:vote_average] %><br>
+  <div class='movie'>
+    <%= link_to "#{movie[:title]}", movie_show_path(movie[:title]), class: 'title' %><br>
+    <span>Vote average:</span>
+    <span class='vote_avg'><%= movie[:vote_average] %></span><br><br>
+  </div>
 <% end %>
 
 <% unless @movies2.nil?  %>
   <% @movies2.each do |movie| %>
-    <%= movie[:title] %><br>
-    <span>Vote average:</span>
-    <%= movie[:vote_average] %><br>
+    <div class='movie'>
+      <%= link_to "#{movie[:title]}", movie_show_path(movie[:title]), class: 'title' %><br>
+      <span>Vote average:</span>
+      <span class='vote_avg'><%= movie[:vote_average] %></span><br><br>
+    </div>
   <% end %>
 <% end %>
