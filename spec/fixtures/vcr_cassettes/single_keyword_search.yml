@@ -1,0 +1,221 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=MOVIES_SECRET_KEY&include_adult=false&language=en-US&page=1&query=dogs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 09 Oct 2020 17:25:15 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=120
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 91f1c114eac2b00f07286bc49dddd7e5.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - sgzhLXpffpwUikm2717PLSW1jQZSqANfgEmNiwbxH6m1-8sy406aiQ==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"total_results":453,"total_pages":23,"results":[{"popularity":505.327,"vote_count":55,"video":false,"poster_path":"\/4BgSWFMW2MJ0dT5metLzsRWO7IJ.jpg","id":726739,"adult":false,"backdrop_path":"\/t22fWbzdnThPseipsdpwgdPOPCR.jpg","original_language":"en","original_title":"Cats
+        & Dogs 3: Paws Unite","genre_ids":[28,35],"title":"Cats & Dogs 3: Paws Unite","vote_average":6.6,"overview":"It''s
+        been ten years since the creation of the Great Truce, an elaborate joint-species
+        surveillance system designed and monitored by cats and dogs to keep the peace
+        when conflicts arise. But when a tech-savvy villain hacks into wireless networks
+        to use frequencies only heard by cats and dogs, he manipulates them into conflict
+        and the worldwide battle between cats and dogs is BACK ON. Now, a team of
+        inexperienced and untested agents will have to use their old-school animal
+        instincts to restore order and peace between cats and dogs everywhere.","release_date":"2020-10-02"},{"popularity":30.226,"vote_count":1077,"video":false,"poster_path":"\/77dmCJelVTBPBwbTppiisQx0e82.jpg","id":10992,"adult":false,"backdrop_path":"\/bFSqeI42Zu95dqPcClBaOcRkahv.jpg","original_language":"en","original_title":"Cats
+        & Dogs","genre_ids":[35,10751],"title":"Cats & Dogs","vote_average":5.3,"overview":"When
+        a professor develops a vaccine that eliminates human allergies to dogs, he
+        unwittingly upsets the fragile balance of power between cats and dogs and
+        touches off an epic battle for pet supremacy. The fur flies as the feline
+        faction, led by Mr. Tinkles, squares off against wide-eyed puppy Lou and his
+        canine cohorts.","release_date":"2001-07-04"},{"popularity":31.948,"vote_count":56,"video":false,"poster_path":"\/5YHjyjd2N0ZXcnGuB8G1nIa6h9t.jpg","id":416153,"adult":false,"backdrop_path":"\/uTfdOozort4sp9kukWxEmdmRsqJ.jpg","original_language":"en","original_title":"Arctic
+        Dogs","genre_ids":[12,16,35],"title":"Arctic Dogs","vote_average":6,"overview":"Animals
+        band together to save the day when the evil Otto Von Walrus hatches a sinister
+        scheme to accelerate global warming and melt the Arctic Circle.","release_date":"2019-11-01"},{"popularity":29.135,"id":500,"video":false,"vote_count":9724,"vote_average":8.2,"title":"Reservoir
+        Dogs","release_date":"1992-09-02","original_language":"en","original_title":"Reservoir
+        Dogs","genre_ids":[80,53],"backdrop_path":"\/t4FHFL6hckU9vohbqO2k7rYGWhF.jpg","adult":false,"overview":"A
+        botched robbery indicates a police informant, and the pressure mounts in the
+        aftermath at a warehouse. Crime begets violence as the survivors -- veteran
+        Mr. White, newcomer Mr. Orange, psychopathic parolee Mr. Blonde, bickering
+        weasel Mr. Pink and Nice Guy Eddie -- unravel.","poster_path":"\/AjTtJNumZyUDz33VtMlF1K8JPsE.jpg"},{"popularity":18.85,"vote_count":133,"video":false,"poster_path":"\/2dvxCBUfDG2cAdkA921rERxhtcp.jpg","id":425148,"adult":false,"backdrop_path":"\/pk1zexoUCtjFs761W48QyIPzwCj.jpg","original_language":"en","original_title":"Show
+        Dogs","genre_ids":[12,35,80,10751],"title":"Show Dogs","vote_average":5.8,"overview":"Max,
+        a macho, solitary Rottweiler police dog is ordered to go undercover as a primped
+        show dog in a prestigious Dog Show, along with his human partner, to avert
+        a disaster from happening.","release_date":"2018-05-10"},{"popularity":19.992,"vote_count":3046,"video":false,"poster_path":"\/mDcPRjZC1bb6LavFU3gwsWdVfCM.jpg","id":308266,"adult":false,"backdrop_path":"\/oNoprEND25zXR6Fns8cIZUkuoMc.jpg","original_language":"en","original_title":"War
+        Dogs","genre_ids":[35,80,18],"title":"War Dogs","vote_average":6.8,"overview":"Based
+        on the true story of two young men, David Packouz and Efraim Diveroli, who
+        won a $300 million contract from the Pentagon to arm America''s allies in
+        Afghanistan.","release_date":"2016-08-17"},{"popularity":17.493,"vote_count":482,"video":false,"poster_path":"\/e34o2b0NzcUgqKHSq36BrgOsEOD.jpg","id":22949,"adult":false,"backdrop_path":"\/of1EpT8iYFfiF1b0Bo3PPHjyAzi.jpg","original_language":"en","original_title":"Old
+        Dogs","genre_ids":[35,10751],"title":"Old Dogs","vote_average":5.5,"overview":"Charlie
+        and Dan have been best friends and business partners for thirty years; their
+        Manhattan public relations firm is on the verge of a huge business deal with
+        a Japanese company. With two weeks to sew up the contract, Dan gets a surprise:
+        a woman he married on a drunken impulse nearly nine years before (annulled
+        the next day) shows up to tell him he''s the father of her twins, now seven,
+        and she''ll be in jail for 14 days for a political protest. Dan volunteers
+        to keep the tykes, although he''s up tight and clueless. With Charlie''s help
+        is there any way they can be dad and uncle, meet the kids'' expectations,
+        and still land the account?","release_date":"2009-11-24"},{"popularity":15.819,"vote_count":319,"video":false,"poster_path":"\/hSW5Msz5Cr6vUQxChPSPdxufnss.jpg","id":64639,"adult":false,"backdrop_path":"\/wbAHNsWHgHA7Hi1uBTIsGY7lKyx.jpg","original_language":"en","original_title":"Straw
+        Dogs","genre_ids":[18,53],"title":"Straw Dogs","vote_average":5.8,"overview":"L.A.
+        screenwriter David Sumner relocates with his wife, Amy, to her hometown in
+        the deep South. There, while tensions build between them, a brewing conflict
+        with locals becomes a threat to them both.","release_date":"2011-09-16"},{"popularity":22.114,"id":399174,"video":false,"vote_count":3024,"vote_average":7.9,"title":"Isle
+        of Dogs","release_date":"2018-03-23","original_language":"en","original_title":"Isle
+        of Dogs","genre_ids":[12,35,16],"backdrop_path":"\/dkk1wFBDhPzLXPwVmHTRzny3rkX.jpg","adult":false,"overview":"In
+        the future, an outbreak of canine flu leads the mayor of a Japanese city to
+        banish all dogs to an island that''s a garbage dump. The outcasts must soon
+        embark on an epic journey when a 12-year-old boy arrives on the island to
+        find his beloved pet.","poster_path":"\/c0nUX6Q1ZB0P2t1Jo6EeFSVnOGQ.jpg"},{"popularity":14.004,"id":11888,"video":false,"vote_count":477,"vote_average":5.6,"title":"Snow
+        Dogs","release_date":"2002-01-18","original_language":"en","original_title":"Snow
+        Dogs","genre_ids":[35,10751,12],"backdrop_path":"\/gfwMVCtYjn4VjAQyIZ5bOj6KSu0.jpg","adult":false,"overview":"When
+        a Miami dentist inherits a team of sled dogs, he''s got to learn the trade
+        or lose his pack to a crusty mountain man.","poster_path":"\/rIPJRJZGleNaK1kfHBaFbGZ675m.jpg"},{"popularity":12.593,"id":994,"video":false,"vote_count":539,"vote_average":7.2,"title":"Straw
+        Dogs","release_date":"1971-12-23","original_language":"en","original_title":"Straw
+        Dogs","genre_ids":[80,18,53],"backdrop_path":"\/8eWzglk0uHAtbFgKb3lVTXnJvxp.jpg","adult":false,"overview":"David
+        Sumner, a mild-mannered academic from the United States, marries Amy, an Englishwoman.
+        In order to escape a hectic stateside lifestyle, David and his wife relocate
+        to the small town in rural Cornwall where Amy was raised. There, David is
+        ostracized by the brutish men of the village, including Amy''s old flame,
+        Charlie. Eventually the taunts escalate, and two of the locals rape Amy. This
+        sexual assault awakes a shockingly violent side of David.","poster_path":"\/yigkfHE1OhkxPPrjrV78Y9ibGEk.jpg"},{"popularity":7.853,"vote_count":80,"video":false,"poster_path":"\/9xC2yUgqPVvoHykYuigrxLyunya.jpg","id":8588,"adult":false,"backdrop_path":null,"original_language":"en","original_title":"Shooting
+        Dogs","genre_ids":[18,36],"title":"Shooting Dogs","vote_average":7.5,"overview":"Two
+        westerners, a priest and a teacher find themselves in the middle of the Rwandan
+        genocide and face a moral dilemna. Do they place themselves in danger and
+        protect the refugees, or escape the country with their lives? Based on a true
+        story.","release_date":"2006-03-08"},{"popularity":15.725,"vote_count":610,"video":false,"poster_path":"\/maFnSOpmNDhlEYjOrnWrriJLF3T.jpg","id":15189,"adult":false,"backdrop_path":"\/7PfMMIxO9hzhxhfhJ1zW60wNqtA.jpg","original_language":"en","original_title":"Hotel
+        for Dogs","genre_ids":[35,10751],"title":"Hotel for Dogs","vote_average":6,"overview":"Placed
+        in a foster home that doesn''t allow pets, 16-year-old Andi and her younger
+        brother, Bruce, turn an abandoned hotel into a home for their dog. Soon other
+        strays arrive, and the hotel becomes a haven for every orphaned canine in
+        town. But the kids have to do some quick thinking to keep the cops off their
+        tails.","release_date":"2009-01-16"},{"popularity":12.326,"id":11648,"video":false,"vote_count":313,"vote_average":5.9,"title":"Must
+        Love Dogs","release_date":"2005-07-21","original_language":"en","original_title":"Must
+        Love Dogs","genre_ids":[10749,35],"backdrop_path":"\/mZ5YlqaT0gZqXRoDkuMJfqB5OAI.jpg","adult":false,"overview":"Sarah
+        Nolan is a newly divorced woman cautiously rediscovering romance with the
+        enthusiastic but often misguided help of her well-meaning family. As she braves
+        a series of hilarious disastrous mismatches and first dates, Sarah begins
+        to trust her own instincts again and learns that, no matter what, it''s never
+        a good idea to give up on love.","poster_path":"\/252PdRj3y2S05DC4oSf2qk2vva3.jpg"},{"popularity":29.428,"id":39691,"video":false,"vote_count":407,"vote_average":5.1,"title":"Cats
+        & Dogs: The Revenge of Kitty Galore","release_date":"2010-07-28","original_language":"en","original_title":"Cats
+        & Dogs: The Revenge of Kitty Galore","genre_ids":[35,10751,28,14,12,9648],"backdrop_path":"\/vwqxvqBsfpz1GnqLapjFs8HnOjS.jpg","adult":false,"overview":"The
+        ongoing war between the canine and feline species is put on hold when they
+        join forces to thwart a rogue cat spy with her own sinister plans for conquest.","poster_path":"\/nTsZT66I4U3aS9ezLdOKacfvo8T.jpg"},{"popularity":7.313,"vote_count":58,"video":false,"poster_path":"\/hNi2M5Z7GUEaSCPjt66yavLlsqV.jpg","id":35796,"adult":false,"backdrop_path":null,"original_language":"en","original_title":"Lawn
+        Dogs","genre_ids":[18],"title":"Lawn Dogs","vote_average":7.3,"overview":"In
+        the affluent, gated community of Camelot Gardens, bored wives indiscriminately
+        sleep around while their unwitting husbands try desperately to climb the social
+        ladder. Trent, a 21-year-old outsider who mows the neighborhood lawns, quietly
+        observes the infidelities and hypocrisies of this overly privileged society.
+        When Devon, a 10-year-old daughter from one family, forges a friendship with
+        Trent, things suddenly get very complicated.","release_date":"1997-11-21"},{"popularity":6.631,"vote_count":50,"video":false,"poster_path":"\/hiEHsguMwMyZMRXgjgQaB2Vpbzj.jpg","id":403068,"adult":false,"backdrop_path":"\/bfZrLxmHh7jAvTJcnj5FX5J9yIW.jpg","original_language":"en","original_title":"Sun
+        Dogs","genre_ids":[35,18],"title":"Sun Dogs","vote_average":7,"overview":"A
+        man eager to serve his country but rejected by the Marines pairs up with a
+        young runaway to form an unlikely team on a misguided adventure.","release_date":"2017-06-18"},{"popularity":6.898,"vote_count":22,"video":false,"poster_path":"\/ffNqpSglkigE2eIVFGSXUYihFCN.jpg","id":298317,"adult":false,"backdrop_path":"\/aIjTgZH92zgkX6jh34eP8A0j2ce.jpg","original_language":"en","original_title":"My
+        Boyfriends'' Dogs","genre_ids":[35,10749,10770],"title":"My Boyfriends'' Dogs","vote_average":6.1,"overview":"The
+        owners of a small diner are surprised one rainy evening when, just after close,
+        a young woman wearing a wedding dress with three dogs in tow begs to come
+        into their restaurant. What follows is the young woman''s retelling of how
+        she arrived at this curious junction in her life and how, through the search
+        for the right man, she ended up as a runaway bride with three new dogs.","release_date":"2014-10-18"},{"popularity":61.326,"vote_count":691,"video":false,"poster_path":"\/wquJChp0NpoqthYdE3YjXNNxvVC.jpg","id":522518,"adult":false,"backdrop_path":"\/71hIkBtvXhvRVh6HdE28CXaNNRz.jpg","original_language":"en","original_title":"A
+        Dog''s Journey","genre_ids":[12,18,10751],"title":"A Dog''s Journey","vote_average":8.1,"overview":"A
+        dog finds the meaning of his own existence through the lives of the humans
+        he meets.","release_date":"2019-05-03"},{"popularity":17.243,"id":11497,"video":false,"vote_count":692,"vote_average":6.7,"title":"All
+        Dogs Go to Heaven","release_date":"1989-11-17","original_language":"en","original_title":"All
+        Dogs Go to Heaven","genre_ids":[18,16,10751,35,14],"backdrop_path":"\/aqjVohKrbcFEERCPcRjDUht0maW.jpg","adult":false,"overview":"When
+        a casino owning dog named Charlie is murdered by his rival Carface, he finds
+        himself in Heaven basically by default since all dogs go to heaven. However,
+        since he wants to get back at his killer, he cons his way back to the living
+        with the warning that doing that damns him to Hell. Once back, he teams with
+        his old partner, Itchy to prep his retaliation. He also stumbles on to an
+        orphan girl who can talk to the animals, thus allowing him to get the inside
+        info on the races to ensure his wins to finance his plans. However, all the
+        while, he is still haunted by nightmares on what''s waiting for him on the
+        other side unless he can prove that he is worthy of Heaven again.","poster_path":"\/nmWh1NglDinfkHD9zCNqGWyhl7Q.jpg"}]}'
+  recorded_at: Fri, 09 Oct 2020 17:25:15 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=MOVIES_SECRET_KEY&include_adult=false&language=en-US&page=2&query=dogs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 09 Oct 2020 17:25:15 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=120
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 824a5d9ed02451bcb68b15ae5991dce0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - 7ueLQoxOzOFsu5f-YNoIyVIrzgxCMps_Grrm2KZyu7Jot0B2ysmZXQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoyLCJ0b3RhbF9yZXN1bHRzIjo0NTMsInRvdGFsX3BhZ2VzIjoyMywicmVzdWx0cyI6W3sicG9wdWxhcml0eSI6Ny40NzUsInZvdGVfY291bnQiOjI2LCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC9oSnBSSFdzWXU2N0JYSWR1VVlMdjVDWHhQaGMuanBnIiwiaWQiOjQzNjczLCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IlNsZWVwaW5nIERvZ3MgTGllIiwiZ2VucmVfaWRzIjpbMzUsMTgsMTA3NDldLCJ0aXRsZSI6IlNsZWVwaW5nIERvZ3MgTGllIiwidm90ZV9hdmVyYWdlIjo1LjgsIm92ZXJ2aWV3IjoiQSByZWNlbnRseSBlbmdhZ2VkIHdvbWFuJ3MgbGlmZSBpcyB0aHJvd24gaW50byB0dXJtb2lsIGFmdGVyIGNvbmZlc3NpbmcgdG8gaGVyIGZpYW5jw6kgdGhhdCBzaGUgb25jZSBleHBlcmltZW50ZWQgd2l0aCBiZXN0aWFsaXR5LiIsInJlbGVhc2VfZGF0ZSI6IjIwMDYtMTAtMjAifSx7InBvcHVsYXJpdHkiOjguMzY0LCJpZCI6MzAwNjAsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6OTUsInZvdGVfYXZlcmFnZSI6Ny43LCJ0aXRsZSI6IlRoZSBQbGFndWUgRG9ncyIsInJlbGVhc2VfZGF0ZSI6IjE5ODItMTAtMjEiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJUaGUgUGxhZ3VlIERvZ3MiLCJnZW5yZV9pZHMiOlsxMiwxNiwxOF0sImJhY2tkcm9wX3BhdGgiOiJcL2dXUG12WUVPRHc5RnA3RkFJR0tsZTJOZWlBQi5qcGciLCJhZHVsdCI6ZmFsc2UsIm92ZXJ2aWV3IjoiVGhlIFBsYWd1ZSBEb2dzIGlzIGEgMTk4MiBhbmltYXRlZCBmaWxtIGJhc2VkIG9uIHRoZSAxOTc3IG5vdmVsIG9mIHRoZSBzYW1lIG5hbWUgYnkgUmljaGFyZCBBZGFtcy4gVGhlIHN0b3J5IGlzIGNlbnRyZWQgb24gdHdvIGRvZ3MgbmFtZWQgUm93ZiBhbmQgU25pdHRlciwgd2hvIGVzY2FwZSBmcm9tIGEgcmVzZWFyY2ggbGFib3JhdG9yeSBpbiBHcmVhdCBCcml0YWluLiBJbiB0aGUgcHJvY2VzcyBvZiB0ZWxsaW5nIHRoZSBzdG9yeSwgdGhlIGZpbG0gaGlnaGxpZ2h0cyB0aGUgY3J1ZWx0eSBvZiBwZXJmb3JtaW5nIHZpdmlzZWN0aW9uIGFuZCBhbmltYWwgcmVzZWFyY2ggZm9yIGl0cyBvd24gc2FrZS4iLCJwb3N0ZXJfcGF0aCI6IlwvN2p2MlJJTGZMYmRrcWc3VFpyTEV3RTQxMFFmLmpwZyJ9LHsicG9wdWxhcml0eSI6NS4xNzYsInZvdGVfY291bnQiOjY4LCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC94aVBWZGZjU081UDV3UWNTekF3dE13Qmx2SjYuanBnIiwiaWQiOjQ0MzEyOSwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJSZXNlcnZvaXIgRG9ncyIsImdlbnJlX2lkcyI6WzE4XSwidGl0bGUiOiJSZXNlcnZvaXIgRG9ncyIsInZvdGVfYXZlcmFnZSI6Ny42LCJvdmVydmlldyI6IlNob3J0IGZpbG0gbWFkZSB3aXRoIHRoZSBoZWxwIG9mIHRoZSBTdW5kYW5jZSBGaWxtIEluc3RpdHV0ZSBhbmQgc2VydmluZyBhcyBhIHByb29mLW9mLWNvbmNlcHQgZm9yIHRoZSBzdWJzZXF1ZW50IGZlYXR1cmUgZmlsbS4iLCJyZWxlYXNlX2RhdGUiOiIxOTkxLTA2LTAxIn0seyJwb3B1bGFyaXR5IjoxMS40NjEsInZvdGVfY291bnQiOjE3NywidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvNVYxMG1nMXJBYndXWU5GNklqbkVZb2tJUjhmLmpwZyIsImlkIjo4ODY2LCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcL2QxMVpaTzk5cG5CNjZ2aUYwRnVxdUxOa2J5Vi5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJUaGUgVHJ1dGggQWJvdXQgQ2F0cyAmIERvZ3MiLCJnZW5yZV9pZHMiOlszNSwxMDc0OV0sInRpdGxlIjoiVGhlIFRydXRoIEFib3V0IENhdHMgJiBEb2dzIiwidm90ZV9hdmVyYWdlIjo1LjksIm92ZXJ2aWV3IjoiQSBzdWNjZXNzZnVsIHZldGVyaW5hcmlhbiBhbmQgcmFkaW8gc2hvdyBob3N0IHdpdGggbG93IHNlbGYtZXN0ZWVtIGFza3MgaGVyIG1vZGVsIGZyaWVuZCB0byBpbXBlcnNvbmF0ZSBoZXIgd2hlbiBhIGhhbmRzb21lIG1hbiB3YW50cyB0byBzZWUgaGVyLiIsInJlbGVhc2VfZGF0ZSI6IjE5OTYtMDQtMjYifSx7InBvcHVsYXJpdHkiOjguNzM0LCJ2b3RlX2NvdW50IjoxLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC9oYk81bm4zN05OSGhzUWxUVVY2bnZpeUtyQnkuanBnIiwiaWQiOjczODYzMiwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJFbmdsaXNoIERvZ3MgaW4gQmFuZ2tvayIsImdlbnJlX2lkcyI6WzI4XSwidGl0bGUiOiJFbmdsaXNoIERvZ3MgaW4gQmFuZ2tvayIsInZvdGVfYXZlcmFnZSI6MTAsIm92ZXJ2aWV3IjoiSW4gdGhlIHN0cmVldHMgb2YgVGhhaWxhbmQsIGEgdHJhaWwgb2YgZGVzdHJ1Y3Rpb24gYW5kIG1heWhlbSBlbnN1ZXMgd2hlbiBhIG5vdG9yaW91cyBzb2xkaWVyIChCeXJvbiBHaWJzb24pIGFuZCBjcmltaW5hbCBraWNrYm94ZXIgKFJvbiBTbW9vcmVuYnVyZykgam9pbiBmb3JjZXMgdG8gYmVjb21lIHRoZSBiaWdnZXN0IGlsbGVnYWwgc3Rlcm9pZCBzdXBwbGllciBpbiBBc2lhLiIsInJlbGVhc2VfZGF0ZSI6IjIwMjAtMDgtMDQifSx7InBvcHVsYXJpdHkiOjUuNzQ0LCJ2b3RlX2NvdW50IjoyNiwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvcU5yd0JpNE50Um9NdWI4OURqWVd3dE1ET3I1LmpwZyIsImlkIjo0NDY4NjYsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvZTNONHJseWhKOXc1ZGJweVg2TnN1NjNtbGt1LmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6Ikxpa2UgQ2F0cyAmIERvZ3MiLCJnZW5yZV9pZHMiOlszNSwxMDc0OSwxMDc3MF0sInRpdGxlIjoiTGlrZSBDYXRzICYgRG9ncyIsInZvdGVfYXZlcmFnZSI6Ni4zLCJvdmVydmlldyI6IlNwZW5jZXIgaXMgYSBjYXQgcGVyc29uLiBMYXVyYSBpcyBhIGRvZyBwZXJzb24uIFNwZW5jZXIgaXMgaGVhZGVkIHRvIGEgYmVhY2ggdG93biB0byB3b3JrIG9uIGhpcyB0aGVzaXMuIExhdXJhIGlzIGNvbWluZyB0byB0aGUgc2FtZSBiZWFjaCB0b3duIHRvIGVzY2FwZSB0aGUgc2hhbWJsZXMgb2YgaGVyIGxpZmUuIFRoZWlyIHBlcnNvbmFsaXRpZXMgY291bGRu4oCZdCBiZSBtb3JlIGRpZmZlcmVudCwgYnV0IHdoZW4gYSByZXNlcnZhdGlvbiBzY3JldyB1cCBsYW5kcyB0aGVtIOKAkyBhbmQgdGhlaXIgcGV0cyDigJMgaW4gdGhlIHNhbWUgdmFjYXRpb24gcmVudGFsIGhvdXNlLCB0aGV5IGFsbCBoYXZlIHRvIGZpZ3VyZSBvdXQgaG93IHRvIGdldCBhbG9uZyB3aXRoIGVhY2ggb3RoZXIuIiwicmVsZWFzZV9kYXRlIjoiMjAxNy0wNC0xNSJ9LHsicG9wdWxhcml0eSI6My4yMjEsInZvdGVfY291bnQiOjgsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcL2w1bGlhZTRnQmI0cXVEZHBobXA3UGxqNzVtbS5qcGciLCJpZCI6MTA0NTI4LCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcL2VlbFVvenZvUWtZZ0FtWkhWeWQzdk0ycHM3TS5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJEb2dzIiwiZ2VucmVfaWRzIjpbMjddLCJ0aXRsZSI6IkRvZ3MiLCJ2b3RlX2F2ZXJhZ2UiOjUuOCwib3ZlcnZpZXciOiJBIHBhY2sgb2YgZG9tZXN0aWNhdGVkIGRvZ3MgZ28gb24gYSBraWxsaW5nIHNwcmVlIGluIHNvdXRoZXJuIENhbGlmb3JuaWEuIiwicmVsZWFzZV9kYXRlIjoiMTk3Ni0xMS0xMSJ9LHsicG9wdWxhcml0eSI6NC4zNDYsInZvdGVfY291bnQiOjI5LCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC9lVllnVlp4MEtURW44VGJ6em45dHVXN2N0ZUQuanBnIiwiaWQiOjE1NzkxLCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcL2JkdHFvOWdUbWoxOFFDbUgyOEI1UmlZS3JuTS5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJEaWFtb25kIERvZ3MiLCJnZW5yZV9pZHMiOlsyOF0sInRpdGxlIjoiRGlhbW9uZCBEb2dzIiwidm90ZV9hdmVyYWdlIjo0LjYsIm92ZXJ2aWV3IjoiXCJEaWFtb25kIERvZ3NcIiBpcyB0aGUgc3Rvcnkgb2YgYSBncm91cCBvZiBBbWVyaWNhbiBmb3J0dW5lIGh1bnRlcnMsIHdobyBjb21lIHRvIENoaW5hIGxvb2tpbmcgZm9yIGEgbG9uZy1sb3N0LXRyZWFzdXJlLiBEdXJpbmcgdGhlIFNvdmlldCBjcmFjay1kb3duIG9uIHJlbGlnaW9uIGluIHRoZSAxOTMwJ3MsIGEgcHJpY2VsZXNzIEJ1ZGRoaXN0IGFydGlmYWN0LCBhIFRhbmdrYSB3YXMgdGFrZW4gYWNyb3NzIHRoZSBib3JkZXIgdG8gQ2hpbmEgYW5kIGhpZGRlbiBpbiB0aGUgbW91bnRhaW5zLiBUaGUgZGlhbW9uZHMgYWxvbmUsIGRlY29yYXRpbmcgdGhpcyBodWdlIGdvbGQtaW5sYWlkIHRleHRpbGUsIGFyZSB0aG91Z2h0IHRvIGJlIHdvcnRoICQ1MCBtaWxsaW9uLiBUaGUgZm9ydHVuZSBodW50ZXJzIiwicmVsZWFzZV9kYXRlIjoiMjAwNy0wMS0wMSJ9LHsicG9wdWxhcml0eSI6NS4wMzMsInZvdGVfY291bnQiOjksInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcL2hFejQ2VU9ub2V4NUVPbHpXZkgzRG5mZzNUSS5qcGciLCJpZCI6NDU5NDI3LCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcLzNreGcwNkF4c1U4MU5ua1JDVm5vS0pNMXBDYS5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJDYXIgRG9ncyIsImdlbnJlX2lkcyI6WzM1LDE4XSwidGl0bGUiOiJDYXIgRG9ncyIsInZvdGVfYXZlcmFnZSI6NS44LCJvdmVydmlldyI6Ik1hbGNvbG0gaXMgYSBicmlsbGlhbnQsIGNhbGxvdXMgYnVzaW5lc3NtYW4gd2hvIGlzIGEgdmljaW91cywgb3ZlcmJlYXJpbmcgZmF0aGVyLiBNYXJrIGlzIHRoZSBzYWxlcyBtYW5hZ2VyIGF0IENoYW1iZXJsYWluIEF1dG8sIHRoZSBkZWFsZXJzaGlwIHRoYXQgcHJvbWlzZXMgdG8gZG8gXCJXaGF0ZXZlciBJdCBUYWtlc1wiIHRvIHB1dCB5b3UgaW4gYSBuZXcgY2FyLiBCdXQgb24gYSBzY29yY2hpbmcgaG90IFNhdHVyZGF5IGluIHRoZSBtaWRkbGUgb2YgdGhlIFBob2VuaXggc3VtbWVyLCBNYXJrIGhhcyBhIGNoYW5jZSB0byBnZXQgaGlzIG93biBkZWFsZXJzaGlwIC0gYW5kIG91dCBmcm9tIHVuZGVyIHRoZSB0aHVtYiBvZiBoaXMgZmF0aGVyLiBNYXJrIGhhcyB0byBzZWxsIHRoaXJ0eS1maXZlIGNhcnMgYnkgdGhlIGVuZCBvZiB0aGUgZGF5LiBUaGUgcXVlc3Rpb246IFdpbGwgTWFyayBkbyB3aGF0ZXZlciBpdCB0YWtlcyAtIGluY2x1ZGluZyBiZXRyYXlpbmcgaGlzIHNhbGVzIHRlYW0gYW5kIGhpbXNlbGYgLSB0byBnZXQgd2hhdCBoZSB3YW50cz8iLCJyZWxlYXNlX2RhdGUiOiIyMDE3LTAzLTI0In0seyJwb3B1bGFyaXR5Ijo0LjQ2OSwidm90ZV9jb3VudCI6NiwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvYUhqRWpsZEVYQzNla1UxaTloS2NpRVp0QnZvLmpwZyIsImlkIjoxODc5MjUsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvZ2wyMUdVUEVRZk82NWtBM1l6RnROZFRmYThmLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IlN0ZXAgRG9ncyIsImdlbnJlX2lkcyI6WzM1LDEwNzUxXSwidGl0bGUiOiJTdGVwIERvZ3MiLCJ2b3RlX2F2ZXJhZ2UiOjUuMSwib3ZlcnZpZXciOiJXaGVuIGEgcGFtcGVyZWQgSG9sbHl3b29kIHBvb2NoIGlzIHNlbnQgdXAgdG8gTm9ydGggdG8gbGl2ZSB3aXRoIGEgd2lzZSBjcmFja2luZyBmYXJtLW11dHQsIGFsbCBsZWFzaGVzIGFyZSBvZmYuIiwicmVsZWFzZV9kYXRlIjoiMjAxMy0xMi0wMyJ9LHsicG9wdWxhcml0eSI6MTMuMjIzLCJpZCI6MTkwNDIsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6MTYyLCJ2b3RlX2F2ZXJhZ2UiOjUuNiwidGl0bGUiOiJBbGwgRG9ncyBHbyB0byBIZWF2ZW4gMiIsInJlbGVhc2VfZGF0ZSI6IjE5OTYtMDMtMjkiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJBbGwgRG9ncyBHbyB0byBIZWF2ZW4gMiIsImdlbnJlX2lkcyI6WzEwNzQ5LDE2LDEwNzUxLDEyLDE0XSwiYmFja2Ryb3BfcGF0aCI6IlwvY0FtWkV4RmpTN0xkQ296bXJPZDlnelE3ZEVwLmpwZyIsImFkdWx0IjpmYWxzZSwib3ZlcnZpZXciOiJDaGFybGllIGFuZCBJdGNoeSByZXR1cm4gdG8gRWFydGggdG8gZmluZCBHYWJyaWVsJ3MgSG9ybiwgYnV0IGFsb25nIHRoZSB3YXkgbWVldCB1cCB3aXRoIGEgeW91bmcgYm95IG5hbWVkIERhdmlkLCB3aG8gcmFuIGF3YXkgZnJvbSBob21lLiIsInBvc3Rlcl9wYXRoIjoiXC9rTm1JSklMT1c5cUYyRjFaMHFPWGthZGFTNTAuanBnIn0seyJwb3B1bGFyaXR5IjozLjc2OSwidm90ZV9jb3VudCI6MTUsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcL2Z2OXpBMk9Ra3RUY2lERm1CSjN4dzhrOFVZZy5qcGciLCJpZCI6Mzc1ODIsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvaERIRm9RaXVmMDRPc01NTmpGdHpTeEw4NW1NLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IlNsZWVwaW5nIERvZ3MiLCJnZW5yZV9pZHMiOlsyOCwxOCw1M10sInRpdGxlIjoiU2xlZXBpbmcgRG9ncyIsInZvdGVfYXZlcmFnZSI6NS41LCJvdmVydmlldyI6IlJlY2x1c2UgU21pdGggaXMgZHJhd24gaW50byBhIHJldm9sdXRpb25hcnkgc3RydWdnbGUgYmV0d2VlbiBndWVycmlsbGFzIGFuZCByaWdodC13aW5nZXJzIGluIE5ldyBaZWFsYW5kLiBJbXBsaWNhdGVkIGluIGEgbXVyZGVyIGFuZCBmcmFtZWQgYXMgYSByZXZvbHV0aW9uYXJ5IGNvbnNwaXJhdG9yLCBTbWl0aCB0cmllcyB0byBtYWludGFpbiBhbiBhdHRpdHVkZSBvZiBub24tdmlvbGVuY2Ugd2hpbGUgY2F1Z2h0IGJldHdlZW4gd2FycmluZyBmYWN0aW9ucy4iLCJyZWxlYXNlX2RhdGUiOiIxOTc3LTEwLTA2In0seyJwb3B1bGFyaXR5IjoyOC44MjQsInZvdGVfY291bnQiOjIyMjEsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcLzNqY052aHRWUWU1TmVvZmZkaWMzOWZSYWN0TS5qcGciLCJpZCI6MzgxMjg5LCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcLzJkZFZUbE15QVRaZHZVSEU3RFBFeEEyWDZ4Ri5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJBIERvZydzIFB1cnBvc2UiLCJnZW5yZV9pZHMiOlsxMiwzNSwxOCwxNCwxMDc1MV0sInRpdGxlIjoiQSBEb2cncyBQdXJwb3NlIiwidm90ZV9hdmVyYWdlIjo3LjUsIm92ZXJ2aWV3IjoiQSBkb2cgZ29lcyBvbiBxdWVzdCB0byBkaXNjb3ZlciBoaXMgcHVycG9zZSBpbiBsaWZlIG92ZXIgdGhlIGNvdXJzZSBvZiBzZXZlcmFsIGxpZmV0aW1lcyB3aXRoIG11bHRpcGxlIG93bmVycy4iLCJyZWxlYXNlX2RhdGUiOiIyMDE3LTAxLTE5In0seyJwb3B1bGFyaXR5Ijo0LjIwMywidm90ZV9jb3VudCI6NCwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvM2QwSlhKYTd3NFA2YUhnZ2QzVXJMUEYweGcyLmpwZyIsImlkIjo0MDQxOTUsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvclprVzNpWmI0T21rZFcxeWpBdFZvdUVacTFtLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6Ik1vb24gRG9ncyIsImdlbnJlX2lkcyI6WzM1LDE4XSwidGl0bGUiOiJNb29uIERvZ3MiLCJ2b3RlX2F2ZXJhZ2UiOjcsIm92ZXJ2aWV3IjoiQSB3b25kZXJmdWxseSBzdXN0YWluZWQgZmVhdHVyZSBkZWJ1dCBmcm9tIFBoaWxpcCBKb2huICh3aG8gZGlyZWN0ZWQgZXBpc29kZXMgb2YgRG93bnRvbiBBYmJleSBhbmQgT3V0bGFuZGVyKSwgdGhpcyBhbmFyY2hpYyBjb21pbmctb2YtYWdlIHN0b3J5IG1ha2VzIHRoZSB2ZXJ5IGJlc3Qgb2Ygc29tZSBzdHVubmluZyBTY290dGlzaCBsb2NhdGlvbnMuIEl0IGZvbGxvd3MgdGhlIG1pc2FkdmVudHVyZXMgb2YgdHdvIHRlZW5hZ2Ugc3RlcCBicm90aGVycyAoSmFjayBQYXJyeS1Kb25lcyBhbmQgQ2hyaXN0eSBP4oCZRG9ubmVsbCkgYXMgdGhleSBoZWFkIG9mZiBvbiBhIHJvYWQgdHJpcCBhY3Jvc3MgU2NvdGxhbmQsIHdpdGggdGhlaXIgcmVsYXRpb25zaGlwIGNoYWxsZW5nZWQgYnkgQ2FpdGxpbiAoYSBjaGFyaXNtYXRpYyBUYXJhIExlZSksIHRoZSBmcmVlIHNwaXJpdGVkIGFuZCBlbmlnbWF0aWMgZ2lybCB3aG8gY29tZXMgYmV0d2VlbiB0aGVtLiBDYW1lb3MgZnJvbSBEZW5pcyBMYXdzb24gYW5kIFNoYXVuYSBNYWNkb25hbGQgYW5kIEFudG9uIE5ld2NvbWJl4oCZcyBzb3VuZHRyYWNrIGFkZCBtdWNoIHRvIHRoZSBmaWxtLiIsInJlbGVhc2VfZGF0ZSI6IjIwMTYtMDYtMTcifSx7InBvcHVsYXJpdHkiOjQ3LjE1OSwidm90ZV9jb3VudCI6NDg1LCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC9wWm44N1I3Z3RtTUNHR084S2VhQWZaRGhYTGcuanBnIiwiaWQiOjUwODc2MywiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC93N01zeU9wUDAwM0ZZaHNpVGdWSGEzck5zcnouanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQSBEb2cncyBXYXkgSG9tZSIsImdlbnJlX2lkcyI6WzEyLDE4LDEwNzUxXSwidGl0bGUiOiJBIERvZydzIFdheSBIb21lIiwidm90ZV9hdmVyYWdlIjo2LjgsIm92ZXJ2aWV3IjoiQSBEb2figJlzIFdheSBIb21lIGNocm9uaWNsZXMgdGhlIGhlYXJ0d2FybWluZyBhZHZlbnR1cmUgb2YgQmVsbGEsIGEgZG9nIHdobyBlbWJhcmtzIG9uIGFuIGVwaWMgNDAwLW1pbGUgam91cm5leSBob21lIGFmdGVyIHNoZSBpcyBzZXBhcmF0ZWQgZnJvbSBoZXIgYmVsb3ZlZCBodW1hbi4iLCJyZWxlYXNlX2RhdGUiOiIyMDE5LTAxLTEwIn0seyJwb3B1bGFyaXR5Ijo2Ljc3MSwidm90ZV9jb3VudCI6NjQsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcL3pBVkZPTGNqcVlvRURZQkY3VVBOWTRESVYySS5qcGciLCJpZCI6MjA2ODEsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvZXFuVVpobUNpbFhMTm1ESXhRSm9OOTFwVHR4LmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IlRoZSBEb2dzIG9mIFdhciIsImdlbnJlX2lkcyI6WzI4LDEyLDUzXSwidGl0bGUiOiJUaGUgRG9ncyBvZiBXYXIiLCJ2b3RlX2F2ZXJhZ2UiOjUuNCwib3ZlcnZpZXciOiJNZXJjZW5hcnkgSmFtZXMgU2hhbm5vbiwgb24gYSByZWNvbm5haXNzYW5jZSBqb2IgdG8gdGhlIEFmcmljYW4gbmF0aW9uIG9mIFphbmdhcm8sIGlzIHRvcnR1cmVkIGFuZCBkZXBvcnRlZC4gSGUgcmV0dXJucyB0byBsZWFkIGEgY291cC4iLCJyZWxlYXNlX2RhdGUiOiIxOTgwLTEyLTE3In0seyJwb3B1bGFyaXR5IjozLjIyMSwidm90ZV9jb3VudCI6NiwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6IlwvdW9kSzd0NXh3YWZDeTRDekhJcHB3WmtDNExOLmpwZyIsImlkIjo2MjMwMTEsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6IlwvN1liajhuZFJta1ZhYlNXM05SdXB5V0tmU09LLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6IkF2ZW5nZXIgRG9ncyIsImdlbnJlX2lkcyI6WzE2XSwidGl0bGUiOiJBdmVuZ2VyIERvZ3MiLCJ2b3RlX2F2ZXJhZ2UiOjQuMiwib3ZlcnZpZXciOiJXaGVuIHRoZSB1bml2ZXJzZSdzIGhpZ2hlc3QtZmx5aW5nIGRvZ3Mgd2FycCBpbnRvIG91dGVyIHNwYWNlLCBTa3lmZXRjaGVyIGFuZCBTcGFjZXNsb2JiZXIgZ2V0IGEgY2FsbCBmcm9tIGNhbmluZSBoZWFkcXVhcnRlcnMhIEl0IHNlZW1zIGFuIHVua25vd24gZm9yY2UgaXMgYXR0YWNraW5nIHVuc3VzcGVjdGluZyBwbGFuZXRzLCBhbmQgaXQncyB1cCB0byB0aGVtIHRvIHJvb3Qgb3V0IHRoZSBzb3VyY2Ugb2YgdGhlIHRyb3VibGUhIiwicmVsZWFzZV9kYXRlIjoiMjAxOS0wMS0xMCJ9LHsicG9wdWxhcml0eSI6My41MzksInZvdGVfY291bnQiOjE4LCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC9ndXhzVklUNENrdllTdUZpMXlwdnZqNjNKZVkuanBnIiwiaWQiOjcwODQzLCJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiJcL2NEa1FuZzZPbkdobDdrNGxSVm1EVGVGbXNsRi5qcGciLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJKdXN0IERvZ3MiLCJnZW5yZV9pZHMiOlsxNiwzNV0sInRpdGxlIjoiSnVzdCBEb2dzIiwidm90ZV9hdmVyYWdlIjo1LjksIm92ZXJ2aWV3IjoiUGx1dG8ncyBjYWdlLW1hdGUgYXQgdGhlIGRvZyBwb3VuZCBicmVha3Mgb3V0IGFuZCBsZXRzIGFsbCB0aGUgb3RoZXIgZG9ncyBvdXQgYXMgd2VsbC4gSW4gdGhlIHBhcmssIHRoYXQgdGVycmllciBrZWVwcyBmb2xsb3dpbmcgUGx1dG8gdG9vIGNsb3NlbHkgZm9yIFBsdXRvJ3MgdGFzdGVzLCB1bnRpbCBoZSBkaWdzIHVwIGEgaHVnZSBib25lIGFuZCBnaXZlcyBpdCB0byBQbHV0byAod2hvIGRvZXNuJ3QgcGFydGljdWxhcmx5IHdhbnQgdG8gc2hhcmUpLiBCdXQgc29vbiBhbGwgdGhlIG90aGVyIGVzY2FwZWQgZG9ncyBhcmUgY2hhc2luZyBhZnRlciB0aGUgYm9uZS4iLCJyZWxlYXNlX2RhdGUiOiIxOTMyLTA3LTMwIn0seyJwb3B1bGFyaXR5IjozLjAyMywidm90ZV9jb3VudCI6NCwidmlkZW8iOmZhbHNlLCJwb3N0ZXJfcGF0aCI6Ilwvcjg4RnVXelo3elpaanpwRjBGSExhSDBSRlI1LmpwZyIsImlkIjoyOTgyNCwiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJTbGVlcGluZyBEb2dzIiwiZ2VucmVfaWRzIjpbODc4XSwidGl0bGUiOiJTbGVlcGluZyBEb2dzIiwidm90ZV9hdmVyYWdlIjozLjQsIm92ZXJ2aWV3IjoiQSBtYXN0ZXIgamV3ZWwgdGhpZWYgaW4gMjFzdCBjZW50dXJ5IExvcyBBbmdlbGVzIHRhcmdldHMgdGhlIGlsbGVnYWwgZW1lcmFsZCBzbXVnZ2xpbmcgb3BlcmF0aW9ucyBvZiBhIGhpZ2hseS1jb25uZWN0ZWQgY3JpbWUgc3luZGljYXRlLiBEdXJpbmcgd2hhdCBoZSBiZWxpZXZlcyB0byBiZSBhIHJvdXRpbmUgaGVpc3QsIGNhdCBidXJnbGFyIEhhcnJ5IE1heHdlbGwgZGlzY292ZXJzIHRoYXQgaGlzIHRhcmdldCwgbm90b3Jpb3VzIGNyaW1pbmFsIFNhbmNoZXogQm9vbiBpcyBhbHNvIHRoZSB0YXJnZXQgb2YgYSBwb2xpY2UgcmFpZC4gSW4gYXR0ZW1wdGluZyB0byBldmFkZSBib3RoIHRoZSBsYXcgYW5kIEJvb24ncyB3ZWxsLWFybWVkIG1lbiwgSGFycnkgbWVldHMgUGFuZG9yYSBHcmltZXMsIG9uZSBvZiBkb3plbnMgb2YgeW91bmcgd29tZW4gQm9vbiBraWRuYXBwZWQgdG8gd29yayBpbiBoaXMgZmFjdG9yeS4gV2hlbiBCb29uIHNldHMgYSBncm91cCBvZiBzb2NpYWwgZGV2aWFudHMgZnJlZSBhbmQgaGlqYWNrcyBhIHNwYWNlIHRyYW5zcG9ydCBzaGlwIGFuZCBpdHMgY3Jldywgb25seSBIYXJyeSBhbmQgUGFuZG9yYSdzIGN1bm5pbmcgY2FuIHNhdmUgdGhlIGh1bmRyZWRzIG9mIGlubm9jZW50IHBlb3BsZSBhYm9hcmQuIiwicmVsZWFzZV9kYXRlIjoiMTk5OC0wNS0xNiJ9LHsicG9wdWxhcml0eSI6Mi45MjYsImlkIjo0Mjg3NywidmlkZW8iOmZhbHNlLCJ2b3RlX2NvdW50Ijo2LCJ2b3RlX2F2ZXJhZ2UiOjQuMSwidGl0bGUiOiJEaXNoIERvZ3MiLCJyZWxlYXNlX2RhdGUiOiIyMDAwLTA4LTI5Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiRGlzaCBEb2dzIiwiZ2VucmVfaWRzIjpbMTgsMzUsMTA3NDldLCJiYWNrZHJvcF9wYXRoIjpudWxsLCJhZHVsdCI6ZmFsc2UsIm92ZXJ2aWV3IjoiVHdvIGZyaWVuZHMgdHJhdmVsIGZyb20gdG93biB0byB0b3duIHRha2luZyBqb2JzIGFzIGRpc2h3YXNoZXJzIHVudGlsIHRoZXkgYm90aCBmaW5kIGxvdmUgYW5kIG11c3QgY2hvb3NlIHNlcGFyYXRlIHBhdGhzLiIsInBvc3Rlcl9wYXRoIjoiXC9nOWNGeXhmUzVFWE5wejhBbG53RmI2UFJaaUkuanBnIn1dfQ==
+  recorded_at: Fri, 09 Oct 2020 17:25:15 GMT
+recorded_with: VCR 6.0.0

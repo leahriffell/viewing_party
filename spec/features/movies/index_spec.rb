@@ -17,11 +17,11 @@ RSpec.describe 'Movies page' do
       end
     end
 
-    describe 'when I searched for top movies' do 
+    describe 'when I searched for top movies' do
       it 'I can see information about each movie and link to show page' do
         VCR.use_cassette('top_movies') do
           visit movies_path
-  
+
           expect(current_path).to eq(movies_path)
           expect(page).to have_content('Top Movies')
 
@@ -29,7 +29,7 @@ RSpec.describe 'Movies page' do
             expect(page).to have_css('.title')
             expect(page).to have_css('.vote_avg')
             VCR.use_cassette('show_movie_details') do
-              #NOTE: I think this error may be because 'Casino' does not appear on top movies page? 
+              #NOTE: I think this error may be because 'Casino' does not appear on top movies page?
               page.find('.title').click
               expect(page).to have_button('Create Viewing Party for Movie')
             end
@@ -39,12 +39,12 @@ RSpec.describe 'Movies page' do
     end
 
     describe 'when I searched by keyword' do
-      it 'I can see information about each movie and link to show page' do 
-        VCR.use_cassette('top_movies') do
+      it 'I can see information about each movie and link to show page' do
+        VCR.use_cassette('single_keyword_search') do
           visit movies_path
-  
+
           expect(current_path).to eq(movies_path)
-          expect(page).to have_content('Top Movies')
+          expect(page).to have_content('Search Results')
 
           within(first('.movie')) do
             expect(page).to have_css('.title')
@@ -58,7 +58,7 @@ RSpec.describe 'Movies page' do
         end
       end
 
-      describe 'I am shown search results even when' do 
+      describe 'I am shown search results even when' do
         it 'search terms include 2 words' do
           VCR.use_cassette('two_keyword_search') do
             visit discover_path
