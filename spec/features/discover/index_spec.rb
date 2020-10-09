@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Discover page' do
   describe 'As a authenticated user' do
-    before :each do 
+    before :each do
       @user = FactoryBot.create(:user)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
@@ -47,6 +47,14 @@ RSpec.describe 'Discover page' do
 
       expect(current_path).to eq(movies_path)
       expect(page).to have_content('Top Movies')
+    end
+  end
+
+  describe 'As an unauthenticated user' do
+    it 'When manually type in /discover, I see an error or warning' do
+      visit discover_path
+
+      expect(page).to have_content("The page you were looking for doesn't exist.")
     end
   end
 end
