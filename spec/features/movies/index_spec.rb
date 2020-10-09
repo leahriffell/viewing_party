@@ -29,8 +29,11 @@ RSpec.describe 'Movies page' do
             expect(page).to have_css('.title')
             expect(page).to have_css('.vote_avg')
             VCR.use_cassette('show_movie_details') do
-              #NOTE: I think this error may be because 'Casino' does not appear on top movies page?
+
               page.find('.title').click
+              rescue Selenium::WebDriver::Error::StaleElementReferenceError 
+                sleep 1
+              retry
               expect(page).to have_button('Create Viewing Party for Movie')
             end
           end
@@ -38,10 +41,12 @@ RSpec.describe 'Movies page' do
       end
     end
 
-    describe 'when I searched by keyword' do
+    describe 'when I search by keyword' do
       it 'I can see information about each movie and link to show page' do
-        VCR.use_cassette('single_keyword_search') do
-          visit movies_path
+        VCR.use_cassette('single_keyword_search', allow_playback_repeats: true) do
+          visit discover_path
+          fill_in :keyword_search, with: 'dog'
+          click_button('Find Movies')
 
           expect(current_path).to eq(movies_path)
           expect(page).to have_content('Search Results')
@@ -51,7 +56,9 @@ RSpec.describe 'Movies page' do
             expect(page).to have_css('.vote_avg')
             page.find('.title').click
             VCR.use_cassette('show_movie_details') do
-              save_and_open_page
+              rescue Selenium::WebDriver::Error::StaleElementReferenceError 
+                sleep 1
+              retry
               expect(page).to have_button('Create Viewing Party for Movie')
             end
           end

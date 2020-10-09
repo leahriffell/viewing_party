@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    response = conn.get("3/movie/524?api_key=#{movies_api_key}")
+    response = conn.get("3/movie/#{params[:id]}?api_key=#{movies_api_key}")
     @movie = JSON.parse(response.body, symbolize_names: true)
   end
 

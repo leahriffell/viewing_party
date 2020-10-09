@@ -4,6 +4,22 @@
   <h1>Search Results</h1>
 <% end %>
 
+
+<%= button_to 'Find Top Rated Movies', movies_path, method: :get, params: {top_40: true} %>
+
+<h3>OR</h3>
+
+<%= form_with url: movies_path, local: true, method: :get do |f| %>
+  <%= f.label :keyword_search  %>
+  <%= f.text_field :keyword_search, :placeholder => 'Search by movie title', required: true %>
+
+  <%= f.submit 'Find Movies' %>
+<% end %>
+
+
+
+
+
 <% @movies1.each do |movie| %>
   <div class='movie'>
     <%= link_to "#{movie[:title]}", movie_show_path(movie[:id]), class: 'title' %><br>
