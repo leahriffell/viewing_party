@@ -9,6 +9,11 @@ class MoviesController < ApplicationController
     end
   end
 
+  def show
+    response = conn.get("3/movie/524?api_key=#{movies_api_key}")
+    @movie = JSON.parse(response.body, symbolize_names: true)
+  end
+
   def fetch_movies(request_type)
     if request_type == 'top'
       response1 = top_movies_endpoint(1)
