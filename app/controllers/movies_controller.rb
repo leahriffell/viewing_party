@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+  before_action :require_user
+
   def index
     if params[:top_40] || !params[:top_40] && !params[:keyword_search]
       fetch_movies('top')
