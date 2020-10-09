@@ -8,30 +8,37 @@ RSpec.describe 'Discover page' do
     end
 
     it 'when I click button to find top movies, I am redirected to movies page' do
-      visit discover_path
+      VCR.use_cassette('top_movies') do
+        visit discover_path
 
-      click_button('Find Top Rated Movies')
-      expect(current_path).to eq(movies_path)
-      expect(page).to have_content('Top Movies')
+        click_button('Find Top Rated Movies')
+
+        expect(current_path).to eq(movies_path)
+        expect(page).to have_content('Top Movies')
+      end
     end
 
     it "when I input 1 search keyword and click 'Find Movies', I am redirected to search result page" do
-      visit discover_path
+      VCR.use_cassette('single_keyword_search') do
+        visit discover_path
 
-      fill_in :keyword_search, with: 'dogs'
-      click_button('Find Movies')
-      expect(current_path).to eq(movies_path)
-      expect(page).to have_content('Search Results')
+        fill_in :keyword_search, with: 'dogs'
+        click_button('Find Movies')
+        expect(current_path).to eq(movies_path)
+        expect(page).to have_content('Search Results')
+      end
     end
 
     it "when I input 2 search keyword(s) and click 'Find Movies', I am redirected to search result page" do
-      visit discover_path
+      VCR.use_cassette('two_keyword_search') do
+        visit discover_path
 
-      fill_in :keyword_search, with: 'toy story'
-      click_button('Find Movies')
+        fill_in :keyword_search, with: 'toy story'
+        click_button('Find Movies')
 
-      expect(current_path).to eq(movies_path)
-      expect(page).to have_content('Search Results')
+        expect(current_path).to eq(movies_path)
+        expect(page).to have_content('Search Results')
+      end
     end
 
     it "when I click 'Find Movies' without entering any keyword(s) I am not redirected to search result page" do
@@ -43,10 +50,13 @@ RSpec.describe 'Discover page' do
     end
 
     it "when I type movies_path in browser, I am shown the top movies" do
-      visit movies_path
+      VCR.use_cassette('top_movies') do
 
-      expect(current_path).to eq(movies_path)
-      expect(page).to have_content('Top Movies')
+        visit movies_path
+
+        expect(current_path).to eq(movies_path)
+        expect(page).to have_content('Top Movies')
+      end
     end
   end
 
