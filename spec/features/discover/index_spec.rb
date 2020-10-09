@@ -7,7 +7,7 @@ RSpec.describe 'Discover page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
     end
 
-    it 'when I click button to find top movies, I am redirected to movies page' do
+    it 'when I click button to find top movies, I am redirected to movies page with top movies' do
       VCR.use_cassette('top_movies') do
         visit discover_path
 
@@ -18,7 +18,7 @@ RSpec.describe 'Discover page' do
       end
     end
 
-    it "when I input 1 search keyword and click 'Find Movies', I am redirected to search result page" do
+    it "when I input 1 search keyword and click 'Find Movies', I am redirected to movies page with search results" do
       VCR.use_cassette('single_keyword_search') do
         visit discover_path
 
@@ -29,7 +29,7 @@ RSpec.describe 'Discover page' do
       end
     end
 
-    it "when I input 2 search keyword(s) and click 'Find Movies', I am redirected to search result page" do
+    it "when I input 2 search keyword(s) and click 'Find Movies', I am redirected to movies page with search results" do
       VCR.use_cassette('two_keyword_search') do
         visit discover_path
 
@@ -41,7 +41,7 @@ RSpec.describe 'Discover page' do
       end
     end
 
-    it "when I click 'Find Movies' without entering any keyword(s) I am not redirected to search result page" do
+    it "when I click 'Find Movies' without entering any keyword(s) I am not redirected to movie page with search results" do
       visit discover_path
 
       click_button('Find Movies')
@@ -49,7 +49,7 @@ RSpec.describe 'Discover page' do
       expect(current_path).to eq(discover_path)
     end
 
-    it "when I type movies_path in browser, I am shown the top movies" do
+    it "when I type movies_path in browser, I am shown the movies page with top movies" do
       VCR.use_cassette('top_movies') do
 
         visit movies_path
