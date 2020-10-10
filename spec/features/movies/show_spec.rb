@@ -26,15 +26,23 @@ RSpec.describe 'Movies detail page' do
     it 'I see the movies title' do
       VCR.use_cassette('show_movie_details') do
         visit(movie_show_path('524'))
-        expect(page).to have_content('Casino')
+        within '#title' do
+          expect(page).to have_content('Casino')
+        end
       end
     end
 
-    xit 'I see the movies vote average' do
-
+# should these be dynamic here? @movie[:vote_average]
+    it 'I see the movies user score' do
+      VCR.use_cassette('show_movie_details') do
+        visit(movie_show_path('524'))
+        within '#user-score' do
+          expect(page).to have_content('8.0')
+        end
+      end
     end
 
-    xit 'I see the movies runtime in hours and minutes' do
+    it 'I see the movies runtime in hours and minutes' do
       VCR.use_cassette('show_movie_details') do
         visit(movie_show_path('524'))
         within '#runtime' do
