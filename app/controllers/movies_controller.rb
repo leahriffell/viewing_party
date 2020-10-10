@@ -61,7 +61,7 @@ class MoviesController < ApplicationController
   end
 
   def keyword_search_endpoint(page_num)
-    conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&query=#{params[:keyword_search]}&#{exclude_adult}&page=#{page_num}")
+    conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&#{exclude_adult}&page=#{page_num}&query=#{params[:keyword_search]}")
   end
 
   def movie_show_endpoint

@@ -24,8 +24,6 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
-      Date:
-      - Sat, 10 Oct 2020 05:44:51 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -35,8 +33,6 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=21600
       X-Memc:
       - HIT
       X-Memc-Key:
@@ -45,27 +41,31 @@ http_interactions:
       - '14007'
       X-Memc-Expires:
       - '7593'
-      Etag:
-      - W/"f32827111ed58e7a4bf09978f16ca1ce"
       Last-Modified:
       - Sat, 10 Oct 2020 05:44:51 GMT
+      Date:
+      - Sat, 10 Oct 2020 13:39:44 GMT
+      Cache-Control:
+      - public, max-age=21600
+      Etag:
+      - W/"f32827111ed58e7a4bf09978f16ca1ce"
       Vary:
       - Accept-Encoding
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 0f653303bc95b26f01daff2926667902.cloudfront.net (CloudFront)
+      - 1.1 6d9f09528e589f3fa7ca05f965ea37a2.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - LIueYFv5eIVeN_qGeqVIWl7RF3qd2eQNN6in5z09qEA948VcsSy1_Q==
+      - jcZ5HF2NDqOz3z-75Ve1rcgbUxmz25edcOfleTZhzj5lQW_6ERZo1g==
       Age:
-      - '164'
+      - '1891'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvcExSMk8zZG1BOXhrQ2lQQTI2VTdFckNVWVNpLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0Ijo1MjAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6ODAsIm5hbWUiOiJDcmltZSJ9XSwiaG9tZXBhZ2UiOiIiLCJpZCI6NTI0LCJpbWRiX2lkIjoidHQwMTEyNjQxIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQ2FzaW5vIiwib3ZlcnZpZXciOiJJbiBlYXJseS0xOTcwcyBMYXMgVmVnYXMsIGxvdy1sZXZlbCBtb2JzdGVyIFNhbSBcIkFjZVwiIFJvdGhzdGVpbiBnZXRzIHRhcHBlZCBieSBoaXMgYm9zc2VzIHRvIGhlYWQgdGhlIFRhbmdpZXJzIENhc2luby4gQXQgZmlyc3QsIGhlJ3MgYSBncmVhdCBzdWNjZXNzIGluIHRoZSBqb2IsIGJ1dCBvdmVyIHRoZSB5ZWFycywgcHJvYmxlbXMgd2l0aCBoaXMgbG9vc2UtY2Fubm9uIGVuZm9yY2VyIE5pY2t5IFNhbnRvcm8sIGhpcyBleC1odXN0bGVyIHdpZmUgR2luZ2VyLCBoZXIgY29uLWFydGlzdCBleCBMZXN0ZXIgRGlhbW9uZCBhbmQgYSBoYW5kZnVsIG9mIGNvcnJ1cHQgcG9saXRpY2lhbnMgcHV0IFNhbSBpbiBldmVyLWluY3JlYXNpbmcgZGFuZ2VyLiIsInBvcHVsYXJpdHkiOjIwLjQwOSwicG9zdGVyX3BhdGgiOiIvNFRTNU8xSVA0MmJZMkJ2Z014TDE1NkVFTnkuanBnIiwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7ImlkIjozMywibG9nb19wYXRoIjoiLzhsdkh5aGpyOG9VS09PeTJkS1hvQUxXS2RwMC5wbmciLCJuYW1lIjoiVW5pdmVyc2FsIFBpY3R1cmVzIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjExNTgzLCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJTeWFsaXMgREEiLCJvcmlnaW5fY291bnRyeSI6IiJ9LHsiaWQiOjEwODk4LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJMw6lnZW5kZSBFbnRyZXByaXNlcyIsIm9yaWdpbl9jb3VudHJ5IjoiIn0seyJpZCI6MTE1ODQsImxvZ29fcGF0aCI6bnVsbCwibmFtZSI6IkRlIEZpbmEtQ2FwcGEiLCJvcmlnaW5fY291bnRyeSI6IiJ9XSwicHJvZHVjdGlvbl9jb3VudHJpZXMiOlt7Imlzb18zMTY2XzEiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSx7Imlzb18zMTY2XzEiOiJVUyIsIm5hbWUiOiJVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EifV0sInJlbGVhc2VfZGF0ZSI6IjE5OTUtMTEtMjIiLCJyZXZlbnVlIjoxMTYxMTIzNzUsInJ1bnRpbWUiOjE3OSwic3Bva2VuX2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZW4iLCJuYW1lIjoiRW5nbGlzaCJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiTm8gb25lIHN0YXlzIGF0IHRoZSB0b3AgZm9yZXZlci4iLCJ0aXRsZSI6IkNhc2lubyIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjAsInZvdGVfY291bnQiOjM0Nzh9
-  recorded_at: Sat, 10 Oct 2020 05:47:35 GMT
+  recorded_at: Sat, 10 Oct 2020 14:11:15 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/524/credits?api_key=MOVIES_SECRET_KEY
@@ -90,8 +90,6 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
-      Date:
-      - Sat, 10 Oct 2020 05:01:32 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -101,8 +99,6 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=21600
       X-Memc:
       - HIT
       X-Memc-Key:
@@ -111,22 +107,26 @@ http_interactions:
       - '5965'
       X-Memc-Expires:
       - '15635'
-      Etag:
-      - W/"6a82c4fa9216fa38414648eda97bde85"
       Last-Modified:
       - Sat, 10 Oct 2020 05:01:32 GMT
+      Date:
+      - Sat, 10 Oct 2020 13:39:45 GMT
+      Cache-Control:
+      - public, max-age=21600
+      Etag:
+      - W/"6a82c4fa9216fa38414648eda97bde85"
       Vary:
       - Accept-Encoding
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 c55bfc9d9a95cdee8e23989feddaa4b3.cloudfront.net (CloudFront)
+      - 1.1 48a6ccbb0ddb052ab512a3422295bd39.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - BTTjULZJHql2Z9p-gSO8Wk3pg4_Xrjpl1aTU0_Ps5qC6cYLunnosgQ==
+      - q4IkW3GltkUqRHtTL4lVNzB5QgEtmCjYkRHHdXycwwPDQHvZXm2lzQ==
       Age:
-      - '2763'
+      - '1891'
     body:
       encoding: ASCII-8BIT
       string: '{"id":524,"cast":[{"cast_id":4,"character":"Sam ''Ace'' Rothstein","credit_id":"52fe424dc3a36847f80139d1","gender":2,"id":380,"name":"Robert
@@ -333,5 +333,5 @@ http_interactions:
         Advisor","name":"Frank Cullotta","profile_path":null},{"credit_id":"5cf98f169251413534baefd7","department":"Crew","gender":2,"id":2504523,"job":"Stunt
         Double","name":"Eddie Matthews","profile_path":null},{"credit_id":"5ea15fd6ea37e0001e2858b3","department":"Sound","gender":2,"id":2612131,"job":"Music","name":"Roy
         Hawkins","profile_path":"/jAImQCksayIzSnRedm0IYmpBWYp.jpg"}]}'
-  recorded_at: Sat, 10 Oct 2020 05:47:35 GMT
+  recorded_at: Sat, 10 Oct 2020 14:11:16 GMT
 recorded_with: VCR 6.0.0
