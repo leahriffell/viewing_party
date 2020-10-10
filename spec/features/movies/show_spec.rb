@@ -13,5 +13,20 @@ RSpec.describe 'Movies detail page' do
         expect(page).to have_content('Casino')
       end
     end
+
+    it 'I see a button to create a viewing party' do
+      VCR.use_cassette('show_movie_details') do
+        visit(movie_show_path('524'))
+        expect(page).to have_button('Create Viewing Party')
+      end
+    end
+
+    it 'When I click create a viewing party, I am taken to the new event page' do
+      VCR.use_cassette('show_movie_details') do
+        visit(movie_show_path('524'))
+        click_button('Create Viewing Party')
+        expect(current_path).to eq(party_create_path)
+      end
+    end
   end
 end

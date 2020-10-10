@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    require "pry"; binding.pry
-    render file: "/public/404" unless current_user
+    render file: '/public/404' unless current_user
   end
 end
