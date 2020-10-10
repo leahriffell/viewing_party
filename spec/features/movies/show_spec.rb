@@ -25,7 +25,7 @@ RSpec.describe 'Movies detail page' do
       VCR.use_cassette('show_movie_details') do
         visit(movie_show_path('524'))
         click_button('Create Viewing Party')
-        expect(current_path).to eq(party_create_path)
+        expect(current_path).to eq(new_party_path)
       end
     end
   end
