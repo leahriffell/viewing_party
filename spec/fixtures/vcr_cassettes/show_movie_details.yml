@@ -54,18 +54,18 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 6d9f09528e589f3fa7ca05f965ea37a2.cloudfront.net (CloudFront)
+      - 1.1 ce4b35590464ed34415a13badd946ebb.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - jcZ5HF2NDqOz3z-75Ve1rcgbUxmz25edcOfleTZhzj5lQW_6ERZo1g==
+      - 7x9AbOcwVRW_vQozIxDq54MMqCPuRPiQ0UqbrM1jR6nERWSkHfHqyQ==
       Age:
-      - '1891'
+      - '15075'
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvcExSMk8zZG1BOXhrQ2lQQTI2VTdFckNVWVNpLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0Ijo1MjAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6ODAsIm5hbWUiOiJDcmltZSJ9XSwiaG9tZXBhZ2UiOiIiLCJpZCI6NTI0LCJpbWRiX2lkIjoidHQwMTEyNjQxIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQ2FzaW5vIiwib3ZlcnZpZXciOiJJbiBlYXJseS0xOTcwcyBMYXMgVmVnYXMsIGxvdy1sZXZlbCBtb2JzdGVyIFNhbSBcIkFjZVwiIFJvdGhzdGVpbiBnZXRzIHRhcHBlZCBieSBoaXMgYm9zc2VzIHRvIGhlYWQgdGhlIFRhbmdpZXJzIENhc2luby4gQXQgZmlyc3QsIGhlJ3MgYSBncmVhdCBzdWNjZXNzIGluIHRoZSBqb2IsIGJ1dCBvdmVyIHRoZSB5ZWFycywgcHJvYmxlbXMgd2l0aCBoaXMgbG9vc2UtY2Fubm9uIGVuZm9yY2VyIE5pY2t5IFNhbnRvcm8sIGhpcyBleC1odXN0bGVyIHdpZmUgR2luZ2VyLCBoZXIgY29uLWFydGlzdCBleCBMZXN0ZXIgRGlhbW9uZCBhbmQgYSBoYW5kZnVsIG9mIGNvcnJ1cHQgcG9saXRpY2lhbnMgcHV0IFNhbSBpbiBldmVyLWluY3JlYXNpbmcgZGFuZ2VyLiIsInBvcHVsYXJpdHkiOjIwLjQwOSwicG9zdGVyX3BhdGgiOiIvNFRTNU8xSVA0MmJZMkJ2Z014TDE1NkVFTnkuanBnIiwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7ImlkIjozMywibG9nb19wYXRoIjoiLzhsdkh5aGpyOG9VS09PeTJkS1hvQUxXS2RwMC5wbmciLCJuYW1lIjoiVW5pdmVyc2FsIFBpY3R1cmVzIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjExNTgzLCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJTeWFsaXMgREEiLCJvcmlnaW5fY291bnRyeSI6IiJ9LHsiaWQiOjEwODk4LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJMw6lnZW5kZSBFbnRyZXByaXNlcyIsIm9yaWdpbl9jb3VudHJ5IjoiIn0seyJpZCI6MTE1ODQsImxvZ29fcGF0aCI6bnVsbCwibmFtZSI6IkRlIEZpbmEtQ2FwcGEiLCJvcmlnaW5fY291bnRyeSI6IiJ9XSwicHJvZHVjdGlvbl9jb3VudHJpZXMiOlt7Imlzb18zMTY2XzEiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSx7Imlzb18zMTY2XzEiOiJVUyIsIm5hbWUiOiJVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EifV0sInJlbGVhc2VfZGF0ZSI6IjE5OTUtMTEtMjIiLCJyZXZlbnVlIjoxMTYxMTIzNzUsInJ1bnRpbWUiOjE3OSwic3Bva2VuX2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZW4iLCJuYW1lIjoiRW5nbGlzaCJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiTm8gb25lIHN0YXlzIGF0IHRoZSB0b3AgZm9yZXZlci4iLCJ0aXRsZSI6IkNhc2lubyIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjAsInZvdGVfY291bnQiOjM0Nzh9
-  recorded_at: Sat, 10 Oct 2020 14:11:15 GMT
+  recorded_at: Sat, 10 Oct 2020 17:50:59 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/524/credits?api_key=MOVIES_SECRET_KEY
@@ -120,13 +120,13 @@ http_interactions:
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 48a6ccbb0ddb052ab512a3422295bd39.cloudfront.net (CloudFront)
+      - 1.1 1e5c934b70471a41d2b61ae8c4abeb79.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - q4IkW3GltkUqRHtTL4lVNzB5QgEtmCjYkRHHdXycwwPDQHvZXm2lzQ==
+      - yOmDv3fNQbrSBzSyRbb9iXJJKP1OiGHVFVbkVwtqavFFFKcAzm_p-g==
       Age:
-      - '1891'
+      - '15074'
     body:
       encoding: ASCII-8BIT
       string: '{"id":524,"cast":[{"cast_id":4,"character":"Sam ''Ace'' Rothstein","credit_id":"52fe424dc3a36847f80139d1","gender":2,"id":380,"name":"Robert
@@ -333,5 +333,70 @@ http_interactions:
         Advisor","name":"Frank Cullotta","profile_path":null},{"credit_id":"5cf98f169251413534baefd7","department":"Crew","gender":2,"id":2504523,"job":"Stunt
         Double","name":"Eddie Matthews","profile_path":null},{"credit_id":"5ea15fd6ea37e0001e2858b3","department":"Sound","gender":2,"id":2612131,"job":"Music","name":"Roy
         Hawkins","profile_path":"/jAImQCksayIzSnRedm0IYmpBWYp.jpg"}]}'
-  recorded_at: Sat, 10 Oct 2020 14:11:16 GMT
+  recorded_at: Sat, 10 Oct 2020 17:50:59 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/524/reviews?api_key=MOVIES_SECRET_KEY&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 10 Oct 2020 23:06:34 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - 96b45fb9e728eaf575012155f6092aaa
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '21600'
+      Last-Modified:
+      - '2020-10-10 02:39:18 +0000'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 0f653303bc95b26f01daff2926667902.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - Q8IpLHzgRlkLLp9h3H8Fy49EjBVZkJTLv3stefSXs1xCuN4OU2p6bg==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":524,"page":1,"results":[{"author":"Kris_12","content":"Sharon
+        Stone and Robert De Niro were amazing! Robert De Niro is my favorite actor!
+        How he was talking about <a href=\"http://www.arrabitah.org/\">pokerstar bonus
+        code</a> and smile at that moment! He was perfect. Now, it is one of my favorite
+        movies. You have to see it!\r\nYou will not regret it. I promise","id":"5c51b825c3a368756484b8b4","url":"https://www.themoviedb.org/review/5c51b825c3a368756484b8b4"}],"total_pages":1,"total_results":1}'
+  recorded_at: Sat, 10 Oct 2020 23:06:34 GMT
 recorded_with: VCR 6.0.0
