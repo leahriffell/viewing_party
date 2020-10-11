@@ -8,22 +8,16 @@ class PartiesController < ApplicationController
   end
 
   def create
-    if Movie.exists?(party_params[:movie_id])
-      movie = Movie.find(party_params[:movie_id])
-    else
-      movie = Movie.create(id: party_params[:movie_id], title: params[:party][:movie_title])
-    end
+    movie = set_movie(party_params[:movie_id], params[:party][:movie_title])
     party = Party.create(party_params)
     if party.save
-      party.party_users.create(user_id: current_user.id, attendee_type: 0)
-      redirect_to dashboard_path
-    else 
-      flash[:error] = party.errors.full_messages.to_sentence
-      redirect_to new_party_path(movie_id: movie.id)
+      valid_party(party)
+    else
+      invalid_party(party, movie.id)
     end
   end
 
-  private 
+  private
 
   def party_params
     params.require(:party).permit(:duration, :party_date, :start_time, :movie_id)
@@ -35,5 +29,23 @@ class PartiesController < ApplicationController
 
   def movies_api_key
     ENV['MOVIES_API_KEY']
+  end
+
+  def valid_party(party)
+    party.party_users.create(user_id: current_user.id, attendee_type: 0)
+    redirect_to dashboard_path
+  end
+
+  def invalid_party(party, movie_id)
+    flash[:error] = party.errors.full_messages.to_sentence
+    redirect_to new_party_path(movie_id: movie_id)
+  end
+
+  def set_movie(movie_id, title)
+    if Movie.exists?(movie_id)
+      Movie.find(movie_id)
+    else
+      Movie.create(id: movie_id, title: title)
+    end
   end
 end
