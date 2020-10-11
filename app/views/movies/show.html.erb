@@ -8,9 +8,21 @@
   <div id="overview"><p><%= @movie[:overview] %></p></div>
 
 <h4>Cast</h4>
-<ol>
-  <% @movie_object.first_10_cast(@movie_cast).each do |actor_name| %>
-    <div id="<%= actor_name %>"><li><%= actor_name %></li>
-  <% end %>
-</ol>
+<section id="cast">
+  <ol>
+    <% @movie_object.first_10_cast(@movie_cast).each do |actor_name| %>
+      <div id="<%= actor_name %>"><li><%= actor_name %></li>
+    <% end %>
+  </ol>
+</section>
+
+<h4>Reviews</h4>
+<section id="reviews">
+  <p>Number of Reviews: <%= @movie_object.review_count(@movie_review[:results]) %></p>
+  <ol>
+    <% @movie_object.display_reviews(@movie_review[:results]).each do |review| %>
+      <li><%= simple_format(review) %></li>
+    <% end %>
+  </ol>
+</section>
 <%= button_to 'Create Viewing Party', "/parties/new", method: :get %>
