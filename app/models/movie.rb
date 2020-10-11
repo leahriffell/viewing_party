@@ -24,8 +24,18 @@ class Movie < ApplicationRecord
   end
 
   def first_10_cast(cast)
-    actors = cast[:cast][0..9].map do |cast|
-      cast[:name]
+    cast[:cast][0..9].map do |cast|
+      "#{cast[:name]} as #{cast[:character]}"
+    end
+  end
+
+  def review_count(reviews)
+    reviews.count
+  end
+
+  def display_reviews(review_array)
+    reviews = review_array.map do |review|
+      "Author: #{review[:author]}\n\nURL: #{review[:url]}\n\nReview: #{review[:content]}"
     end
   end
 end
