@@ -136,4 +136,198 @@ http_interactions:
         Films","origin_country":""}],"production_countries":[],"release_date":"2020-03-17","revenue":0,"runtime":75,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"","title":"Alien
         Contact: The Pascagoula UFO Encounter","video":false,"vote_average":10.0,"vote_count":1}'
   recorded_at: Sun, 11 Oct 2020 22:33:01 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/752218?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 11 Oct 2020 17:54:34 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 6ddf2de46969e2533d1f69af8fff4be9
+      X-Memc-Age:
+      - '3932'
+      X-Memc-Expires:
+      - '17668'
+      Etag:
+      - W/"7a10e559a921344e7b622f941b563788"
+      Last-Modified:
+      - Sun, 11 Oct 2020 17:54:34 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 9204cf44179493ed42c678800a26918b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - GHQBxh-itFPlBvXtR78-vxVpbx8Z_6bOvGLe7MCyFEF0gDWRSKkQrw==
+      Age:
+      - '18088'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOm51bGwsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjowLCJnZW5yZXMiOltdLCJob21lcGFnZSI6IiIsImlkIjo3NTIyMTgsImltZGJfaWQiOiJ0dDE5NzkyMjIiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJFbCBndWFyZGF2w61hcyIsIm92ZXJ2aWV3IjoiUGFibG8gcmV0dXJucyB0byBoaXMgaG9tZSB2aWxsYWdlIHRvIGNvbmZyb250IGhpcyBmZWFycyIsInBvcHVsYXJpdHkiOjAuMCwicG9zdGVyX3BhdGgiOm51bGwsInByb2R1Y3Rpb25fY29tcGFuaWVzIjpbXSwicHJvZHVjdGlvbl9jb3VudHJpZXMiOltdLCJyZWxlYXNlX2RhdGUiOiIiLCJyZXZlbnVlIjowLCJydW50aW1lIjowLCJzcG9rZW5fbGFuZ3VhZ2VzIjpbXSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiIiwidGl0bGUiOiJFbCBndWFyZGF2w61hcyIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjoxMC4wLCJ2b3RlX2NvdW50IjoxfQ==
+  recorded_at: Sun, 11 Oct 2020 22:56:02 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/524?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 11 Oct 2020 22:56:04 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - be38a5fddc0a72fc19f37da65cb3a087
+      X-Memc-Age:
+      - '21040'
+      X-Memc-Expires:
+      - '560'
+      Etag:
+      - W/"181e35643888ef2323f10102987b16c5"
+      Last-Modified:
+      - Sun, 11 Oct 2020 22:56:04 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 e7ff4a714a3b1f464db9c76ee954a565.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - q66iLTVC7Gp8FTRFZyzqYP7B66qIZnCiTBx441e2TdbYZtQR_0yQqA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvcExSMk8zZG1BOXhrQ2lQQTI2VTdFckNVWVNpLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0Ijo1MjAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6ODAsIm5hbWUiOiJDcmltZSJ9XSwiaG9tZXBhZ2UiOiIiLCJpZCI6NTI0LCJpbWRiX2lkIjoidHQwMTEyNjQxIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQ2FzaW5vIiwib3ZlcnZpZXciOiJJbiBlYXJseS0xOTcwcyBMYXMgVmVnYXMsIGxvdy1sZXZlbCBtb2JzdGVyIFNhbSBcIkFjZVwiIFJvdGhzdGVpbiBnZXRzIHRhcHBlZCBieSBoaXMgYm9zc2VzIHRvIGhlYWQgdGhlIFRhbmdpZXJzIENhc2luby4gQXQgZmlyc3QsIGhlJ3MgYSBncmVhdCBzdWNjZXNzIGluIHRoZSBqb2IsIGJ1dCBvdmVyIHRoZSB5ZWFycywgcHJvYmxlbXMgd2l0aCBoaXMgbG9vc2UtY2Fubm9uIGVuZm9yY2VyIE5pY2t5IFNhbnRvcm8sIGhpcyBleC1odXN0bGVyIHdpZmUgR2luZ2VyLCBoZXIgY29uLWFydGlzdCBleCBMZXN0ZXIgRGlhbW9uZCBhbmQgYSBoYW5kZnVsIG9mIGNvcnJ1cHQgcG9saXRpY2lhbnMgcHV0IFNhbSBpbiBldmVyLWluY3JlYXNpbmcgZGFuZ2VyLiIsInBvcHVsYXJpdHkiOjE5LjIxMiwicG9zdGVyX3BhdGgiOiIvNFRTNU8xSVA0MmJZMkJ2Z014TDE1NkVFTnkuanBnIiwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7ImlkIjozMywibG9nb19wYXRoIjoiLzhsdkh5aGpyOG9VS09PeTJkS1hvQUxXS2RwMC5wbmciLCJuYW1lIjoiVW5pdmVyc2FsIFBpY3R1cmVzIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjExNTgzLCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJTeWFsaXMgREEiLCJvcmlnaW5fY291bnRyeSI6IiJ9LHsiaWQiOjEwODk4LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJMw6lnZW5kZSBFbnRyZXByaXNlcyIsIm9yaWdpbl9jb3VudHJ5IjoiIn0seyJpZCI6MTE1ODQsImxvZ29fcGF0aCI6bnVsbCwibmFtZSI6IkRlIEZpbmEtQ2FwcGEiLCJvcmlnaW5fY291bnRyeSI6IiJ9XSwicHJvZHVjdGlvbl9jb3VudHJpZXMiOlt7Imlzb18zMTY2XzEiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSx7Imlzb18zMTY2XzEiOiJVUyIsIm5hbWUiOiJVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EifV0sInJlbGVhc2VfZGF0ZSI6IjE5OTUtMTEtMjIiLCJyZXZlbnVlIjoxMTYxMTIzNzUsInJ1bnRpbWUiOjE3OSwic3Bva2VuX2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZW4iLCJuYW1lIjoiRW5nbGlzaCJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiTm8gb25lIHN0YXlzIGF0IHRoZSB0b3AgZm9yZXZlci4iLCJ0aXRsZSI6IkNhc2lubyIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjAsInZvdGVfY291bnQiOjM0ODF9
+  recorded_at: Sun, 11 Oct 2020 22:56:04 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/524?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 11 Oct 2020 22:56:04 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - be38a5fddc0a72fc19f37da65cb3a087
+      X-Memc-Age:
+      - '21040'
+      X-Memc-Expires:
+      - '560'
+      Etag:
+      - W/"181e35643888ef2323f10102987b16c5"
+      Last-Modified:
+      - Sun, 11 Oct 2020 22:56:04 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 23d87d8c2ce38e34462e6c134d187eeb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - UT_-c0zBc_4PHoXGeZCBIQ4CqxLDg8HyOxdTCT7aGYDlmFo__QUALQ==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvcExSMk8zZG1BOXhrQ2lQQTI2VTdFckNVWVNpLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0Ijo1MjAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6ODAsIm5hbWUiOiJDcmltZSJ9XSwiaG9tZXBhZ2UiOiIiLCJpZCI6NTI0LCJpbWRiX2lkIjoidHQwMTEyNjQxIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQ2FzaW5vIiwib3ZlcnZpZXciOiJJbiBlYXJseS0xOTcwcyBMYXMgVmVnYXMsIGxvdy1sZXZlbCBtb2JzdGVyIFNhbSBcIkFjZVwiIFJvdGhzdGVpbiBnZXRzIHRhcHBlZCBieSBoaXMgYm9zc2VzIHRvIGhlYWQgdGhlIFRhbmdpZXJzIENhc2luby4gQXQgZmlyc3QsIGhlJ3MgYSBncmVhdCBzdWNjZXNzIGluIHRoZSBqb2IsIGJ1dCBvdmVyIHRoZSB5ZWFycywgcHJvYmxlbXMgd2l0aCBoaXMgbG9vc2UtY2Fubm9uIGVuZm9yY2VyIE5pY2t5IFNhbnRvcm8sIGhpcyBleC1odXN0bGVyIHdpZmUgR2luZ2VyLCBoZXIgY29uLWFydGlzdCBleCBMZXN0ZXIgRGlhbW9uZCBhbmQgYSBoYW5kZnVsIG9mIGNvcnJ1cHQgcG9saXRpY2lhbnMgcHV0IFNhbSBpbiBldmVyLWluY3JlYXNpbmcgZGFuZ2VyLiIsInBvcHVsYXJpdHkiOjE5LjIxMiwicG9zdGVyX3BhdGgiOiIvNFRTNU8xSVA0MmJZMkJ2Z014TDE1NkVFTnkuanBnIiwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7ImlkIjozMywibG9nb19wYXRoIjoiLzhsdkh5aGpyOG9VS09PeTJkS1hvQUxXS2RwMC5wbmciLCJuYW1lIjoiVW5pdmVyc2FsIFBpY3R1cmVzIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjExNTgzLCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJTeWFsaXMgREEiLCJvcmlnaW5fY291bnRyeSI6IiJ9LHsiaWQiOjEwODk4LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJMw6lnZW5kZSBFbnRyZXByaXNlcyIsIm9yaWdpbl9jb3VudHJ5IjoiIn0seyJpZCI6MTE1ODQsImxvZ29fcGF0aCI6bnVsbCwibmFtZSI6IkRlIEZpbmEtQ2FwcGEiLCJvcmlnaW5fY291bnRyeSI6IiJ9XSwicHJvZHVjdGlvbl9jb3VudHJpZXMiOlt7Imlzb18zMTY2XzEiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSx7Imlzb18zMTY2XzEiOiJVUyIsIm5hbWUiOiJVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EifV0sInJlbGVhc2VfZGF0ZSI6IjE5OTUtMTEtMjIiLCJyZXZlbnVlIjoxMTYxMTIzNzUsInJ1bnRpbWUiOjE3OSwic3Bva2VuX2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZW4iLCJuYW1lIjoiRW5nbGlzaCJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiTm8gb25lIHN0YXlzIGF0IHRoZSB0b3AgZm9yZXZlci4iLCJ0aXRsZSI6IkNhc2lubyIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjAsInZvdGVfY291bnQiOjM0ODF9
+  recorded_at: Sun, 11 Oct 2020 22:56:04 GMT
 recorded_with: VCR 6.0.0
