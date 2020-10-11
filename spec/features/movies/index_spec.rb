@@ -8,7 +8,6 @@ RSpec.describe 'Movies page' do
     end
 
     it 'when I type movies_path in browser, I am defaulted to being shown top movies' do
-      # I don't think this test is really testing anything unless we assert that it includes a certain title / ranking / etc.
       VCR.use_cassette('top_movies') do
         visit movies_path
 
@@ -54,12 +53,12 @@ RSpec.describe 'Movies page' do
             expect(page).to have_css('.title')
             expect(page).to have_css('.vote_avg')
             page.find('.title').click
-            # VCR.use_cassette('dog_search_first_movie_details', allow_playback_repeats: true) do
-            #   rescue Selenium::WebDriver::Error::StaleElementReferenceError 
-            #     sleep 1
-            #   retry
-            #   expect(page).to have_button('Create Viewing Party for Movie')
-            # end
+            VCR.use_cassette('dog_search_first_movie_details', allow_playback_repeats: true) do
+              rescue Selenium::WebDriver::Error::StaleElementReferenceError 
+                sleep 1
+              retry
+              expect(page).to have_button('Create Viewing Party for Movie')
+            end
           end
         end
       end
