@@ -69,16 +69,34 @@ RSpec.describe 'Movies detail page' do
       end
     end
 
-    xit 'I see a list of the first 10 cast members including their character and name' do
-
+    it 'I see a list of the first 10 cast members including their character and name' do
+      VCR.use_cassette('show_movie_details') do
+        visit(movie_show_path('524'))
+        within '#cast' do
+          expect(page).to have_content('Robert De Niro as Sam \'Ace\' Rothstein')
+        end
+      end
     end
 
-    xit 'I see a count of the total number of reviews' do
-
+    it 'I see a count of the total number of reviews' do
+      VCR.use_cassette('show_movie_details') do
+        visit(movie_show_path('524'))
+        within '#reviews' do
+          expect(page).to have_content('Number of Reviews:')
+          expect(page).to have_content(1)
+        end
+      end
     end
 
-    xit 'I see for the reviews, each authors name and their information' do
-
+    it 'I see for the reviews, each authors name and their information' do
+      VCR.use_cassette('show_movie_details') do
+        visit(movie_show_path('524'))
+        within '#reviews' do
+          expect(page).to have_content('Kris_12')
+          expect(page).to have_content('https://www.themoviedb.org/review/5c51b825c3a368756484b8b4')
+          expect(page).to have_content('Sharon Stone and Robert De Niro were amazing!')
+        end
+      end
     end
   end
 end
