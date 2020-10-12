@@ -7,7 +7,7 @@ RSpec.describe 'Create Viewing Party page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
 
       VCR.use_cassette('show_movie_details') do
-        visit movie_show_path('751702')
+        visit movie_path('751702')
         click_button('Create Viewing Party')
       end
     end
