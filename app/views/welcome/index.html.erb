@@ -1,15 +1,21 @@
 <h1>Welcome to Viewing Party!</h1>
-<h3>This app is an app that does appy stuff. We will fill in a mo betta description about what it does.</h3>
+<h2>Explore movies and create viewing parties to watch flix with your friends</h2>
 
+<h4>Search for a movie, click create party, add details, then invite friends!</h4>
 
-<%= form_tag login_path do %>
-  <%= label_tag :email %>
-  <%= email_field_tag :email %><br>
+<section class="login">
+  <% if !current_user %>
+    <h2>Log in:</h2>
+    <%= form_tag login_path do %>
+      <%= label_tag :email %>
+      <%= email_field_tag :email %><br>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %><br>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %><br>
 
-  <%= submit_tag 'Log In' %>
-<% end %>
-
-<%= link_to 'New to Viewing Party? Register Here', registration_path %>
+      <%= submit_tag 'Log In' %>
+    <% end %>
+  
+    <%= link_to 'New to Viewing Party? Register Here', registration_path %>
+  <% end %>
+</section>

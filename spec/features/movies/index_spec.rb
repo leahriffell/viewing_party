@@ -16,6 +16,28 @@ RSpec.describe 'Movies page' do
       end
     end
 
+    it 'when I click button to find top movies, I am redirected to movies page with top movies' do
+      VCR.use_cassette('top_movies') do
+        visit discover_path
+
+        click_button('Find Top Rated Movies')
+
+        expect(current_path).to eq(movies_path)
+        expect(page).to have_content('Top Movies')
+      end
+    end
+
+    it "when I input search keyword and click 'Find Movies', I am redirected to movies page with search results" do
+      VCR.use_cassette('single_keyword_search') do
+        visit discover_path
+
+        fill_in :keyword_search, with: 'dogs'
+        click_button('Find Movies')
+        expect(current_path).to eq(movies_path)
+        expect(page).to have_content('Search Results')
+      end
+    end
+
     describe 'when I searched for top movies' do
       it 'I can see information about each movie and link to show page' do
         VCR.use_cassette('top_movies') do
@@ -39,7 +61,7 @@ RSpec.describe 'Movies page' do
       end
     end
 
-    describe 'when I search by keyword' do
+    describe 'when I searched by keyword' do
       it 'I can see information about each movie and link to show page' do
         VCR.use_cassette('single_keyword_search', allow_playback_repeats: true) do
           visit discover_path

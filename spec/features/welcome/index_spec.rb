@@ -42,6 +42,23 @@ RSpec.describe 'Welcome page' do
     end
   end
 
+  describe 'As a logged in user' do
+    before :each do 
+      @user = FactoryBot.create(:user)
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    end
+
+    it 'I do not see log in form' do
+      visit root_path
+
+      expect(page).to_not have_content('Log in:')
+      expect(page).to_not have_field('Email')
+      expect(page).to_not have_field('Password')
+      expect(page).to_not have_button ('Log in')
+      expect(page).to_not have_link ('New to Viewing Party? Register Here')
+    end
+  end
+
   describe 'As a visitor' do 
     it 'can access the registration form' do 
       visit root_path
