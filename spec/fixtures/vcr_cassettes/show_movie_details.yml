@@ -1,0 +1,730 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/524?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 11 Oct 2020 22:56:04 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - be38a5fddc0a72fc19f37da65cb3a087
+      X-Memc-Age:
+      - '21040'
+      X-Memc-Expires:
+      - '560'
+      Etag:
+      - W/"181e35643888ef2323f10102987b16c5"
+      Last-Modified:
+      - Sun, 11 Oct 2020 22:56:04 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 d29afc70fc2fdadee440493854714224.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - rlnVvbcMUUZgIkr7L3u050mtIfoozOTQCNN2uRKFreopHwGf6zhyvw==
+      Age:
+      - '6097'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvcExSMk8zZG1BOXhrQ2lQQTI2VTdFckNVWVNpLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0Ijo1MjAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6ODAsIm5hbWUiOiJDcmltZSJ9XSwiaG9tZXBhZ2UiOiIiLCJpZCI6NTI0LCJpbWRiX2lkIjoidHQwMTEyNjQxIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQ2FzaW5vIiwib3ZlcnZpZXciOiJJbiBlYXJseS0xOTcwcyBMYXMgVmVnYXMsIGxvdy1sZXZlbCBtb2JzdGVyIFNhbSBcIkFjZVwiIFJvdGhzdGVpbiBnZXRzIHRhcHBlZCBieSBoaXMgYm9zc2VzIHRvIGhlYWQgdGhlIFRhbmdpZXJzIENhc2luby4gQXQgZmlyc3QsIGhlJ3MgYSBncmVhdCBzdWNjZXNzIGluIHRoZSBqb2IsIGJ1dCBvdmVyIHRoZSB5ZWFycywgcHJvYmxlbXMgd2l0aCBoaXMgbG9vc2UtY2Fubm9uIGVuZm9yY2VyIE5pY2t5IFNhbnRvcm8sIGhpcyBleC1odXN0bGVyIHdpZmUgR2luZ2VyLCBoZXIgY29uLWFydGlzdCBleCBMZXN0ZXIgRGlhbW9uZCBhbmQgYSBoYW5kZnVsIG9mIGNvcnJ1cHQgcG9saXRpY2lhbnMgcHV0IFNhbSBpbiBldmVyLWluY3JlYXNpbmcgZGFuZ2VyLiIsInBvcHVsYXJpdHkiOjE5LjIxMiwicG9zdGVyX3BhdGgiOiIvNFRTNU8xSVA0MmJZMkJ2Z014TDE1NkVFTnkuanBnIiwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7ImlkIjozMywibG9nb19wYXRoIjoiLzhsdkh5aGpyOG9VS09PeTJkS1hvQUxXS2RwMC5wbmciLCJuYW1lIjoiVW5pdmVyc2FsIFBpY3R1cmVzIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjExNTgzLCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJTeWFsaXMgREEiLCJvcmlnaW5fY291bnRyeSI6IiJ9LHsiaWQiOjEwODk4LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJMw6lnZW5kZSBFbnRyZXByaXNlcyIsIm9yaWdpbl9jb3VudHJ5IjoiIn0seyJpZCI6MTE1ODQsImxvZ29fcGF0aCI6bnVsbCwibmFtZSI6IkRlIEZpbmEtQ2FwcGEiLCJvcmlnaW5fY291bnRyeSI6IiJ9XSwicHJvZHVjdGlvbl9jb3VudHJpZXMiOlt7Imlzb18zMTY2XzEiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSx7Imlzb18zMTY2XzEiOiJVUyIsIm5hbWUiOiJVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EifV0sInJlbGVhc2VfZGF0ZSI6IjE5OTUtMTEtMjIiLCJyZXZlbnVlIjoxMTYxMTIzNzUsInJ1bnRpbWUiOjE3OSwic3Bva2VuX2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZW4iLCJuYW1lIjoiRW5nbGlzaCJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiTm8gb25lIHN0YXlzIGF0IHRoZSB0b3AgZm9yZXZlci4iLCJ0aXRsZSI6IkNhc2lubyIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjAsInZvdGVfY291bnQiOjM0ODF9
+  recorded_at: Mon, 12 Oct 2020 00:37:41 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/524/credits?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 12 Oct 2020 00:37:41 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 1596119ef185c387d28e72e03cb2b7f3
+      X-Memc-Age:
+      - '14084'
+      X-Memc-Expires:
+      - '7516'
+      Etag:
+      - W/"2db2674de6736905b4a69d3f33a768d1"
+      Last-Modified:
+      - Mon, 12 Oct 2020 00:37:41 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 045f1e1f031241f3808c557a2b5d6b0a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - bKtXVHTCwW_mU9UVwYqyB4cU-m865sc3MlH8zI2LZE3gCTLY-y4lxw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":524,"cast":[{"cast_id":4,"character":"Sam ''Ace'' Rothstein","credit_id":"52fe424dc3a36847f80139d1","gender":2,"id":380,"name":"Robert
+        De Niro","order":0,"profile_path":"/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"},{"cast_id":5,"character":"Ginger
+        McKenna","credit_id":"52fe424dc3a36847f80139d5","gender":1,"id":4430,"name":"Sharon
+        Stone","order":1,"profile_path":"/yICU0UWEZjWSZ9PnQRaerwn29tz.jpg"},{"cast_id":6,"character":"Nicky
+        Santoro","credit_id":"52fe424dc3a36847f80139d9","gender":2,"id":4517,"name":"Joe
+        Pesci","order":2,"profile_path":"/iX8b8KL8cezzxw1FnH978h9ob48.jpg"},{"cast_id":7,"character":"Lester
+        Diamond","credit_id":"52fe424dc3a36847f80139dd","gender":2,"id":4512,"name":"James
+        Woods","order":3,"profile_path":"/4dFkx2x1mBJs7haIkqs6nbY7wFU.jpg"},{"cast_id":11,"character":"Billy
+        Sherbert","credit_id":"52fe424dc3a36847f80139ed","gender":2,"id":7167,"name":"Don
+        Rickles","order":4,"profile_path":"/iJLQV4dcbTUgxlWJakjDldzlMXS.jpg"},{"cast_id":13,"character":"Andy
+        Stone","credit_id":"52fe424dc3a36847f80139f5","gender":2,"id":7169,"name":"Alan
+        King","order":5,"profile_path":"/wq3yjC2S2SMxjs4tAAuryJ91Hum.jpg"},{"cast_id":10,"character":"Phillip
+        Green","credit_id":"52fe424dc3a36847f80139e9","gender":2,"id":7166,"name":"Kevin
+        Pollak","order":6,"profile_path":"/jWhKIVtmc3vIoS2l1VsdNwMAMJB.jpg"},{"cast_id":9,"character":"Remo
+        Gaggi","credit_id":"52fe424dc3a36847f80139e5","gender":2,"id":7165,"name":"Pasquale
+        Cajano","order":7,"profile_path":"/yVVVGHe3FnXMBgNlmuA3tgF750u.jpg"},{"cast_id":27,"character":"Pat
+        Webb","credit_id":"53a2d500c3a368320a0013be","gender":2,"id":8262,"name":"L.Q.
+        Jones","order":8,"profile_path":"/vSGLFloekrgC8eIaqxCiKe7VW0u.jpg"},{"cast_id":28,"character":"Senator","credit_id":"53a2d529c3a36832020012f8","gender":2,"id":166789,"name":"Dick
+        Smothers","order":9,"profile_path":null},{"cast_id":8,"character":"Frank Marino","credit_id":"52fe424dc3a36847f80139e1","gender":2,"id":7164,"name":"Frank
+        Vincent","order":10,"profile_path":"/fa1gikNsPKvX1roWUo2bBmixnvp.jpg"},{"cast_id":20,"character":"Oscar
+        Goodman","credit_id":"52fe424dc3a36847f8013a1b","gender":2,"id":7424,"name":"Oscar
+        Goodman","order":11,"profile_path":null},{"cast_id":29,"character":"Charlie
+        Clark","credit_id":"53a2d5aec3a368443e000bca","gender":2,"id":18262,"name":"Richard
+        Riehle","order":12,"profile_path":"/dLVsIz74rTpNRgwFm8znMOVgWNI.jpg"},{"cast_id":31,"character":"Piscano''s
+        Mother","credit_id":"53a2d80cc3a368443e000c04","gender":1,"id":11483,"name":"Catherine
+        Scorsese","order":14,"profile_path":"/iBQ9Rc44BsDCZgcgh4l4wSMge0F.jpg"},{"cast_id":12,"character":"Artie
+        Piscano","credit_id":"52fe424dc3a36847f80139f1","gender":2,"id":7168,"name":"Vinny
+        Vella","order":15,"profile_path":"/uk0lXfw6RuffrSg4VUULP1lte5F.jpg"},{"cast_id":21,"character":"Ichikawa","credit_id":"52fe424dc3a36847f8013a1f","gender":0,"id":7425,"name":"Nobu
+        Matsuhisa","order":16,"profile_path":"/rOfkaDIBE0Al07AOgi5UTXjHen9.jpg"},{"cast_id":19,"character":"Amy","credit_id":"52fe424dc3a36847f8013a17","gender":1,"id":7423,"name":"Erika
+        von Tagen","order":17,"profile_path":"/cnfYAFCcwFydNcmzSi90fZMm81o.jpg"},{"cast_id":22,"character":"Black
+        Jack-Groupier","credit_id":"52fe424dc3a36847f8013a23","gender":0,"id":7444,"name":"Nick
+        Mazzola","order":18,"profile_path":null},{"cast_id":32,"character":"David","credit_id":"56aa347ac3a36872cd00724d","gender":0,"id":107020,"name":"David
+        Rose","order":19,"profile_path":"/ywVlHuF7oiFBWRfFN1CTSNk25ix.jpg"},{"cast_id":33,"character":"Don
+        Ward","credit_id":"5865391bc3a36852c0022729","gender":2,"id":99906,"name":"John
+        Bloom","order":20,"profile_path":"/cku3Uat7AXQIK7CZ1ILUx53G5Ad.jpg"},{"cast_id":34,"character":"Vincent
+        Borelli","credit_id":"59c2ea0ec3a3681461001373","gender":2,"id":13605,"name":"Joseph
+        Rigano","order":21,"profile_path":null},{"cast_id":35,"character":"Dominick
+        Santoro","credit_id":"59c2ea679251415b2800165a","gender":2,"id":14332,"name":"Philip
+        Suriano","order":22,"profile_path":"/dUuTfqN4L4Cz0vQtxprzDVtpZRS.jpg"},{"cast_id":36,"character":"Jennifer
+        Santoro","credit_id":"59c2eaa69251415b24001766","gender":0,"id":105623,"name":"Melissa
+        Prophet","order":23,"profile_path":"/sBHstIj9AHHF6PvQmhT2J8Vgh0k.jpg"},{"cast_id":37,"character":"John
+        Nance","credit_id":"59c2eaf39251415b32001680","gender":0,"id":1574239,"name":"Bill
+        Allison","order":24,"profile_path":"/xhe1MWVdaHygnXI4M3HVEwJhGIs.jpg"},{"cast_id":38,"character":"Signaller","credit_id":"59c2eb32c3a3681461001475","gender":0,"id":96901,"name":"Joe
+        La Due","order":25,"profile_path":"/mUKJsrGyPIFrP8nVTDDVRUAU6em.jpg"},{"cast_id":39,"character":"Winner","credit_id":"59c2eb7ac3a36813a90016fb","gender":2,"id":7531,"name":"Joseph
+        P. Reidy","order":26,"profile_path":null},{"cast_id":40,"character":"Cowboy","credit_id":"59c2ebcfc3a36813a9001789","gender":0,"id":1738942,"name":"Craig
+        Vincent","order":27,"profile_path":"/jmFrhzRzn3ikMCZ7aub434eZMTn.jpg"},{"cast_id":41,"character":"Tony
+        Dogs","credit_id":"59c2ebe7c3a36814540016f5","gender":2,"id":42824,"name":"Carl
+        Ciarfalio","order":28,"profile_path":"/yADROfK7uJkmd8p3GyjxH8WZqRL.jpg"},{"cast_id":42,"character":"Vinny
+        Forlano","credit_id":"59c2ec2b9251415b5d001821","gender":2,"id":39599,"name":"Gene
+        Ruffini","order":29,"profile_path":null},{"cast_id":43,"character":"Americo
+        Capelli","credit_id":"59c2ec54c3a3681443001999","gender":0,"id":1204013,"name":"Dominick
+        Grieco","order":30,"profile_path":null},{"cast_id":44,"character":"Sal Fusco","credit_id":"59c2ecc09251415b77001a28","gender":0,"id":17921,"name":"Clem
+        Caserta","order":31,"profile_path":"/d3Vm8hym67OrDkMZPU9bXZKZeWj.jpg"},{"cast_id":45,"character":"Doctor
+        Dan","credit_id":"59c2ecd6c3a3681443001a34","gender":2,"id":120303,"name":"Daniel
+        P. Conte","order":32,"profile_path":null},{"cast_id":46,"character":"Stabbed
+        Gambler","credit_id":"59c2ed5b9251415b54001891","gender":0,"id":583419,"name":"Joey
+        DePinto","order":33,"profile_path":"/5rpkiA9eLqZr7m21cRtjoP9QzpB.jpg"},{"cast_id":47,"character":"Baker","credit_id":"59c2ed6ac3a36813a9001965","gender":2,"id":122124,"name":"Jack
+        Orend","order":34,"profile_path":"/xItHVsK66DornaNkmXxkVAiJkAX.jpg"},{"cast_id":48,"character":"Gambler
+        in Phone Booth","credit_id":"59c2ed9c9251415b32001967","gender":2,"id":58535,"name":"Paul
+        Herman","order":35,"profile_path":"/fzcOl6DjcGIfq9wPeqFCd6tDZKb.jpg"},{"cast_id":49,"character":"Jack
+        Hardy","credit_id":"59c3ca099251415b280160c5","gender":0,"id":1219275,"name":"Jed
+        Mills","order":36,"profile_path":"/g3ezU4evH6AmnrvhTrwjgOhqFYt.jpg"},{"cast_id":50,"character":"Trudy","credit_id":"59c3cada9251415b8701527d","gender":1,"id":553774,"name":"Claudia
+        Haro","order":37,"profile_path":"/jiCSlQT8p3cFGq8U0aBreQ0AiQ7.jpg"},{"cast_id":51,"character":"Anna
+        Scott","credit_id":"59c3cb1dc3a368141e013f64","gender":1,"id":1892328,"name":"Ffolliott
+        Le Coque","order":38,"profile_path":"/3ZJXNAqoIhiw1rrJeAGhcADziKK.jpg"},{"cast_id":52,"character":"Wiseguy
+        Eddie","credit_id":"59c3cb449251415b3201570e","gender":0,"id":1888770,"name":"John
+        Manca","order":39,"profile_path":null},{"cast_id":53,"character":"Wiseguy
+        Jerry","credit_id":"59c3cb6d9251415b6e014ccf","gender":2,"id":233121,"name":"Ronald
+        Maccone","order":40,"profile_path":"/ffEKUmCHFYhYFIGknT4snW8mqRX.jpg"},{"cast_id":54,"character":"Moosh","credit_id":"59c3cbe6c3a368141e01407c","gender":0,"id":1888773,"name":"Joseph
+        Bono","order":41,"profile_path":"/6qzUvSRwyWCix4nz8ZIi5GW3Kyk.jpg"},{"cast_id":55,"character":"Rocky","credit_id":"59c3cc1f9251415b3201580b","gender":2,"id":4692,"name":"Frank
+        Adonis","order":42,"profile_path":"/7gQwIAzV49vzj9juK68eEuTXMW1.jpg"},{"cast_id":56,"character":"Bookie","credit_id":"59c3cc4dc3a36813ed0160cc","gender":2,"id":58474,"name":"Anthony
+        Russell","order":43,"profile_path":null},{"cast_id":57,"character":"LA Banker","credit_id":"59c3ccdcc3a36813ed016196","gender":2,"id":1183497,"name":"Stuart
+        Nisbet","order":44,"profile_path":null},{"cast_id":58,"character":"Chastised
+        Gambler","credit_id":"59c3cd48c3a36813a9015484","gender":2,"id":1644894,"name":"Alfred
+        Nittoli","order":45,"profile_path":"/cMeH60JoEzQneF6fB0dPPwVlvMa.jpg"},{"cast_id":164,"character":"Wife","credit_id":"5d937076fa78cd0019edc8d8","gender":1,"id":2422826,"name":"C.C.
+        Carr","order":46,"profile_path":"/flsTzx4xgcksiarvNw4N1wQ5ni.jpg"},{"cast_id":165,"character":"Arthur
+        Capp","credit_id":"5dcc923a79a1c30013459a59","gender":2,"id":2147891,"name":"Peter
+        Conti","order":47,"profile_path":null},{"cast_id":166,"character":"Beeper","credit_id":"5dcc92bee263bb001771a766","gender":0,"id":1915299,"name":"Steve
+        Vignari","order":48,"profile_path":null},{"cast_id":167,"character":"Craps
+        Dealer","credit_id":"5dcca32bcc277c0012e16107","gender":0,"id":120875,"name":"Frankie
+        J. Allison","order":49,"profile_path":"/3POxdze8SXU2dGQouHEctjwGiHL.jpg"},{"cast_id":169,"character":"Man
+        in Bar (uncredited)","credit_id":"5e4004119603310019ed62ed","gender":2,"id":97188,"name":"Steve
+        Schirripa","order":50,"profile_path":"/2Nd2Hd4zIBCv4ZoXFhSkrJCx6wB.jpg"}],"crew":[{"credit_id":"52fe424dc3a36847f8013a01","department":"Camera","gender":2,"id":149,"job":"Director
+        of Photography","name":"Robert Richardson","profile_path":"/lmJy31oZtN5l2VAGpkrt3xEXsxL.jpg"},{"credit_id":"5b204462c3a368149c006662","department":"Art","gender":0,"id":370,"job":"Art
+        Direction","name":"Jack G. Taylor Jr.","profile_path":null},{"credit_id":"5b20447b0e0a264da50053fa","department":"Art","gender":2,"id":906,"job":"Set
+        Decoration","name":"Rick Simpson","profile_path":null},{"credit_id":"52fe424dc3a36847f8013a29","department":"Writing","gender":2,"id":1032,"job":"Screenplay","name":"Martin
+        Scorsese","profile_path":"/9U9Y5GQuWX3EZy39B8nkk4NY01S.jpg"},{"credit_id":"52fe424dc3a36847f80139cd","department":"Directing","gender":2,"id":1032,"job":"Director","name":"Martin
+        Scorsese","profile_path":"/9U9Y5GQuWX3EZy39B8nkk4NY01S.jpg"},{"credit_id":"5b21533e9251416f9e00a16a","department":"Sound","gender":0,"id":1638,"job":"Sound
+        Editor","name":"Eugene Gearty","profile_path":null},{"credit_id":"52fe424dc3a36847f8013a0d","department":"Production","gender":1,"id":2242,"job":"Casting","name":"Ellen
+        Lewis","profile_path":null},{"credit_id":"52fe424dc3a36847f8013a13","department":"Art","gender":2,"id":2366,"job":"Production
+        Design","name":"Dante Ferretti","profile_path":"/x7eXV2MioTZ5CMeoIBvR5JAnvpo.jpg"},{"credit_id":"5b2152c39251416e2100d1e0","department":"Production","gender":1,"id":2947,"job":"Unit
+        Production Manager","name":"Georgia Kacandes","profile_path":"/Vct0XHfBGXNpl0xIifJbcPeJ57.jpg"},{"credit_id":"52fe424dc3a36847f8013a07","department":"Editing","gender":1,"id":3661,"job":"Editor","name":"Thelma
+        Schoonmaker","profile_path":"/nmFrA92JuDOvGAyd6yxnRdiYVMF.jpg"},{"credit_id":"5b2152f9c3a36813b90126bb","department":"Sound","gender":2,"id":5337,"job":"Dialogue
+        Editor","name":"Dan Korintus","profile_path":null},{"credit_id":"5cf98ea20e0a2643c6d7211d","department":"Sound","gender":0,"id":5339,"job":"ADR
+        Engineer","name":"David Boulton","profile_path":null},{"credit_id":"5b2044b40e0a264d8a0050c7","department":"Costume
+        & Make-Up","gender":1,"id":6192,"job":"Costume Design","name":"Rita Ryack","profile_path":null},{"credit_id":"52fe424dc3a36847f8013a2f","department":"Writing","gender":2,"id":7163,"job":"Screenplay","name":"Nicholas
+        Pileggi","profile_path":"/4OiAI0osmx3fHiHoqixTPq5ZSkD.jpg"},{"credit_id":"52fe424dc3a36847f8013a35","department":"Writing","gender":2,"id":7163,"job":"Novel","name":"Nicholas
+        Pileggi","profile_path":"/4OiAI0osmx3fHiHoqixTPq5ZSkD.jpg"},{"credit_id":"52fe424dc3a36847f80139fb","department":"Production","gender":1,"id":7170,"job":"Producer","name":"Barbara
+        De Fina","profile_path":"/gBKdvzHKLjqatJ4Im6WrpdaptrP.jpg"},{"credit_id":"5b2044330e0a264db600550a","department":"Production","gender":2,"id":7531,"job":"Associate
+        Producer","name":"Joseph P. Reidy","profile_path":null},{"credit_id":"5b21537e0e0a264d8d00f611","department":"Sound","gender":2,"id":9619,"job":"Supervising
+        Sound Editor","name":"Skip Lievsay","profile_path":"/wnQisLNWHfsVCRPX8mvEn3s6tXY.jpg"},{"credit_id":"5b2150eb9251416e3300de03","department":"Crew","gender":2,"id":9993,"job":"Post
+        Production Supervisor","name":"Bradley M. Goodman","profile_path":null},{"credit_id":"5cf98f93c3a3686bb3236ec2","department":"Editing","gender":0,"id":11474,"job":"Associate
+        Editor","name":"James Y. Kwei","profile_path":null},{"credit_id":"5b214c1fc3a36813c000cffa","department":"Art","gender":0,"id":14442,"job":"Leadman","name":"Mike
+        Higelmire","profile_path":null},{"credit_id":"5b2151d8c3a36813b90125ff","department":"Editing","gender":2,"id":15840,"job":"Additional
+        Editor","name":"Pasquale Buba","profile_path":"/jOWwfGYY0EYJfieZjaul2u4QZEU.jpg"},{"credit_id":"5b21503f9251416e3800d629","department":"Costume
+        & Make-Up","gender":1,"id":16551,"job":"Hairstylist","name":"Ilona Herman","profile_path":null},{"credit_id":"5b214d090e0a264d9300ec93","department":"Camera","gender":2,"id":18095,"job":"Still
+        Photographer","name":"Phillip V. Caruso","profile_path":null},{"credit_id":"5b214ffdc3a36813ab010a4e","department":"Costume
+        & Make-Up","gender":0,"id":18123,"job":"Assistant Costume Designer","name":"Maggie
+        Morgan","profile_path":null},{"credit_id":"5b21512fc3a3687b4b00af35","department":"Crew","gender":0,"id":24963,"job":"Special
+        Effects","name":"Terry Erickson","profile_path":null},{"credit_id":"5b20449b0e0a264d9900525a","department":"Costume
+        & Make-Up","gender":2,"id":52163,"job":"Costume Design","name":"John Dunn","profile_path":null},{"credit_id":"5b2152aec3a36813c300fd17","department":"Production","gender":1,"id":92301,"job":"Production
+        Coordinator","name":"Kathleen M. Courtney","profile_path":null},{"credit_id":"5b2153109251416e1800d7ce","department":"Sound","gender":2,"id":92373,"job":"Foley
+        Editor","name":"Kam Chan","profile_path":null},{"credit_id":"5cf98ed79251413534baefb3","department":"Sound","gender":2,"id":92376,"job":"Foley
+        Artist","name":"Marko A. Costanzo","profile_path":null},{"credit_id":"5b2152dd0e0a264d9900f12e","department":"Sound","gender":0,"id":92379,"job":"Assistant
+        Sound Editor","name":"Chris Fielder","profile_path":null},{"credit_id":"5ddf2a23c51acd0015f25030","department":"Sound","gender":2,"id":72861,"job":"Music
+        Consultant","name":"Robbie Robertson","profile_path":null},{"credit_id":"5cf98e42c3a3681173254f84","department":"Directing","gender":0,"id":105287,"job":"Second
+        Assistant Director","name":"Scott Harris","profile_path":null},{"credit_id":"5b215167c3a36813ab010b39","department":"Crew","gender":0,"id":237921,"job":"Stunt
+        Coordinator","name":"Daniel W. Barringer","profile_path":null},{"credit_id":"5b21506a0e0a264d9300ee3d","department":"Costume
+        & Make-Up","gender":0,"id":548404,"job":"Key Makeup Artist","name":"Jo-Anne
+        Smith-Ojeil","profile_path":null},{"credit_id":"5b2152239251416e2100d199","department":"Lighting","gender":0,"id":589970,"job":"Gaffer","name":"Ian
+        Kincaid","profile_path":null},{"credit_id":"5cf98e86c3a3680b4e2350ef","department":"Art","gender":1,"id":1078050,"job":"Title
+        Designer","name":"Elaine Bass","profile_path":null},{"credit_id":"5cf98eb90e0a2671fdcefa6b","department":"Sound","gender":1,"id":1085007,"job":"Additional
+        Sound Re-Recording Mixer","name":"Reilly Steele","profile_path":null},{"credit_id":"5b2151450e0a264dab0100da","department":"Crew","gender":2,"id":1318092,"job":"Special
+        Effects Coordinator","name":"Paul J. Lombardi","profile_path":null},{"credit_id":"5b2150100e0a264d8d00f3f0","department":"Costume
+        & Make-Up","gender":0,"id":1328134,"job":"Costume Supervisor","name":"Nancy
+        McArdle","profile_path":null},{"credit_id":"5b21527d9251416e0d00e326","department":"Production","gender":0,"id":1345624,"job":"Location
+        Manager","name":"Michael J. Burmeister","profile_path":null},{"credit_id":"5b214be60e0a264dae00e640","department":"Art","gender":0,"id":1352958,"job":"Art
+        Department Coordinator","name":"A. Todd Holland","profile_path":null},{"credit_id":"5b2153d7c3a3687b4b00b12e","department":"Visual
+        Effects","gender":0,"id":1397846,"job":"Visual Effects Supervisor","name":"Craig
+        Barron","profile_path":null},{"credit_id":"5b214cf79251416e2e00fa80","department":"Camera","gender":0,"id":1399143,"job":"Steadicam
+        Operator","name":"Garrett Brown","profile_path":null},{"credit_id":"5b2153669251416e0d00e399","department":"Sound","gender":2,"id":1400072,"job":"Sound
+        Re-Recording Mixer","name":"Tom Fleischman","profile_path":null},{"credit_id":"5b215265c3a36813b10108ab","department":"Production","gender":0,"id":1400566,"job":"Executive
+        In Charge Of Production","name":"Krystyna Demkowicz","profile_path":null},{"credit_id":"5b2151139251416e0b00c33a","department":"Directing","gender":1,"id":1400738,"job":"Script
+        Supervisor","name":"Karen Golden","profile_path":null},{"credit_id":"5b2150d19251416e3800d66a","department":"Crew","gender":0,"id":1409282,"job":"Picture
+        Car Coordinator","name":"Joshua Hancock","profile_path":null},{"credit_id":"5b2150280e0a264db600fecd","department":"Costume
+        & Make-Up","gender":0,"id":1410149,"job":"Hair Designer","name":"Paul LeBlanc","profile_path":null},{"credit_id":"5b215057c3a36813b1010797","department":"Costume
+        & Make-Up","gender":0,"id":1411166,"job":"Key Hair Stylist","name":"Peter
+        Tothpal","profile_path":null},{"credit_id":"5b214bfcc3a3687b4b00abea","department":"Art","gender":0,"id":1411260,"job":"Construction
+        Coordinator","name":"Rodney Armanino","profile_path":null},{"credit_id":"5b214c0cc3a36813ad012aa9","department":"Art","gender":0,"id":1411261,"job":"Construction
+        Foreman","name":"Alan Allinger","profile_path":null},{"credit_id":"5b214ca99251416e4200ef79","department":"Camera","gender":2,"id":1415632,"job":"Camera
+        Operator","name":"Daniel C. Gold","profile_path":null},{"credit_id":"5cf98e91c3a3680b4e2350f6","department":"Sound","gender":0,"id":1427381,"job":"ADR
+        Editor","name":"Annette Kudrak","profile_path":null},{"credit_id":"5b214c33c3a368149c01227e","department":"Art","gender":2,"id":1434205,"job":"Property
+        Master","name":"Dennis J. Parrish","profile_path":null},{"credit_id":"5cf98ef8c3a3685c3d20e20b","department":"Sound","gender":0,"id":1439872,"job":"Supervising
+        ADR Editor","name":"Lee Lemont","profile_path":null},{"credit_id":"5b21507f9251416e1800d60d","department":"Costume
+        & Make-Up","gender":0,"id":1457720,"job":"Makeup Artist","name":"Tricia Sawyer","profile_path":null},{"credit_id":"5b2153549251416e2a00de21","department":"Sound","gender":0,"id":1511706,"job":"Sound
+        Mixer","name":"Charles M. Wilborn","profile_path":null},{"credit_id":"5cf98f64c3a3686bb3236e5e","department":"Camera","gender":2,"id":1529591,"job":"Second
+        Assistant Camera","name":"Todd McMullen","profile_path":null},{"credit_id":"5b2153299251416e1b00ef82","department":"Sound","gender":2,"id":1534638,"job":"Music
+        Editor","name":"Bobby Mackston","profile_path":null},{"credit_id":"5b2151f1c3a36813b1010879","department":"Editing","gender":0,"id":1550730,"job":"Color
+        Timer","name":"Bob Kaiser","profile_path":null},{"credit_id":"5cf98f83c3a3685c3d20e381","department":"Editing","gender":2,"id":1550732,"job":"Assistant
+        Editor","name":"Scott Brock","profile_path":null},{"credit_id":"5b215236c3a36813ad012eab","department":"Lighting","gender":0,"id":1551224,"job":"Rigging
+        Gaffer","name":"Victor Svimonoff","profile_path":null},{"credit_id":"5b214c589251416e1800d3f2","department":"Art","gender":0,"id":1552101,"job":"Sculptor","name":"Evan
+        Campbell","profile_path":null},{"credit_id":"5b2153bcc3a36813b600d556","department":"Crew","gender":0,"id":1557588,"job":"Executive
+        Visual Effects Producer","name":"Mark Franco","profile_path":null},{"credit_id":"5cf9900fc3a36806ee239609","department":"Production","gender":0,"id":1569837,"job":"Assistant
+        Production Coordinator","name":"Nicole Kwak","profile_path":null},{"credit_id":"5b214ce10e0a264da800fa3f","department":"Camera","gender":0,"id":1619077,"job":"Key
+        Grip","name":"Chris Centrella","profile_path":null},{"credit_id":"5cf98ee60e0a26706ecdddb1","department":"Sound","gender":2,"id":1620010,"job":"Foley
+        Supervisor","name":"Bruce Pross","profile_path":null},{"credit_id":"5b2152159251416e1b00eebb","department":"Lighting","gender":0,"id":1621239,"job":"Electrician","name":"Reynaldo
+        Barrera","profile_path":null},{"credit_id":"5cf98feb92514153b7bd7d37","department":"Crew","gender":2,"id":1632066,"job":"Aerial
+        Coordinator","name":"Peter McKernan","profile_path":"/y9TwHiOhGphwiedYtgW97AxCUtk.jpg"},{"credit_id":"5b21517cc3a36813ab010b45","department":"Crew","gender":2,"id":1677236,"job":"Stunts","name":"Greg
+        Anderson","profile_path":null},{"credit_id":"5cf98fb00e0a2643c6d722dc","department":"Editing","gender":2,"id":1733132,"job":"Negative
+        Cutter","name":"Mo Henry","profile_path":null},{"credit_id":"5cf98e28c3a36806ee239302","department":"Directing","gender":0,"id":1739825,"job":"Additional
+        Second Assistant Director","name":"Darin Rivetti","profile_path":null},{"credit_id":"5b2151b60e0a264d9c00ffd6","department":"Crew","gender":0,"id":1743157,"job":"Unit
+        Publicist","name":"Dianne E. Collins","profile_path":null},{"credit_id":"5b21539a0e0a264da800fe64","department":"Visual
+        Effects","gender":0,"id":1854478,"job":"3D Modeller","name":"Ben Barron","profile_path":null},{"credit_id":"5cf98fc2c3a3680b4e23530c","department":"Production","gender":0,"id":1905460,"job":"Assistant
+        Location Manager","name":"Ralph Coleman","profile_path":null},{"credit_id":"5cf98f530e0a267617ce0858","department":"Camera","gender":0,"id":1945080,"job":"Dolly
+        Grip","name":"David L. Merrill","profile_path":null},{"credit_id":"5cf990200e0a2671fdcefe5d","department":"Crew","gender":0,"id":2025002,"job":"Generator
+        Operator","name":"David Teasley","profile_path":null},{"credit_id":"5b214c919251416e2100cf1c","department":"Art","gender":0,"id":2051155,"job":"Standby
+        Painter","name":"Bill Darrow","profile_path":null},{"credit_id":"5b214c4c0e0a264d9300ec27","department":"Art","gender":0,"id":2063785,"job":"Props","name":"John
+        Duncan","profile_path":null},{"credit_id":"5b214c720e0a264dae00e67f","department":"Art","gender":0,"id":2063786,"job":"Set
+        Designer","name":"Daniel Ross","profile_path":null},{"credit_id":"5b214c839251416e0f00c4c0","department":"Costume
+        & Make-Up","gender":0,"id":2063787,"job":"Set Dressing Artist","name":"Omar
+        Abderrahman","profile_path":null},{"credit_id":"5b214cc70e0a264da200f581","department":"Camera","gender":0,"id":2063788,"job":"First
+        Assistant Camera","name":"Jerry Lane","profile_path":null},{"credit_id":"5b214cd00e0a264da200f589","department":"Camera","gender":0,"id":2063789,"job":"Grip","name":"Bill
+        Blaydes","profile_path":null},{"credit_id":"5b215094c3a36813b10107bd","department":"Costume
+        & Make-Up","gender":2,"id":2063791,"job":"Set Costumer","name":"Jon Boyden","profile_path":null},{"credit_id":"5b2150aac3a36813b600d3c3","department":"Crew","gender":0,"id":2063792,"job":"Craft
+        Service","name":"Brett Kramer","profile_path":null},{"credit_id":"5b2150b90e0a264d9f00f388","department":"Crew","gender":0,"id":2063793,"job":"Driver","name":"Glenn
+        E. Anderson","profile_path":null},{"credit_id":"5b2151050e0a264d9900effe","department":"Crew","gender":0,"id":2063794,"job":"Projection","name":"Paul
+        Mayer","profile_path":null},{"credit_id":"5b21515d0e0a264d9000f1e8","department":"Crew","gender":0,"id":2063795,"job":"Stand
+        In","name":"Rosie Heeter","profile_path":null},{"credit_id":"5b2151920e0a264d8d00f4db","department":"Crew","gender":0,"id":2063796,"job":"Transportation
+        Captain","name":"Ardie McLaughlin","profile_path":null},{"credit_id":"5b21519c9251416e1e00e762","department":"Crew","gender":0,"id":2063797,"job":"Transportation
+        Co-Captain","name":"Buddy Hunter","profile_path":null},{"credit_id":"5b2151a49251416e0b00c38c","department":"Crew","gender":0,"id":2063798,"job":"Transportation
+        Coordinator","name":"Dan Anglin","profile_path":null},{"credit_id":"5b2152090e0a264da200f87a","department":"Lighting","gender":0,"id":2063799,"job":"Best
+        Boy Electric","name":"Mark Hadland","profile_path":null},{"credit_id":"5b21524dc3a36813cf00f805","department":"Production","gender":0,"id":2063800,"job":"Casting
+        Associate","name":"Ray Favero","profile_path":null},{"credit_id":"5b2152939251416e1100fd6d","department":"Production","gender":0,"id":2063801,"job":"Post
+        Production Accountant","name":"Nadine F. Wilson","profile_path":null},{"credit_id":"5b2152a2c3a36813cf00f82a","department":"Production","gender":0,"id":2063802,"job":"Production
+        Accountant","name":"Dixie D. Walker","profile_path":null},{"credit_id":"5b2152ee9251416e0d00e35b","department":"Sound","gender":0,"id":2063804,"job":"Boom
+        Operator","name":"Christopher Ramsey","profile_path":null},{"credit_id":"5cf98f0b9251413534baefd2","department":"Crew","gender":0,"id":2076997,"job":"Special
+        Effects Technician","name":"Scott Garcia","profile_path":null},{"credit_id":"5cf990339251416737bf6aec","department":"Lighting","gender":2,"id":2141306,"job":"Key
+        Rigging Grip","name":"Michael A. Mendez","profile_path":null},{"credit_id":"5cf98e13c3a36806ee239295","department":"Costume
+        & Make-Up","gender":0,"id":2150273,"job":"Key Costumer","name":"Danna Edwards","profile_path":null},{"credit_id":"5cf98f459251416737bf67d2","department":"Camera","gender":0,"id":2153960,"job":"Camera
+        Loader","name":"Steve Craft","profile_path":null},{"credit_id":"5cf98f3692514146dcbf285f","department":"Camera","gender":0,"id":2214779,"job":"Best
+        Boy Grip","name":"Dean M. King","profile_path":null},{"credit_id":"5cf98ffe0e0a2665bdd194ea","department":"Production","gender":0,"id":2216229,"job":"Assistant
+        Accountant","name":"Kelli Gillam","profile_path":null},{"credit_id":"5cf98e53c3a3680b4e23506b","department":"Directing","gender":0,"id":2256673,"job":"Second
+        Second Assistant Director","name":"Michael Greenwood","profile_path":null},{"credit_id":"5cf98e7392514146dcbf2594","department":"Art","gender":0,"id":2280345,"job":"Assistant
+        Property Master","name":"Gary F. Kieldrup","profile_path":null},{"credit_id":"5cf98e669251416737bf6667","department":"Directing","gender":0,"id":2331263,"job":"Second
+        Unit Director","name":"Phil Marco","profile_path":null},{"credit_id":"5cf98ecbc3a3685c3d20e1f6","department":"Sound","gender":0,"id":2331264,"job":"Apprentice
+        Sound Editor","name":"Sean Huff","profile_path":null},{"credit_id":"5cf98f760e0a2665bdd193e3","department":"Production","gender":0,"id":2331267,"job":"Casting
+        Assistant","name":"Heather McCurdy","profile_path":null},{"credit_id":"5cf98fa4c3a3685c3d20e3ab","department":"Editing","gender":0,"id":2331270,"job":"Colorist","name":"John
+        Gardiner","profile_path":null},{"credit_id":"5cf98fd39251413534baf206","department":"Production","gender":0,"id":2331271,"job":"Location
+        Assistant","name":"Maggie Mancuso","profile_path":null},{"credit_id":"5cf990430e0a2665bdd195ee","department":"Production","gender":0,"id":2331276,"job":"Production
+        Assistant","name":"Howard Carey","profile_path":null},{"credit_id":"5cf99050c3a3681173255463","department":"Production","gender":0,"id":2331277,"job":"Production
+        Secretary","name":"Braden Kuhlman","profile_path":null},{"credit_id":"5cf9905bc3a3681a56224098","department":"Crew","gender":2,"id":2331279,"job":"Technical
+        Advisor","name":"Frank Cullotta","profile_path":null},{"credit_id":"5cf98f169251413534baefd7","department":"Crew","gender":2,"id":2504523,"job":"Stunt
+        Double","name":"Eddie Matthews","profile_path":null},{"credit_id":"5ea15fd6ea37e0001e2858b3","department":"Sound","gender":2,"id":2612131,"job":"Music","name":"Roy
+        Hawkins","profile_path":"/jAImQCksayIzSnRedm0IYmpBWYp.jpg"}]}'
+  recorded_at: Mon, 12 Oct 2020 00:37:41 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/524/reviews?api_key=MOVIES_SECRET_KEY&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 12 Oct 2020 00:37:41 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - 96b45fb9e728eaf575012155f6092aaa
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '21600'
+      Last-Modified:
+      - '2020-10-11 23:51:33 +0000'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 a44b9db7a2d103360945ab52619e5016.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - 5ObdPVC6D9iDDxz8N3DKdEe_Vr9gZSJj2ps-_biriNxGqmMCtZ2qPA==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":524,"page":1,"results":[{"author":"Kris_12","content":"Sharon
+        Stone and Robert De Niro were amazing! Robert De Niro is my favorite actor!
+        How he was talking about <a href=\"http://www.arrabitah.org/\">pokerstar bonus
+        code</a> and smile at that moment! He was perfect. Now, it is one of my favorite
+        movies. You have to see it!\r\nYou will not regret it. I promise","id":"5c51b825c3a368756484b8b4","url":"https://www.themoviedb.org/review/5c51b825c3a368756484b8b4"}],"total_pages":1,"total_results":1}'
+  recorded_at: Mon, 12 Oct 2020 00:37:41 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/524?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 11 Oct 2020 22:56:04 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - be38a5fddc0a72fc19f37da65cb3a087
+      X-Memc-Age:
+      - '21040'
+      X-Memc-Expires:
+      - '560'
+      Etag:
+      - W/"181e35643888ef2323f10102987b16c5"
+      Last-Modified:
+      - Sun, 11 Oct 2020 22:56:04 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 c55bfc9d9a95cdee8e23989feddaa4b3.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - wLgfD-a9B-j9pyhf5KaShsU-ZJCBV6nGcUwleA1R34U0fgEC7cowCQ==
+      Age:
+      - '6098'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvcExSMk8zZG1BOXhrQ2lQQTI2VTdFckNVWVNpLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0Ijo1MjAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6ODAsIm5hbWUiOiJDcmltZSJ9XSwiaG9tZXBhZ2UiOiIiLCJpZCI6NTI0LCJpbWRiX2lkIjoidHQwMTEyNjQxIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiQ2FzaW5vIiwib3ZlcnZpZXciOiJJbiBlYXJseS0xOTcwcyBMYXMgVmVnYXMsIGxvdy1sZXZlbCBtb2JzdGVyIFNhbSBcIkFjZVwiIFJvdGhzdGVpbiBnZXRzIHRhcHBlZCBieSBoaXMgYm9zc2VzIHRvIGhlYWQgdGhlIFRhbmdpZXJzIENhc2luby4gQXQgZmlyc3QsIGhlJ3MgYSBncmVhdCBzdWNjZXNzIGluIHRoZSBqb2IsIGJ1dCBvdmVyIHRoZSB5ZWFycywgcHJvYmxlbXMgd2l0aCBoaXMgbG9vc2UtY2Fubm9uIGVuZm9yY2VyIE5pY2t5IFNhbnRvcm8sIGhpcyBleC1odXN0bGVyIHdpZmUgR2luZ2VyLCBoZXIgY29uLWFydGlzdCBleCBMZXN0ZXIgRGlhbW9uZCBhbmQgYSBoYW5kZnVsIG9mIGNvcnJ1cHQgcG9saXRpY2lhbnMgcHV0IFNhbSBpbiBldmVyLWluY3JlYXNpbmcgZGFuZ2VyLiIsInBvcHVsYXJpdHkiOjE5LjIxMiwicG9zdGVyX3BhdGgiOiIvNFRTNU8xSVA0MmJZMkJ2Z014TDE1NkVFTnkuanBnIiwicHJvZHVjdGlvbl9jb21wYW5pZXMiOlt7ImlkIjozMywibG9nb19wYXRoIjoiLzhsdkh5aGpyOG9VS09PeTJkS1hvQUxXS2RwMC5wbmciLCJuYW1lIjoiVW5pdmVyc2FsIFBpY3R1cmVzIiwib3JpZ2luX2NvdW50cnkiOiJVUyJ9LHsiaWQiOjExNTgzLCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJTeWFsaXMgREEiLCJvcmlnaW5fY291bnRyeSI6IiJ9LHsiaWQiOjEwODk4LCJsb2dvX3BhdGgiOm51bGwsIm5hbWUiOiJMw6lnZW5kZSBFbnRyZXByaXNlcyIsIm9yaWdpbl9jb3VudHJ5IjoiIn0seyJpZCI6MTE1ODQsImxvZ29fcGF0aCI6bnVsbCwibmFtZSI6IkRlIEZpbmEtQ2FwcGEiLCJvcmlnaW5fY291bnRyeSI6IiJ9XSwicHJvZHVjdGlvbl9jb3VudHJpZXMiOlt7Imlzb18zMTY2XzEiOiJGUiIsIm5hbWUiOiJGcmFuY2UifSx7Imlzb18zMTY2XzEiOiJVUyIsIm5hbWUiOiJVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EifV0sInJlbGVhc2VfZGF0ZSI6IjE5OTUtMTEtMjIiLCJyZXZlbnVlIjoxMTYxMTIzNzUsInJ1bnRpbWUiOjE3OSwic3Bva2VuX2xhbmd1YWdlcyI6W3siaXNvXzYzOV8xIjoiZW4iLCJuYW1lIjoiRW5nbGlzaCJ9XSwic3RhdHVzIjoiUmVsZWFzZWQiLCJ0YWdsaW5lIjoiTm8gb25lIHN0YXlzIGF0IHRoZSB0b3AgZm9yZXZlci4iLCJ0aXRsZSI6IkNhc2lubyIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjAsInZvdGVfY291bnQiOjM0ODF9
+  recorded_at: Mon, 12 Oct 2020 00:37:42 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/751702?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 11 Oct 2020 22:33:00 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 4c95e196a26f8bbdc9e59fa82b6cd5af
+      X-Memc-Age:
+      - '3600'
+      X-Memc-Expires:
+      - '18000'
+      Etag:
+      - W/"ff7a2872cfc197298185092d3069d7f9"
+      Last-Modified:
+      - Sun, 11 Oct 2020 22:33:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 6cab218159221ab723900fb6fe65d73f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - uXevCv-xS70xd0xOSr9o9TGrq-YyTNmxiJVVC9mi2Wx6oXm8n5kUmA==
+      Age:
+      - '7482'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[{"id":99,"name":"Documentary"}],"homepage":"https://alchemywerks.com/product/alien-contact-the-pascagoula-ufo-encounter/","id":751702,"imdb_id":"tt11672244","original_language":"en","original_title":"Alien
+        Contact: The Pascagoula UFO Encounter","overview":"A retrospective on the
+        events in this small town","popularity":1.495,"poster_path":null,"production_companies":[{"id":73041,"logo_path":null,"name":"Reality
+        Films","origin_country":""}],"production_countries":[],"release_date":"2020-03-17","revenue":0,"runtime":75,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"","title":"Alien
+        Contact: The Pascagoula UFO Encounter","video":false,"vote_average":10.0,"vote_count":1}'
+  recorded_at: Mon, 12 Oct 2020 00:37:42 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/751702/credits?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 12 Oct 2020 00:37:42 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - c8fb99fc81149a6613ed221f9a8ea274
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '21600'
+      Last-Modified:
+      - '2020-10-09 22:11:19 +0000'
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 28d79637e27f11e3ab19a9515e273a5b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - U99ukTi22V9S3pv8ME_rhXvOSot0X3Mdv7qY8-VohkUGVHtmUMHhjw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":751702,"cast":[{"cast_id":2,"character":"Himself","credit_id":"5f80da3b17505100389322df","gender":0,"id":2025483,"name":"Calvin
+        Parker, Jr.","order":1,"profile_path":null},{"cast_id":5,"character":"Himself
+        (Narrator)","credit_id":"5f80df01021cee003747fc6c","gender":0,"id":1764330,"name":"J.
+        Michael Long","order":2,"profile_path":null}],"crew":[{"credit_id":"5f80dd87175051003791933b","department":"Production","gender":0,"id":1039129,"job":"Executive
+        Producer","name":"Warren Croyle","profile_path":null},{"credit_id":"5f80d9f01750510036943910","department":"Directing","gender":0,"id":1764330,"job":"Director","name":"J.
+        Michael Long","profile_path":null},{"credit_id":"5f80de9102842000360afcf3","department":"Production","gender":0,"id":1764330,"job":"Producer","name":"J.
+        Michael Long","profile_path":null}]}'
+  recorded_at: Mon, 12 Oct 2020 00:37:42 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/751702/reviews?api_key=MOVIES_SECRET_KEY&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '69'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 12 Oct 2020 00:37:42 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - 102a586f0639ceb7b99bbe3154a068f7
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '21600'
+      Last-Modified:
+      - '2020-10-09 22:11:19 +0000'
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 ed8294655bb258e13bfb027c25483ddb.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - qRCAe18tCapKdwpP2YrNDUVDHhum5qHRoZYrZHaD2sHQWpxEauzJLQ==
+    body:
+      encoding: UTF-8
+      string: '{"id":751702,"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Mon, 12 Oct 2020 00:37:43 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/751702?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Sun, 11 Oct 2020 22:33:00 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 4c95e196a26f8bbdc9e59fa82b6cd5af
+      X-Memc-Age:
+      - '3600'
+      X-Memc-Expires:
+      - '18000'
+      Etag:
+      - W/"ff7a2872cfc197298185092d3069d7f9"
+      Last-Modified:
+      - Sun, 11 Oct 2020 22:33:00 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 7d885ba806a1846198f8b666005bec93.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - p_hg2lk2s7A0OVNVNWGPz1SZsyOSPT6eJW4ak8anxEWQ4cc316nPHw==
+      Age:
+      - '7483'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[{"id":99,"name":"Documentary"}],"homepage":"https://alchemywerks.com/product/alien-contact-the-pascagoula-ufo-encounter/","id":751702,"imdb_id":"tt11672244","original_language":"en","original_title":"Alien
+        Contact: The Pascagoula UFO Encounter","overview":"A retrospective on the
+        events in this small town","popularity":1.495,"poster_path":null,"production_companies":[{"id":73041,"logo_path":null,"name":"Reality
+        Films","origin_country":""}],"production_countries":[],"release_date":"2020-03-17","revenue":0,"runtime":75,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"","title":"Alien
+        Contact: The Pascagoula UFO Encounter","video":false,"vote_average":10.0,"vote_count":1}'
+  recorded_at: Mon, 12 Oct 2020 00:37:43 GMT
+recorded_with: VCR 6.0.0
