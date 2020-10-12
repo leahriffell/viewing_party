@@ -5,9 +5,16 @@
 Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friends.
 [View live app](https://elmers-viewing-party.herokuapp.com/)
 
-### Readme Content
+## Learning goals:
+- Consume multiple endpoints from JSON API that requires authentication
+- Implement a self-referential relationship in ActiveRecord
+- Require basic authentication 
+- Stack: Rails, PostgreSQL, Heroku, Travis CI, RuboCop, bcrypt 
+
+## Readme Content
 [Getting Started](#getting-started)
 [Running the Tests](#running-the-tests)
+[Database Schema](#databa-schema)
 [Authors](#authors)
 
 ## Getting Started
@@ -37,6 +44,9 @@ rails s
 
 ## Running the Tests
 - Run with $ bundle exec rspec. All tests should be passing.
+
+## Database Schema
+[ insert image of db schema here ]
 
 ## Authors
 - Daniel Halverson | [github](https://github.com/dhalverson) | [linkedin](https://www.linkedin.com/in/daniel-halverson/)
