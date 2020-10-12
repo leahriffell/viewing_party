@@ -12,10 +12,10 @@ Viewing party is an application in which users can explore movie options and cre
 - Stack: Rails, PostgreSQL, Heroku, Travis CI, RuboCop, bcrypt 
 
 ## Readme Content
-[Getting Started](#getting-started)
-[Running the Tests](#running-the-tests)
-[Database Schema](#databa-schema)
-[Authors](#authors)
+- [Getting Started](#getting-started)
+- [Running the Tests](#running-the-tests)
+- [Database Schema](#databa-schema)
+- [Authors](#authors)
 
 ## Getting Started
 ```
