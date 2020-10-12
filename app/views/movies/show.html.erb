@@ -1,3 +1,29 @@
-<h1><%= @movie[:title] %></h1>
+<%# <% require "pry"; binding.pry %> %>
+<div id="title"><h1><%= @movie[:title] %><span class="unbold"> (<%= @movie_object.release_year(@movie[:release_date]) %>)</span></h1></div>
+  <div id="user-score"><p>User Score: <%= @movie[:vote_average] %></p></div>
+  <div id="genres"><p>Genre(s): <%= @movie_object.display_genres(@movie[:genres]).join(', ') %></p></div>
+  <div id="runtime"><p>Runtime: <%= @movie_object.total_runtime(@movie[:runtime]) %></p></div>
+
+<h4>Overview</h4>
+  <div id="overview"><p><%= @movie[:overview] %></p></div>
+
+<h4>Cast</h4>
+<section id="cast">
+  <ol>
+    <% @movie_object.first_10_cast(@movie_cast).each do |actor_name| %>
+      <div id="<%= actor_name %>"><li><%= actor_name %></li>
+    <% end %>
+  </ol>
+</section>
+
+<h4>Reviews</h4>
+<section id="reviews">
+  <p>Number of Reviews: <%= @movie_object.review_count(@movie_review[:results]) %></p>
+  <ol>
+    <% @movie_object.display_reviews(@movie_review[:results]).each do |review| %>
+      <li><%= simple_format(review) %></li>
+    <% end %>
+  </ol>
+</section>
 
 <%= button_to 'Create Viewing Party', "/parties/new", method: :get, params: { movie_id: @movie[:id] } %>

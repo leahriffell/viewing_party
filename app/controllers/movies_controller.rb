@@ -12,8 +12,13 @@ class MoviesController < ApplicationController
   end
 
   def show
-    response = conn.get("3/movie/#{params[:id]}?api_key=#{movies_api_key}")
-    @movie = JSON.parse(response.body, symbolize_names: true)
+    show_response = movie_show_endpoint
+    cast_response = movie_cast_endpoint
+    review_response = movie_review_endpoint
+    @movie_object = Movie.new
+    @movie = parse(show_response)
+    @movie_cast = parse(cast_response)
+    @movie_review = parse(review_response)
   end
 
   def fetch_movies(request_type)
@@ -32,10 +37,6 @@ class MoviesController < ApplicationController
 
   private
 
-  def conn
-    Faraday.new(url: 'https://api.themoviedb.org')
-  end
-
   def language(language)
     "language=#{language}"
   end
@@ -48,16 +49,32 @@ class MoviesController < ApplicationController
     ENV['MOVIES_API_KEY']
   end
 
-  def top_movies_endpoint(page_num)
-    sort_by = 'vote_average.desc'
-    conn.get("3/discover/movie?api_key=#{movies_api_key}&#{language('en-US')}&sort_by=#{sort_by}&#{exclude_adult}&page=#{page_num}")
-  end
-
-  def keyword_search_endpoint(page_num)
-    conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&query=#{params[:keyword_search]}&#{exclude_adult}&page=#{page_num}")
+  def conn
+    Faraday.new(url: "https://api.themoviedb.org")
   end
 
   def parse(response)
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def top_movies_endpoint(page_num)
+    sort_by = 'vote_average.desc'
+    conn.get("3/discover/movie?api_key=#{movies_api_key}&#{language('en-US')}&sort_by=#{sort_by}&#{exclude_adult}&page=#{page_num}&vote_count.gte=300")
+  end
+
+  def keyword_search_endpoint(page_num)
+    conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&#{exclude_adult}&page=#{page_num}&query=#{params[:keyword_search]}")
+  end
+
+  def movie_show_endpoint
+    conn.get("3/movie/#{params[:id]}?api_key=#{movies_api_key}")
+  end
+
+  def movie_cast_endpoint
+    conn.get("3/movie/#{params[:id]}/credits?api_key=#{movies_api_key}")
+  end
+
+  def movie_review_endpoint
+    conn.get("3/movie/#{params[:id]}/reviews?api_key=#{movies_api_key}&#{language('en-US')}")
   end
 end
