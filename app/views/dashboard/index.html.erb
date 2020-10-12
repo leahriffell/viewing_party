@@ -1,0 +1,15 @@
+<h1>Dashboard</h1>
+
+<% if current_user.any_parties? %>
+  <section class='viewing-parties'>
+    <h2>Viewing Parties</h2>
+    <% current_user.parties.each do |party| %>
+      <div class='party'>
+        <h4><%= Movie.find(party.movie_id).title %></h4>
+        <p><%= party.party_date.strftime("%B %e, %Y") %></p>
+        <p><%= party.start_time %></p>
+        <p><%= current_user.party_status(party.id) %></p>
+      </div>  
+    <% end %>
+  </section>
+<% end %>

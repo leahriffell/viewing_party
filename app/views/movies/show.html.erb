@@ -25,4 +25,5 @@
     <% end %>
   </ol>
 </section>
-<%= button_to 'Create Viewing Party', "/parties/new", method: :get %>
+
+<%= button_to 'Create Viewing Party', "/parties/new", method: :get, params: { movie_id: @movie[:id] } %>

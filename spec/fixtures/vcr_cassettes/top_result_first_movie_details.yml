@@ -2,145 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/movie/751920?api_key=MOVIES_SECRET_KEY
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.0.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Date:
-      - Sat, 10 Oct 2020 17:47:26 GMT
-      Server:
-      - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=21600
-      X-Memc:
-      - HIT
-      X-Memc-Key:
-      - 848ed6c59b78c9736e76e87a84126ff2
-      X-Memc-Age:
-      - '12322'
-      X-Memc-Expires:
-      - '9278'
-      Etag:
-      - W/"3c44d924a2e5585ecd7ec736eaf0e519"
-      Last-Modified:
-      - Sat, 10 Oct 2020 17:47:26 GMT
-      Vary:
-      - Accept-Encoding
-      X-Cache:
-      - Hit from cloudfront
-      Via:
-      - 1.1 c55bfc9d9a95cdee8e23989feddaa4b3.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - DEN50-C2
-      X-Amz-Cf-Id:
-      - SRV_KS2dj8hn0pYIzNnuYFEOq7cgfLg2o242hGRD5PERKGCMx-Gyrw==
-      Age:
-      - '211'
-    body:
-      encoding: ASCII-8BIT
-      string: '{"adult":false,"backdrop_path":null,"belongs_to_collection":null,"budget":0,"genres":[{"id":99,"name":"Documentary"}],"homepage":"","id":751920,"imdb_id":"tt0289404","original_language":"en","original_title":"Against
-        Pornography: The Feminism of Andrea Dworkin","overview":"Radical feminist
-        Andrea Dworkin''s expose on the pornography industry.","popularity":0.0,"poster_path":null,"production_companies":[{"id":137997,"logo_path":null,"name":"BBC","origin_country":""},{"id":22495,"logo_path":null,"name":"Amaya
-        Distribution","origin_country":""},{"id":948,"logo_path":null,"name":"SBS","origin_country":""},{"id":141636,"logo_path":null,"name":"films
-        media group","origin_country":""}],"production_countries":[{"iso_3166_1":"AU","name":"Australia"},{"iso_3166_1":"GB","name":"United
-        Kingdom"},{"iso_3166_1":"US","name":"United States of America"}],"release_date":"1991-10-25","revenue":0,"runtime":52,"spoken_languages":[],"status":"Released","tagline":"Radical
-        feminist Andrea Dworkin''s expose on the pornography industry.","title":"Against
-        Pornography: The Feminism of Andrea Dworkin","video":true,"vote_average":10.0,"vote_count":1}'
-  recorded_at: Sat, 10 Oct 2020 17:50:57 GMT
-- request:
-    method: get
-    uri: https://api.themoviedb.org/3/movie/751920/credits?api_key=MOVIES_SECRET_KEY
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.0.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Date:
-      - Sat, 10 Oct 2020 17:47:26 GMT
-      Server:
-      - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=21600
-      X-Memc:
-      - MISS, STORE
-      X-Memc-Key:
-      - 27b65556ecb4224568ff66e2a5b8bbc9
-      X-Memc-Age:
-      - '0'
-      X-Memc-Expires:
-      - '21600'
-      Last-Modified:
-      - '2020-10-10 16:12:42 +0000'
-      Vary:
-      - Accept-Encoding
-      X-Cache:
-      - Hit from cloudfront
-      Via:
-      - 1.1 29f1da35ce271d2cdc88184ed0c1f86d.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - DEN50-C2
-      X-Amz-Cf-Id:
-      - OH4Yr5TinaDCgJOvPKrsYBiGm1b2QaIvc63-kkIj5OF9mYusepWQ2Q==
-      Age:
-      - '211'
-    body:
-      encoding: ASCII-8BIT
-      string: '{"id":751920,"cast":[{"cast_id":1,"character":"Self","credit_id":"5f81bf2141465c0038117918","gender":0,"id":2630322,"name":"Andrea
-        Dworkin","order":1,"profile_path":null}],"crew":[{"credit_id":"5f81bfa3075288003938ffed","department":"Crew","gender":0,"id":1319633,"job":"Cinematography","name":"Nesya
-        Blue","profile_path":null},{"credit_id":"5f81bf72d8e15a003ae66ac0","department":"Production","gender":0,"id":2810405,"job":"Producer","name":"David
-        Evans","profile_path":null},{"credit_id":"5f81bfd469eb900038b8b1a2","department":"Crew","gender":0,"id":2810410,"job":"Cinematography","name":"Loraine
-        Champness","profile_path":null}]}'
-  recorded_at: Sat, 10 Oct 2020 17:50:57 GMT
-- request:
-    method: get
     uri: https://api.themoviedb.org/3/movie/724089?api_key=MOVIES_SECRET_KEY
     body:
       encoding: US-ASCII
@@ -164,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sun, 11 Oct 2020 18:29:56 GMT
+      - Mon, 12 Oct 2020 00:37:38 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -181,25 +42,23 @@ http_interactions:
       X-Memc-Key:
       - 8064efce63b52d0889d69a823f040eb4
       X-Memc-Age:
-      - '11765'
+      - '16462'
       X-Memc-Expires:
-      - '9835'
+      - '5138'
       Etag:
-      - W/"eab0844cc60279993b2dc9eaea50fd6d"
+      - W/"b2876b0c7aa7f11ddb47f80ddd2d79eb"
       Last-Modified:
-      - Sun, 11 Oct 2020 18:29:56 GMT
+      - Mon, 12 Oct 2020 00:37:38 GMT
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 ee9de9e6182ae0c8e8f119177e905245.cloudfront.net (CloudFront)
+      - 1.1 38059ba65876500c040fb73e2cbaebf5.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - xGA0z9b7udNCVgBzUO_8o32TVzR9ve2UMB4TVXuILrEsy-XViJWg2Q==
-      Age:
-      - '20645'
+      - hfw76sU84UgSzoxkuXnvdoCdElfIHHOGDjTGdLzHcURAcD9k9ttJIA==
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg","belongs_to_collection":{"id":729322,"name":"Gabriel''s
@@ -209,8 +68,8 @@ http_interactions:
         too late. Julia is done waiting for the well-respected Dante specialist to
         remember her and wants nothing more to do with him. Can Gabriel win back her
         heart before she finds love in another''s arms?","popularity":14.13,"poster_path":"/pci1ArYW7oJ2eyTo2NMYEKHHiCP.jpg","production_companies":[{"id":92153,"logo_path":"/psjvYkjjgAPtS8utnFYDM8t8yi7.png","name":"PassionFlix","origin_country":"US"}],"production_countries":[],"release_date":"2020-07-31","revenue":0,"runtime":105,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"","title":"Gabriel''s
-        Inferno Part II","video":false,"vote_average":8.9,"vote_count":872}'
-  recorded_at: Mon, 12 Oct 2020 00:14:01 GMT
+        Inferno Part II","video":false,"vote_average":8.9,"vote_count":873}'
+  recorded_at: Mon, 12 Oct 2020 00:37:38 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/724089/credits?api_key=MOVIES_SECRET_KEY
@@ -235,8 +94,6 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
-      Date:
-      - Sun, 11 Oct 2020 18:29:56 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -246,8 +103,6 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=21600
       X-Memc:
       - HIT
       X-Memc-Key:
@@ -256,22 +111,24 @@ http_interactions:
       - '2358'
       X-Memc-Expires:
       - '19242'
-      Etag:
-      - W/"7dc5114a3d99860abe3acdfee47b2d56"
       Last-Modified:
       - Sun, 11 Oct 2020 18:29:56 GMT
+      Date:
+      - Mon, 12 Oct 2020 00:37:38 GMT
+      Cache-Control:
+      - public, max-age=21600
+      Etag:
+      - W/"7dc5114a3d99860abe3acdfee47b2d56"
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - RefreshHit from cloudfront
       Via:
-      - 1.1 23d87d8c2ce38e34462e6c134d187eeb.cloudfront.net (CloudFront)
+      - 1.1 6d9f09528e589f3fa7ca05f965ea37a2.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - pxshhIWUwSDl5lwZVrYQbA2y6E-9hjCE98toQm8jyyThRNjQSG_rVg==
-      Age:
-      - '20645'
+      - pL44He_PWNUGwnP3OvPiGiIdoLoQiLOHgTy82FIl-O7gUT1R9eBP3w==
     body:
       encoding: ASCII-8BIT
       string: '{"id":724089,"cast":[{"cast_id":1,"character":"Julia Mitchell","credit_id":"5f25dbe72d8ef30035d4c8d8","gender":1,"id":1312450,"name":"Melanie
@@ -298,7 +155,7 @@ http_interactions:
         Goodspeed","profile_path":null},{"credit_id":"5f25dfb47c6de300351c5dfa","department":"Production","gender":0,"id":1845009,"job":"Producer","name":"Michael
         Buttiglieri","profile_path":null},{"credit_id":"5f275793869e750036680f1f","department":"Writing","gender":0,"id":2693030,"job":"Novel","name":"Sylvain
         Reynard","profile_path":null}]}'
-  recorded_at: Mon, 12 Oct 2020 00:14:01 GMT
+  recorded_at: Mon, 12 Oct 2020 00:37:38 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/724089/reviews?api_key=MOVIES_SECRET_KEY&language=en-US
@@ -324,7 +181,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sun, 11 Oct 2020 18:29:56 GMT
+      - Mon, 12 Oct 2020 00:37:38 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -337,29 +194,25 @@ http_interactions:
       Cache-Control:
       - public, max-age=21600
       X-Memc:
-      - HIT
+      - MISS, STORE
       X-Memc-Key:
       - bf1cc79b7d1dffdf642f30174a05dbbd
       X-Memc-Age:
-      - '1687'
+      - '0'
       X-Memc-Expires:
-      - '19913'
-      Etag:
-      - W/"37200b87f61430f107cfb20c963bb0c3"
+      - '21600'
       Last-Modified:
-      - Sun, 11 Oct 2020 18:29:56 GMT
+      - '2020-09-25 04:10:03 +0000'
       X-Cache:
-      - Hit from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 28d79637e27f11e3ab19a9515e273a5b.cloudfront.net (CloudFront)
+      - 1.1 9c7e5857d78c5dc89042979317de5843.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - sjv7qO8WMWO_8h82RGIP2MbVcEfqsAp6JIYc9lbEKJPgIdwNdnZUtA==
-      Age:
-      - '20645'
+      - XkokI99fl5H2URYN4tqY4dM_y-ab1_GEP8bAHie3drzZgrb9H2O6YA==
     body:
       encoding: UTF-8
       string: '{"id":724089,"page":1,"results":[],"total_pages":0,"total_results":0}'
-  recorded_at: Mon, 12 Oct 2020 00:14:01 GMT
+  recorded_at: Mon, 12 Oct 2020 00:37:38 GMT
 recorded_with: VCR 6.0.0

@@ -11,4 +11,32 @@ describe User, type: :model do
     it { should validate_uniqueness_of :email }
     it { should validate_presence_of :password }
   end
+
+  describe 'instance methods' do
+    before :each do
+      @user1 = FactoryBot.create(:user)
+      @user2 = FactoryBot.create(:user)
+
+      @movie = Movie.create!(id: 524)
+      @party1 = FactoryBot.create(:party)
+      @party2 = FactoryBot.create(:party)
+
+      PartyUser.create!(party_id: @party1.id, user_id: @user2.id)
+      PartyUser.create!(party_id: @party2.id, user_id: @user2.id, attendee_type: 0)
+    end
+
+    describe 'any_parties?' do
+      it 'determines if user is hosting or has been invited to any parties' do
+        expect(@user1.any_parties?).to eq(false)
+        expect(@user2.any_parties?).to eq(true)
+      end
+    end
+
+    describe 'party_status' do
+      it 'can return status for specific party based on party id' do
+        expect(@user2.party_status(@party1.id)).to eq('guest')
+        expect(@user2.party_status(@party2.id)).to eq('host')
+      end
+    end
+  end
 end

@@ -96,6 +96,8 @@ RSpec.describe 'Movies detail page' do
           expect(page).to have_content('https://www.themoviedb.org/review/5c51b825c3a368756484b8b4')
           expect(page).to have_content('Sharon Stone and Robert De Niro were amazing!')
         end
+        click_button('Create Viewing Party')
+        expect(current_path).to eq(new_party_path)
       end
     end
   end

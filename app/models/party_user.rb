@@ -4,5 +4,5 @@ class PartyUser < ApplicationRecord
 
   validates :attendee_type, presence: true
 
-  enum role: { 'host': 0, 'guest': 1 }
+  enum attendee_type: { 'host': 0, 'guest': 1 }
 end

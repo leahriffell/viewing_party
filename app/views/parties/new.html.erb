@@ -1,1 +1,20 @@
-<h1>PARTY PEOPLE</h1>
+<h1>Viewing Party Details</h1>
+
+<%= form_with model: @party, url: parties_path, local: true do |f| %>
+  <span>Movie Title:</span>
+  <%= @movie[:title] %><br>
+
+  <%= f.label :duration %>
+  <%= f.number_field :duration, value: @movie[:runtime] %><br>
+
+  <%= f.label :party_date %>
+  <%= f.date_field :party_date, min: Date.today%><br>
+
+  <%= f.label :start_time %>
+  <%= f.text_field :start_time, placeholder: 'Ex: 5:00 pm' %><br>
+
+  <%= f.hidden_field :movie_id, value: @movie[:id] %>
+  <%= f.hidden_field :movie_title, value: @movie[:title] %>
+
+  <%= f.submit 'Create Party' %>
+<% end %>

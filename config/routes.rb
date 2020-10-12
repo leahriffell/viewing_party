@@ -13,6 +13,5 @@ Rails.application.routes.draw do
   get '/movies', to: 'movies#index'
   get '/movies/:id', to: 'movies#show', as: :movie_show
 
-  get '/parties/new', to: 'parties#new'
-  # post '/parties', to: 'parties#create'
+  resources :parties, only: [:new, :create]
 end
