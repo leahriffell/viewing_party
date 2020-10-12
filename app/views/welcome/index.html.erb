@@ -3,16 +3,19 @@
 
 <h4>Search for a movie, click create party, add details, then invite friends!</h4>
 
+<section class="login">
+  <% if !current_user %>
+    <h2>Log in:</h2>
+    <%= form_tag login_path do %>
+      <%= label_tag :email %>
+      <%= email_field_tag :email %><br>
 
-<h2>Log in:</h2>
-<%= form_tag login_path do %>
-  <%= label_tag :email %>
-  <%= email_field_tag :email %><br>
+      <%= label_tag :password %>
+      <%= password_field_tag :password %><br>
 
-  <%= label_tag :password %>
-  <%= password_field_tag :password %><br>
-
-  <%= submit_tag 'Log In' %>
-<% end %>
-
-<%= link_to 'New to Viewing Party? Register Here', registration_path %>
+      <%= submit_tag 'Log In' %>
+    <% end %>
+  
+    <%= link_to 'New to Viewing Party? Register Here', registration_path %>
+  <% end %>
+</section>
