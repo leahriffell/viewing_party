@@ -14,7 +14,7 @@ Viewing party is an application in which users can explore movie options and cre
 ## Readme Content
 - [Getting Started](#getting-started)
 - [Running the Tests](#running-the-tests)
-- [Database Schema](#databa-schema)
+- [Database Schema](#database-schema)
 - [Authors](#authors)
 
 ## Getting Started
