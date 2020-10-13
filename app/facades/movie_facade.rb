@@ -22,30 +22,20 @@ class MovieFacade
     end
 
     def self.keyword_search(keywords)
-        response1 = keyword_search_endpoint(1, keywords)
-        response2 = keyword_search_endpoint(2, keywords)
-
-        json1 = parse(response1)
-        json2 = parse(response2)
-        movies1 = json1[:results].map do |movie_data|
+        movies1 = MovieService.keyword_search(1, keywords)[:results].map do |movie_data|
             MovieCreator.new(movie_data)
         end
-        movies2 = json2[:results].map do |movie_data|
+        movies2 = MovieService.keyword_search(2, keywords)[:results].map do |movie_data|
             MovieCreator.new(movie_data)
         end
         (movies1.concat(movies2)).flatten
     end
 
     def self.top_movies
-        response1 = top_movies_endpoint(1)
-        response2 = top_movies_endpoint(2)
-
-        json1 = parse(response1)
-        json2 = parse(response2)
-        movies1 = json1[:results].map do |movie_data|
+        movies1 = MovieService.top_movies(1)[:results].map do |movie_data|
             MovieCreator.new(movie_data)
         end
-        movies2 = json2[:results].map do |movie_data|
+        movies2 = MovieService.top_movies(2)[:results].map do |movie_data|
             MovieCreator.new(movie_data)
         end
         (movies1.concat(movies2)).flatten
