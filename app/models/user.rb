@@ -19,4 +19,9 @@ class User < ApplicationRecord
   def has_friends?
     !friends.empty?
   end
+
+  def add_friend(new_friend)
+    Friendship.create(user_id: self.id, friend_id: new_friend.id)
+    Friendship.create(user_id: new_friend.id, friend_id: self.id)
+  end
 end

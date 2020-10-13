@@ -48,5 +48,14 @@ describe User, type: :model do
       expect(@user1.has_friends?).to eq(true)
       end
     end
+
+    describe 'add_friend' do
+      it 'can add a new user as friend' do
+        @user1.add_friend(@user2)
+
+        expect(@user1.friends).to eq([@user2])
+        expect(@user2.friends).to eq([@user1])
+      end
+    end
   end
 end
