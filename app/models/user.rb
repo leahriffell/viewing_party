@@ -24,4 +24,9 @@ class User < ApplicationRecord
     Friendship.create(user_id: self.id, friend_id: new_friend.id)
     Friendship.create(user_id: new_friend.id, friend_id: self.id)
   end
+
+  def friends_with?(friend)
+    # friends.includes(friend) error when using AR method 
+    friends.include?(friend)
+  end
 end

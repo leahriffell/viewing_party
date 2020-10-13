@@ -16,6 +16,7 @@ describe User, type: :model do
     before :each do
       @user1 = FactoryBot.create(:user)
       @user2 = FactoryBot.create(:user)
+      @user3 = FactoryBot.create(:user)
 
       @movie = Movie.create!(id: 524)
       @party1 = FactoryBot.create(:party)
@@ -55,6 +56,15 @@ describe User, type: :model do
 
         expect(@user1.friends).to eq([@user2])
         expect(@user2.friends).to eq([@user1])
+      end
+    end
+
+    describe 'friends_with?' do
+      it 'can determine if a user is friends with another' do
+        @user1.add_friend(@user2)
+
+        expect(@user1.friends_with?(@user2)).to eq(true)
+        expect(@user1.friends_with?(@user3)).to eq(false)
       end
     end
   end
