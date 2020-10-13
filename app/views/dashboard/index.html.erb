@@ -15,3 +15,21 @@
     <% end %>
   </section>
 <% end %>
+
+<section class='friends'>
+  <h2>Friends</h2>
+
+  <%= form_with model: @friendships, url: friendships_path, local: true do |f| %>
+    <%= f.label :friend_email %>
+    <%= f.email_field :friend_email, :placeholder => "Enter your friend's email", required: true %>
+    <%= f.submit 'Add Friend' %>
+  <% end %>
+
+  <% if current_user.friends? %>
+    <% current_user.friends.each do |friend| %>
+      <%= friend.email %>
+    <% end %>
+  <% else %>
+    <p>You don't have any friends... yet!</p>
+  <% end %>
+</section>

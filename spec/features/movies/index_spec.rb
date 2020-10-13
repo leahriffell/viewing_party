@@ -51,7 +51,7 @@ RSpec.describe 'Movies page' do
             expect(page).to have_css('.vote_avg')
             VCR.use_cassette('top_result_first_movie_details') do
               page.find('.title').click
-              rescue Selenium::WebDriver::Error::StaleElementReferenceError 
+              rescue Selenium::WebDriver::Error::StaleElementReferenceError
                 sleep 1
               retry
               expect(page).to have_button('Create Viewing Party for Movie')
@@ -76,7 +76,7 @@ RSpec.describe 'Movies page' do
             expect(page).to have_css('.vote_avg')
             page.find('.title').click
             VCR.use_cassette('dog_search_first_movie_details', allow_playback_repeats: true) do
-              rescue Selenium::WebDriver::Error::StaleElementReferenceError 
+              rescue Selenium::WebDriver::Error::StaleElementReferenceError
                 sleep 1
               retry
               expect(page).to have_button('Create Viewing Party for Movie')
