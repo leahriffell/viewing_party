@@ -42,6 +42,7 @@ class MovieCreator
   end
 
   def first_ten_cast(cast_array)
+    require 'pry'; binding.pry
     cast_array[0..9].map do |cast|
       "#{cast.name} as #{cast.character}"
     end

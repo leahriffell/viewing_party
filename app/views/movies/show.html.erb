@@ -1,4 +1,3 @@
-
 <div id="title"><h1><%= @movie.title %><span class="unbold"> (<%= @movie.release_year(@movie.release_date) %>)</span></h1></div>
   <div id="user-score"><p>User Score: <%= @movie.vote_average %></p></div>
   <div id="genres"><p>Genre(s): <%= @movie.display_genres(@movie.genres).join(', ') %></p></div>

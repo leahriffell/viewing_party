@@ -48,6 +48,7 @@ class MovieFacade
     end
 
     def self.movie_cast(id)
+        require 'pry'; binding.pry
         results = []
         cast_response = movie_cast_endpoint(id)
         json = parse(cast_response)

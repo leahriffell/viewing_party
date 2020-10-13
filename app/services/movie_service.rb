@@ -40,6 +40,4 @@ private
   def self.keyword_search_endpoint(page_num, keywords)
       conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&#{exclude_adult}&page=#{page_num}&query=#{keywords}")
   end
-
-
 end
