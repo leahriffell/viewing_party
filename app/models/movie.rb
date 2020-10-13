@@ -3,15 +3,13 @@ require 'date'
 class Movie < ApplicationRecord
   has_many :parties, dependent: :destroy
 
-  def release_year(release_date)
-    if release_date != ''
-      Date.parse(release_date).year
-    else
-      return 'n/a'
-    end
-  end
-
-
+  # def release_year(release_date)
+  #   if release_date != ''
+  #     Date.parse(release_date).year
+  #   else
+  #     return 'n/a'
+  #   end
+  # end
 
   # def display_genres(genre_array)
   #   genre_array.map do |genre|

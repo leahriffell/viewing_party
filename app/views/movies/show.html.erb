@@ -1,12 +1,10 @@
-# <% require "pry"; binding.pry %>
 
-
-<div id="title"><h1><%= @movie.title %> <span class="unbold"> (<%= @movie.release_year(@movie.release_date) %>)</span></h1></div>
+<div id="title"><h1><%= @movie.title %><span class="unbold"> (<%= @movie.release_year(@movie.release_date) %>)</span></h1></div>
   <div id="user-score"><p>User Score: <%= @movie.vote_average %></p></div>
-#   <div id="genres"><p>Genre(s): <%=  %></p></div>
+  <div id="genres"><p>Genre(s): <%= @movie.display_genres(@movie.genres).join(', ') %></p></div>
   <div id="runtime"><p>Runtime: <%= @movie.total_runtime(@movie.runtime) %></p></div>
 
-<h4>Overview</h4>
+<h4>Overview:</h4>
   <div id="overview"><p><%= @movie.overview %></p></div>
 
 <h4>Cast</h4>
@@ -18,17 +16,16 @@
   </ol>
 </section>
 
-# <h4>Reviews</h4>
-# <section id="reviews">
-#   <p>Number of Reviews: <%= @movie_reviews.count %></p>
-#   <ol>
-#     <% @movie_reviews.each do |review| %>
-#       <li><%= review.author %>
-#       <p><%= review.url %></p>
-#       <p><%= review.author %></p></li>
+<h4>Reviews</h4>
+<section id="reviews">
+  <p>Number of Reviews: <%= @movie_reviews.count %></p>
+  <ol>
+    <% @movie_reviews.each do |review| %>
+      <li>Author: <%= review.author %>
+      <p><%= review.url %></p>
+      <p><%= review.content %></p></li>
+    <% end %>
+  </ol>
+</section>
 
-#     <% end %>
-#   </ol>
-# </section>
-
-# <%= button_to 'Create Viewing Party', "/parties/new", method: :get, params: { movie_id: @movie[:id] } %>
+<%= button_to 'Create Viewing Party', "/parties/new", method: :get, params: { movie_id: @movie.id } %>

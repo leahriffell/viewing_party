@@ -41,16 +41,15 @@ class MovieCreator
     "#{hours}h #{remaining}m"
   end
 
-    def first_ten_cast(cast_array)
+  def first_ten_cast(cast_array)
     cast_array[0..9].map do |cast|
       "#{cast.name} as #{cast.character}"
     end
   end
 
-    def display_genres(genre_array)
+  def display_genres(genre_array)
     genre_array.map do |genre|
       genre[:name]
     end
   end
-
 end
