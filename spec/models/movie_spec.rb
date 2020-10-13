@@ -31,7 +31,6 @@ describe Movie, type: :model do
     xit 'can display the first 10 cast names and characters' do
       url = "https://api.themoviedb.org/3/movie/524/credits?api_key=#{ENV['MOVIES_API_KEY']}"
       json_response = File.read('spec/fixtures/show_movie_cast.json')
-      require "pry"; binding.pry
       stub_request(:get, url).to_return(status: 200, body: json_response)
       expect(@movie.first_10_cast(json_response)).to eq('aaaa')
     end

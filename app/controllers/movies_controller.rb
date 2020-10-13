@@ -23,16 +23,10 @@ class MoviesController < ApplicationController
 
   def fetch_movies(request_type)
     if request_type == 'top'
-      response1 = top_movies_endpoint(1)
-      response2 = top_movies_endpoint(2)
+      @movies = MovieFacade.top_movies
     else
-      response1 = keyword_search_endpoint(1)
-      response2 = keyword_search_endpoint(2)
+      @movies = MovieFacade.keyword_search(params[:keyword_search])
     end
-    json1 = parse(response1)
-    json2 = parse(response2)
-    @movies1 = json1[:results]
-    @movies2 = json2[:results]
   end
 
   private
@@ -55,15 +49,6 @@ class MoviesController < ApplicationController
 
   def parse(response)
     JSON.parse(response.body, symbolize_names: true)
-  end
-
-  def top_movies_endpoint(page_num)
-    sort_by = 'vote_average.desc'
-    conn.get("3/discover/movie?api_key=#{movies_api_key}&#{language('en-US')}&sort_by=#{sort_by}&#{exclude_adult}&page=#{page_num}&vote_count.gte=300")
-  end
-
-  def keyword_search_endpoint(page_num)
-    conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&#{exclude_adult}&page=#{page_num}&query=#{params[:keyword_search]}")
   end
 
   def movie_show_endpoint
