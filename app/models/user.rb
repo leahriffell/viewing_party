@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def party_status(party_id)
     party_users.where(party_id: party_id).pluck(:attendee_type).first
   end
+
+  def has_friends?
+    !friends.empty?
+  end
 end

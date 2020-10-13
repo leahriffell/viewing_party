@@ -38,5 +38,15 @@ describe User, type: :model do
         expect(@user2.party_status(@party2.id)).to eq('host')
       end
     end
+
+    describe 'has_friends?' do
+      it 'can determine if user has any friends or not' do
+      expect(@user1.has_friends?).to eq(false)
+
+      @user1.friends << @user2
+
+      expect(@user1.has_friends?).to eq(true)
+      end
+    end
   end
 end
