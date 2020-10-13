@@ -40,13 +40,13 @@ describe User, type: :model do
       end
     end
 
-    describe 'has_friends?' do
+    describe 'friends?' do
       it 'can determine if user has any friends or not' do
-      expect(@user1.has_friends?).to eq(false)
+      expect(@user1.friends?).to eq(false)
 
       @user1.friends << @user2
 
-      expect(@user1.has_friends?).to eq(true)
+      expect(@user1.friends?).to eq(true)
       end
     end
 

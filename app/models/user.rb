@@ -16,13 +16,13 @@ class User < ApplicationRecord
     party_users.where(party_id: party_id).pluck(:attendee_type).first
   end
 
-  def has_friends?
+  def friends?
     !friends.empty?
   end
 
   def add_friend(new_friend)
-    Friendship.create(user_id: self.id, friend_id: new_friend.id)
-    Friendship.create(user_id: new_friend.id, friend_id: self.id)
+    Friendship.create(user_id: id, friend_id: new_friend.id)
+    Friendship.create(user_id: new_friend.id, friend_id: id)
   end
 
   def friends_with?(friend)

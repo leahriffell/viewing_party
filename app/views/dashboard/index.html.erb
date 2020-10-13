@@ -25,7 +25,7 @@
     <%= f.submit 'Add Friend' %>
   <% end %>
 
-  <% if current_user.has_friends? %>
+  <% if current_user.friends? %>
     <% current_user.friends.each do |friend| %>
       <%= friend.email %>
     <% end %>
