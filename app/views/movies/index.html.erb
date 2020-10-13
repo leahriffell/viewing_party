@@ -7,8 +7,5 @@
 <%= render 'movie_search' %>
 
 <section class='movie-results'>
-  <%= render partial: 'movie_list', locals: { movies: @movies1 } %>
-  <% unless @movies2.nil?  %>
-    <%= render partial: 'movie_list', locals: { movies: @movies2 } %>
-  <% end %>
+  <%= render partial: 'movie_list' %>
 </section>
