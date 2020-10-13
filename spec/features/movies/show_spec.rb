@@ -80,7 +80,7 @@ RSpec.describe 'Movies detail page' do
 
     it 'I see a count of the total number of reviews' do
       VCR.use_cassette('show_movie_details') do
-        visit(movie_path('524'))
+        visit(movie_path('278'))
         within '#reviews' do
           expect(page).to have_content('Number of Reviews:')
           expect(page).to have_content(1)

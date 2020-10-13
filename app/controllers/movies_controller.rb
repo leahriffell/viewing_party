@@ -12,13 +12,10 @@ class MoviesController < ApplicationController
   end
 
   def show
-    show_response = movie_show_endpoint
-    cast_response = movie_cast_endpoint
-    review_response = movie_review_endpoint
     @movie_object = Movie.new
-    @movie = parse(show_response)
-    @movie_cast = parse(cast_response)
-    @movie_review = parse(review_response)
+    @movie = MovieFacade.movie_details(params[:id])
+    @movie_cast = MovieFacade.movie_cast(params[:id])
+    @movie_reviews = MovieFacade.movie_reviews(params[:id])
   end
 
   def fetch_movies(request_type)
@@ -49,17 +46,5 @@ class MoviesController < ApplicationController
 
   def parse(response)
     JSON.parse(response.body, symbolize_names: true)
-  end
-
-  def movie_show_endpoint
-    conn.get("3/movie/#{params[:id]}?api_key=#{movies_api_key}")
-  end
-
-  def movie_cast_endpoint
-    conn.get("3/movie/#{params[:id]}/credits?api_key=#{movies_api_key}")
-  end
-
-  def movie_review_endpoint
-    conn.get("3/movie/#{params[:id]}/reviews?api_key=#{movies_api_key}&#{language('en-US')}")
   end
 end

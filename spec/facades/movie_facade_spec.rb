@@ -22,4 +22,35 @@ RSpec.describe 'Movie Facade' do
             expect(movies.first.vote_average).to be_an(Float)
         end
     end
+
+    it 'returns movie detail objects' do
+        VCR.use_cassette('show_movie_details') do
+            movies = MovieFacade.movie_details(278)
+
+            expect(movies).to be_a(MovieCreator)
+            expect(movies.genres).to be_an(Array)
+            expect(movies.release_date).to be_a(String)
+            expect(movies.runtime).to be_an(Integer)
+            expect(movies.title).to be_a(String)
+            expect(movies.vote_average).to be_a(Float)
+        end
+    end
+
+    it 'returns a movie cast object' do
+        VCR.use_cassette('show_movie_cast') do
+            cast = MovieFacade.movie_cast(278)
+
+            expect(cast).to be_a(MovieCreator)
+            expect(cast).to be_an(Array)
+            expect(cast.first).to be_a(Hash)
+        end
+    end
+
+    it 'returns a movie reviews object' do
+        VCR.use_cassette('show_movie_reviews') do
+            reviews = MovieFacade.movie_reviews(278)
+
+            expect(reviews).to be_a(MovieCreator)
+        end
+    end    
 end
