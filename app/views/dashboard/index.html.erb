@@ -11,6 +11,11 @@
         <p><%= party.party_date.strftime("%B %e, %Y") %></p>
         <p><%= party.start_time %></p>
         <p><%= current_user.party_status(party.id) %></p>
+        <% if party.any_guests? %>
+          <% party.invitees.each do |invitee| %>
+            <%= invitee.email %>
+          <% end %>
+        <% end %>
       </div>  
     <% end %>
   </section>
