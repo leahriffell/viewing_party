@@ -15,17 +15,17 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 500
-      message: Internal Server Error
+      code: 200
+      message: OK
     headers:
       Content-Type:
       - application/json;charset=utf-8
-      Content-Length:
-      - '105'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Date:
-      - Tue, 13 Oct 2020 16:10:01 GMT
+      - Wed, 14 Oct 2020 19:20:32 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -35,24 +35,26 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Etag:
-      - f71c297ba5c5df33f56304bb71f64e8c
+      Cache-Control:
+      - public, max-age=120
+      Vary:
+      - Accept-Encoding
       X-Cache:
-      - Error from cloudfront
+      - Miss from cloudfront
       Via:
-      - 1.1 b2e880ac67c1fba390623b9fc04bd63a.cloudfront.net (CloudFront)
+      - 1.1 9cefde3a3c84cc779d3c26a39c2e4430.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - tDkXYzNyEaTk3f3QKAbVBY8-MwBXsSgszEJVbSslcaLY2uCPDz3GRQ==
+      - XsNAw4IWtfJJi-9PrOuFmu-WZSuQUFZ_STQA_OQqIwFB8yFJiEx3dg==
     body:
-      encoding: UTF-8
-      string: '{"status_code":11,"status_message":"Internal error: Something went
-        wrong, contact TMDb.","success":false}'
-  recorded_at: Tue, 13 Oct 2020 16:10:01 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoxLCJ0b3RhbF9yZXN1bHRzIjo2LCJ0b3RhbF9wYWdlcyI6MSwicmVzdWx0cyI6W3sicG9wdWxhcml0eSI6MjguODkyLCJpZCI6MTA2MjUsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6NjExNiwidm90ZV9hdmVyYWdlIjo3LjEsInRpdGxlIjoiTWVhbiBHaXJscyIsInJlbGVhc2VfZGF0ZSI6IjIwMDQtMDQtMzAiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJNZWFuIEdpcmxzIiwiZ2VucmVfaWRzIjpbMzVdLCJiYWNrZHJvcF9wYXRoIjoiXC8zUGlLdERsMXMwdEdIbXFSam5XWmJCVmdFRXIuanBnIiwiYWR1bHQiOmZhbHNlLCJvdmVydmlldyI6IkNhZHkgSGVyb24gaXMgYSBoaXQgd2l0aCBUaGUgUGxhc3RpY3MsIHRoZSBBLWxpc3QgZ2lybCBjbGlxdWUgYXQgaGVyIG5ldyBzY2hvb2wsIHVudGlsIHNoZSBtYWtlcyB0aGUgbWlzdGFrZSBvZiBmYWxsaW5nIGZvciBBYXJvbiBTYW11ZWxzLCB0aGUgZXgtYm95ZnJpZW5kIG9mIGFscGhhIFBsYXN0aWMgUmVnaW5hIEdlb3JnZS4iLCJwb3N0ZXJfcGF0aCI6IlwvZlhtM1lLWEFFang3ZDJ0SVdEZzlUZlJadHNVLmpwZyJ9LHsicG9wdWxhcml0eSI6MjAuMDU4LCJ2b3RlX2NvdW50Ijo4NjgsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcLzM0ektIVDk4WmdTQ3o2YWcxWk5CdWw3ZjFXdS5qcGciLCJpZCI6NTE0ODEsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6Ilwvd2xxc2VmUGN2TGNkMHdWbFBWaFJTMWdFRUhOLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6Ik1lYW4gR2lybHMgMiIsImdlbnJlX2lkcyI6WzM1XSwidGl0bGUiOiJNZWFuIEdpcmxzIDIiLCJ2b3RlX2F2ZXJhZ2UiOjUuMiwib3ZlcnZpZXciOiJBIG5ldyBzdHVkZW50LCBKbywgYWdyZWVzIHRvIGJlZnJpZW5kIGFuIG91dGNhc3QsIEFiYnksIGF0IHRoZSB1cmdpbmcgb2YgQWJieSdzIHdlYWx0aHkgZmF0aGVyIGluIGV4Y2hhbmdlIGZvciBwYXlpbmcgYWxsIG9mIEpvJ3MgY29zdHMgZm9yIHRoZSBjb2xsZWdlIG9mIGhlciBkcmVhbXMuIEpvIGFuZCBBYmJ5IHRlYW0gdXAgdG8gdGFrZSBvbiB0aGUgc2Nob29sJ3MgbWVhbiBnaXJscywgdGhlIFBsYXN0aWNzLiIsInJlbGVhc2VfZGF0ZSI6IjIwMTEtMDEtMjMifSx7InBvcHVsYXJpdHkiOjAuNzU3LCJ2b3RlX2NvdW50IjowLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC8xTGFjOXFyTjZONHVPMjZUN25CZ2k4QTdoVmguanBnIiwiaWQiOjY3MzU5MywiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC9oYllxZkZpVjk0Ym1tRjBPNHY5elQxZmdZWG8uanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiTWVhbiBHaXJscyIsImdlbnJlX2lkcyI6WzM1LDEwNDAyXSwidGl0bGUiOiJNZWFuIEdpcmxzIiwidm90ZV9hdmVyYWdlIjowLCJvdmVydmlldyI6IkFuIGFkYXB0YXRpb24gb2YgVGluYSBGZXksIEplZmYgUmljaG1vbmQsIGFuZCBOZWxsIEJlbmphbWluJ3MgQnJvYWR3YXkgbXVzaWNhbCBiYXNlZCBvbiB0aGUgcG9wdWxhciAyMDA0IGZpbG0gY29tZWR5LiIsInJlbGVhc2VfZGF0ZSI6IiJ9LHsicG9wdWxhcml0eSI6MS4zNjUsImlkIjo2OTE4MDIsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6MCwidm90ZV9hdmVyYWdlIjowLCJ0aXRsZSI6IlNjaG9vbCBHaXJsczsgT3IsIHRoZSBBZnJpY2FuIE1lYW4gR2lybHMgUGxheSIsInJlbGVhc2VfZGF0ZSI6IjIwMjAtMDQtMDIiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJTY2hvb2wgR2lybHM7IE9yLCB0aGUgQWZyaWNhbiBNZWFuIEdpcmxzIFBsYXkiLCJnZW5yZV9pZHMiOltdLCJiYWNrZHJvcF9wYXRoIjoiXC9uU21Ub2ZjZ3lDajcwT004QWQ1bU13M01NTDEuanBnIiwiYWR1bHQiOmZhbHNlLCJvdmVydmlldyI6IkFzIHRoZSByZWlnbmluZyBxdWVlbiBiZWUgYXQgR2hhbmHigJlzIG1vc3QgZXhjbHVzaXZlIGJvYXJkaW5nIHNjaG9vbCBzZXRzIGhlciBzaWdodHMgb24gdGhlIE1pc3MgVW5pdmVyc2UgcGFnZWFudCwgYSBuZXcgc3R1ZGVudCB1bmV4cGVjdGVkbHkgY2hhbmdlcyB0aGUgZ2FtZS4iLCJwb3N0ZXJfcGF0aCI6IlwveUJtU3JrWVhmTVpYTHJkc21tMDVzV085SU5JLmpwZyJ9LHsicG9wdWxhcml0eSI6MC43MjMsImlkIjo3MTY3ODEsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6MCwidm90ZV9hdmVyYWdlIjowLCJ0aXRsZSI6Ik1lYW4gUXVlZW5zOiBBIE1lYW4gR2lybHMgUGFyb2R5IiwicmVsZWFzZV9kYXRlIjoiMjAyMC0wNC0wOSIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6Ik1lYW4gUXVlZW5zOiBBIE1lYW4gR2lybHMgUGFyb2R5IiwiZ2VucmVfaWRzIjpbMzVdLCJiYWNrZHJvcF9wYXRoIjoiXC8zT0YwbzBKd0xnaVJXVjUxWHJEVklxTGpqaXYuanBnIiwiYWR1bHQiOmZhbHNlLCJvdmVydmlldyI6IkEgcmVpbWFnaW5pbmcgb2YgdGhlIGZhbW91cyBNZWFuIEdpcmxzIGZvdXItd2F5IGNhbGwgd2l0aCBkcmFnIHF1ZWVucyBhbWlkc3Qgc29jaWFsIGRpc3RhbmNpbmcuIiwicG9zdGVyX3BhdGgiOiJcL2xCT1NUQnVUOVB2bFVrZGNJT20xeEh3ZDMxTy5qcGcifSx7InBvcHVsYXJpdHkiOjAuNjQ5LCJpZCI6NjIzMzUxLCJ2aWRlbyI6ZmFsc2UsInZvdGVfY291bnQiOjAsInZvdGVfYXZlcmFnZSI6MCwidGl0bGUiOiJTY2hvb2wgR2lybHM7IE9yLCB0aGUgQWZyaWNhbiBNZWFuIEdpcmxzIFBsYXkiLCJyZWxlYXNlX2RhdGUiOiIyMDE5LTA4LTE2Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiU2Nob29sIEdpcmxzOyBPciwgdGhlIEFmcmljYW4gTWVhbiBHaXJscyBQbGF5IiwiZ2VucmVfaWRzIjpbXSwiYmFja2Ryb3BfcGF0aCI6IlwveWRFNzNnM1JqSldPYkczdUFNdWVoUUNGM1JFLmpwZyIsImFkdWx0IjpmYWxzZSwib3ZlcnZpZXciOiJQYXVsaW5hLCB0aGUgcmVpZ25pbmcgcXVlZW4gYmVlIGF0IEdoYW5h4oCZcyBtb3N0IGV4Y2x1c2l2ZSBib2FyZGluZyBzY2hvb2wsIGhhcyBoZXIgc2lnaHRzIHNldCBvbiB0aGUgTWlzcyBVbml2ZXJzZSBwYWdlYW50LiBCdXQgdGhlIGFycml2YWwgb2YgRXJpY2thLCBhIG5ldyBzdHVkZW50IHdpdGggdW5kZW5pYWJsZSB0YWxlbnQgYW5kIGJlYXV0eSwgY2FwdHVyZXMgdGhlIGF0dGVudGlvbiBvZiB0aGUgcGFnZWFudCByZWNydWl0ZXLigJRhbmQgUGF1bGluYeKAmXMgaGl2ZS1taW5kZWQgZnJpZW5kcy4iLCJwb3N0ZXJfcGF0aCI6IlwvejZ4bnBDaUU1VFhDSXNqZlgzQzc5ZjFwMWhhLmpwZyJ9XX0=
+  recorded_at: Wed, 14 Oct 2020 19:20:32 GMT
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/search/movie?api_key=MOVIES_SECRET_KEY&include_adult=false&language=en-US&page=2&query=star%20wars
+    uri: https://api.themoviedb.org/3/search/movie?api_key=MOVIES_SECRET_KEY&include_adult=false&language=en-US&page=2&query=mean%20girls
     body:
       encoding: US-ASCII
       string: ''
@@ -70,54 +72,6 @@ http_interactions:
     headers:
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Date:
-      - Wed, 14 Oct 2020 14:00:34 GMT
-      Server:
-      - openresty
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Methods:
-      - GET, HEAD, POST, PUT, DELETE, OPTIONS
-      Access-Control-Expose-Headers:
-      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
-        Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=120
-      Vary:
-      - Accept-Encoding
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 38059ba65876500c040fb73e2cbaebf5.cloudfront.net (CloudFront)
-      X-Amz-Cf-Pop:
-      - DEN50-C2
-      X-Amz-Cf-Id:
-      - XTEEmj8a4Z7agFET0f2NluWz_4TJJfZTp5dcOhCdoez18xqo6JSWsQ==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        eyJwYWdlIjoxLCJ0b3RhbF9yZXN1bHRzIjo2LCJ0b3RhbF9wYWdlcyI6MSwicmVzdWx0cyI6W3sicG9wdWxhcml0eSI6MjguODkyLCJpZCI6MTA2MjUsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6NjExNiwidm90ZV9hdmVyYWdlIjo3LjEsInRpdGxlIjoiTWVhbiBHaXJscyIsInJlbGVhc2VfZGF0ZSI6IjIwMDQtMDQtMzAiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJNZWFuIEdpcmxzIiwiZ2VucmVfaWRzIjpbMzVdLCJiYWNrZHJvcF9wYXRoIjoiXC8zUGlLdERsMXMwdEdIbXFSam5XWmJCVmdFRXIuanBnIiwiYWR1bHQiOmZhbHNlLCJvdmVydmlldyI6IkNhZHkgSGVyb24gaXMgYSBoaXQgd2l0aCBUaGUgUGxhc3RpY3MsIHRoZSBBLWxpc3QgZ2lybCBjbGlxdWUgYXQgaGVyIG5ldyBzY2hvb2wsIHVudGlsIHNoZSBtYWtlcyB0aGUgbWlzdGFrZSBvZiBmYWxsaW5nIGZvciBBYXJvbiBTYW11ZWxzLCB0aGUgZXgtYm95ZnJpZW5kIG9mIGFscGhhIFBsYXN0aWMgUmVnaW5hIEdlb3JnZS4iLCJwb3N0ZXJfcGF0aCI6IlwvZlhtM1lLWEFFang3ZDJ0SVdEZzlUZlJadHNVLmpwZyJ9LHsicG9wdWxhcml0eSI6MjAuMDU4LCJ2b3RlX2NvdW50Ijo4NjgsInZpZGVvIjpmYWxzZSwicG9zdGVyX3BhdGgiOiJcLzM0ektIVDk4WmdTQ3o2YWcxWk5CdWw3ZjFXdS5qcGciLCJpZCI6NTE0ODEsImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6Ilwvd2xxc2VmUGN2TGNkMHdWbFBWaFJTMWdFRUhOLmpwZyIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6Ik1lYW4gR2lybHMgMiIsImdlbnJlX2lkcyI6WzM1XSwidGl0bGUiOiJNZWFuIEdpcmxzIDIiLCJ2b3RlX2F2ZXJhZ2UiOjUuMiwib3ZlcnZpZXciOiJBIG5ldyBzdHVkZW50LCBKbywgYWdyZWVzIHRvIGJlZnJpZW5kIGFuIG91dGNhc3QsIEFiYnksIGF0IHRoZSB1cmdpbmcgb2YgQWJieSdzIHdlYWx0aHkgZmF0aGVyIGluIGV4Y2hhbmdlIGZvciBwYXlpbmcgYWxsIG9mIEpvJ3MgY29zdHMgZm9yIHRoZSBjb2xsZWdlIG9mIGhlciBkcmVhbXMuIEpvIGFuZCBBYmJ5IHRlYW0gdXAgdG8gdGFrZSBvbiB0aGUgc2Nob29sJ3MgbWVhbiBnaXJscywgdGhlIFBsYXN0aWNzLiIsInJlbGVhc2VfZGF0ZSI6IjIwMTEtMDEtMjMifSx7InBvcHVsYXJpdHkiOjAuNzU3LCJ2b3RlX2NvdW50IjowLCJ2aWRlbyI6ZmFsc2UsInBvc3Rlcl9wYXRoIjoiXC8xTGFjOXFyTjZONHVPMjZUN25CZ2k4QTdoVmguanBnIiwiaWQiOjY3MzU5MywiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiXC9oYllxZkZpVjk0Ym1tRjBPNHY5elQxZmdZWG8uanBnIiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiTWVhbiBHaXJscyIsImdlbnJlX2lkcyI6WzM1LDEwNDAyXSwidGl0bGUiOiJNZWFuIEdpcmxzIiwidm90ZV9hdmVyYWdlIjowLCJvdmVydmlldyI6IkFuIGFkYXB0YXRpb24gb2YgVGluYSBGZXksIEplZmYgUmljaG1vbmQsIGFuZCBOZWxsIEJlbmphbWluJ3MgQnJvYWR3YXkgbXVzaWNhbCBiYXNlZCBvbiB0aGUgcG9wdWxhciAyMDA0IGZpbG0gY29tZWR5LiIsInJlbGVhc2VfZGF0ZSI6IiJ9LHsicG9wdWxhcml0eSI6MS4zNjUsImlkIjo2OTE4MDIsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6MCwidm90ZV9hdmVyYWdlIjowLCJ0aXRsZSI6IlNjaG9vbCBHaXJsczsgT3IsIHRoZSBBZnJpY2FuIE1lYW4gR2lybHMgUGxheSIsInJlbGVhc2VfZGF0ZSI6IjIwMjAtMDQtMDIiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImVuIiwib3JpZ2luYWxfdGl0bGUiOiJTY2hvb2wgR2lybHM7IE9yLCB0aGUgQWZyaWNhbiBNZWFuIEdpcmxzIFBsYXkiLCJnZW5yZV9pZHMiOltdLCJiYWNrZHJvcF9wYXRoIjoiXC9uU21Ub2ZjZ3lDajcwT004QWQ1bU13M01NTDEuanBnIiwiYWR1bHQiOmZhbHNlLCJvdmVydmlldyI6IkFzIHRoZSByZWlnbmluZyBxdWVlbiBiZWUgYXQgR2hhbmHigJlzIG1vc3QgZXhjbHVzaXZlIGJvYXJkaW5nIHNjaG9vbCBzZXRzIGhlciBzaWdodHMgb24gdGhlIE1pc3MgVW5pdmVyc2UgcGFnZWFudCwgYSBuZXcgc3R1ZGVudCB1bmV4cGVjdGVkbHkgY2hhbmdlcyB0aGUgZ2FtZS4iLCJwb3N0ZXJfcGF0aCI6IlwveUJtU3JrWVhmTVpYTHJkc21tMDVzV085SU5JLmpwZyJ9LHsicG9wdWxhcml0eSI6MC43MjMsImlkIjo3MTY3ODEsInZpZGVvIjpmYWxzZSwidm90ZV9jb3VudCI6MCwidm90ZV9hdmVyYWdlIjowLCJ0aXRsZSI6Ik1lYW4gUXVlZW5zOiBBIE1lYW4gR2lybHMgUGFyb2R5IiwicmVsZWFzZV9kYXRlIjoiMjAyMC0wNC0wOSIsIm9yaWdpbmFsX2xhbmd1YWdlIjoiZW4iLCJvcmlnaW5hbF90aXRsZSI6Ik1lYW4gUXVlZW5zOiBBIE1lYW4gR2lybHMgUGFyb2R5IiwiZ2VucmVfaWRzIjpbMzVdLCJiYWNrZHJvcF9wYXRoIjoiXC8zT0YwbzBKd0xnaVJXVjUxWHJEVklxTGpqaXYuanBnIiwiYWR1bHQiOmZhbHNlLCJvdmVydmlldyI6IkEgcmVpbWFnaW5pbmcgb2YgdGhlIGZhbW91cyBNZWFuIEdpcmxzIGZvdXItd2F5IGNhbGwgd2l0aCBkcmFnIHF1ZWVucyBhbWlkc3Qgc29jaWFsIGRpc3RhbmNpbmcuIiwicG9zdGVyX3BhdGgiOiJcL2xCT1NUQnVUOVB2bFVrZGNJT20xeEh3ZDMxTy5qcGcifSx7InBvcHVsYXJpdHkiOjAuNjQ5LCJpZCI6NjIzMzUxLCJ2aWRlbyI6ZmFsc2UsInZvdGVfY291bnQiOjAsInZvdGVfYXZlcmFnZSI6MCwidGl0bGUiOiJTY2hvb2wgR2lybHM7IE9yLCB0aGUgQWZyaWNhbiBNZWFuIEdpcmxzIFBsYXkiLCJyZWxlYXNlX2RhdGUiOiIyMDE5LTA4LTE2Iiwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJlbiIsIm9yaWdpbmFsX3RpdGxlIjoiU2Nob29sIEdpcmxzOyBPciwgdGhlIEFmcmljYW4gTWVhbiBHaXJscyBQbGF5IiwiZ2VucmVfaWRzIjpbXSwiYmFja2Ryb3BfcGF0aCI6IlwveWRFNzNnM1JqSldPYkczdUFNdWVoUUNGM1JFLmpwZyIsImFkdWx0IjpmYWxzZSwib3ZlcnZpZXciOiJQYXVsaW5hLCB0aGUgcmVpZ25pbmcgcXVlZW4gYmVlIGF0IEdoYW5h4oCZcyBtb3N0IGV4Y2x1c2l2ZSBib2FyZGluZyBzY2hvb2wsIGhhcyBoZXIgc2lnaHRzIHNldCBvbiB0aGUgTWlzcyBVbml2ZXJzZSBwYWdlYW50LiBCdXQgdGhlIGFycml2YWwgb2YgRXJpY2thLCBhIG5ldyBzdHVkZW50IHdpdGggdW5kZW5pYWJsZSB0YWxlbnQgYW5kIGJlYXV0eSwgY2FwdHVyZXMgdGhlIGF0dGVudGlvbiBvZiB0aGUgcGFnZWFudCByZWNydWl0ZXLigJRhbmQgUGF1bGluYeKAmXMgaGl2ZS1taW5kZWQgZnJpZW5kcy4iLCJwb3N0ZXJfcGF0aCI6IlwvejZ4bnBDaUU1VFhDSXNqZlgzQzc5ZjFwMWhhLmpwZyJ9XX0=
-  recorded_at: Wed, 14 Oct 2020 14:00:34 GMT
-- request:
-    method: get
-    uri: https://api.themoviedb.org/3/search/movie?api_key=MOVIES_SECRET_KEY&include_adult=false&language=en-US&page=2&query=mean%20girls
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v1.0.1
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    headers:
-      - application/json;charset=utf-8
       Content-Length:
       - '57'
       Connection:
@@ -132,21 +86,21 @@ http_interactions:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
       Date:
-      - Wed, 14 Oct 2020 14:00:34 GMT
+      - Wed, 14 Oct 2020 19:20:33 GMT
       Etag:
       - 2e7c726a05acc00daba2490ed025708c
       Cache-Control:
       - public, max-age=120
       X-Cache:
-      - Miss from cloudfront
+      - RefreshHit from cloudfront
       Via:
-      - 1.1 ce4b35590464ed34415a13badd946ebb.cloudfront.net (CloudFront)
+      - 1.1 045f1e1f031241f3808c557a2b5d6b0a.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - ggWETTlCAAONrsKL1uiGKP6gqHp6ib8MR8VYqXUSWJAvAFK2Kc1itA==
+      - ZlsSJAzwGpFlcPGpuoNOfhRtDUrv4_O3tn8HEvheXQFvq3pbqG15gw==
     body:
       encoding: UTF-8
       string: '{"page":2,"total_results":6,"total_pages":1,"results":[]}'
-  recorded_at: Wed, 14 Oct 2020 14:00:34 GMT
+  recorded_at: Wed, 14 Oct 2020 19:20:33 GMT
 recorded_with: VCR 6.0.0
