@@ -80,6 +80,17 @@ RSpec.describe 'Create Viewing Party page' do
         expect(page).to have_content('host')
         expect(page).to have_content("#{@user2.email}")
       end
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user2)
+      
+      visit dashboard_path
+
+      within(".viewing-parties") do
+        expect(page).to have_content('Alien Contact: The Pascagoula UFO Encounter')
+        expect(page).to have_content('November 12, 2021')
+        expect(page).to have_content('9:30 PM')
+        expect(page).to have_content('guest')
+      end
     end
 
     it 'Can create viewing party and invite multiple friends' do
@@ -103,6 +114,28 @@ RSpec.describe 'Create Viewing Party page' do
         expect(page).to have_content('host')
         expect(page).to have_content("#{@user2.email}")
         expect(page).to have_content("#{@user3.email}")
+      end
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user2)
+      
+      visit dashboard_path
+
+      within(".viewing-parties") do
+        expect(page).to have_content('Alien Contact: The Pascagoula UFO Encounter')
+        expect(page).to have_content('January 11, 2021')
+        expect(page).to have_content('8:30 PM')
+        expect(page).to have_content('guest')
+      end
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user3)
+      
+      visit dashboard_path
+save_and_open_page
+      within(".viewing-parties") do
+        expect(page).to have_content('Alien Contact: The Pascagoula UFO Encounter')
+        expect(page).to have_content('January 11, 2021')
+        expect(page).to have_content('8:30 PM')
+        expect(page).to have_content('guest')
       end
     end
 

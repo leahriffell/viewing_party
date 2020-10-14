@@ -23,7 +23,7 @@
 
 <section class='friends'>
   <h2>Friends</h2>
-
+  <h5>Add a new friend:</h5>
   <%= form_with model: @friendships, url: friendships_path, local: true do |f| %>
     <%= f.label :friend_email %>
     <%= f.email_field :friend_email, :placeholder => "Enter your friend's email", required: true %>
