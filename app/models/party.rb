@@ -21,4 +21,8 @@ class Party < ApplicationRecord
       relation
     end 
   end
+
+  def any_guests?
+    !invitees.empty?
+  end
 end

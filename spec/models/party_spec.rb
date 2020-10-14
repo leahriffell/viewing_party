@@ -42,5 +42,14 @@ describe Party, type: :model do
         expect(@party1.invitees).to eq([@user2, @user3])
       end
     end
+
+    describe 'any_guests?' do
+      it 'can determine whether or not a party has any invited guests' do
+        PartyUser.create(party_id: @party1.id, user_id: @user1.id)
+        
+        expect(@party1.any_guests?).to eq(true)
+        expect(@party2.any_guests?).to eq(false)
+      end
+    end
   end
 end
