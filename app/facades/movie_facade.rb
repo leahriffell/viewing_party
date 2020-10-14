@@ -8,19 +8,19 @@ class MovieFacade
 
   def self.keyword_search(keywords)
     moviespg1 = MovieService.keyword_search(1, keywords)[:results]
-    movies1 = moviespg1.map { |movie_data| MovieCreator.new(movie_data) } unless moviespg1.nil?
+    movies1 = moviespg1.map { |movie_data| MovieDetails.new(movie_data) } unless moviespg1.nil?
     moviespg2 = MovieService.keyword_search(2, keywords)[:results]
-    movies2 = moviespg2.map { |movie_data| MovieCreator.new(movie_data) } unless moviespg2.nil?
+    movies2 = moviespg2.map { |movie_data| MovieDetails.new(movie_data) } unless moviespg2.nil?
     
     format_object_array(movies1, movies2)
   end
 
   def self.top_movies
     movies1 = MovieService.top_movies(1)[:results].map do |movie_data|
-      MovieCreator.new(movie_data)
+      MovieDetails.new(movie_data)
     end
     movies2 = MovieService.top_movies(2)[:results].map do |movie_data|
-      MovieCreator.new(movie_data)
+      MovieDetails.new(movie_data)
     end
     movies1.concat(movies2).flatten
   end
