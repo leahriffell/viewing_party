@@ -40,10 +40,4 @@ class MovieDetails
       genre[:name]
     end
   end
-
-  # def first_ten_cast(cast_array)
-  #   cast_array[0..9].map do |cast|
-  #     "#{cast.name} as #{cast.character}"
-  #   end
-  # end
 end

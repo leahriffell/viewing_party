@@ -7,6 +7,4 @@ class CastDetails
     @character = attr[:character]
     @id = attr[:id]
   end
-
-
 end
