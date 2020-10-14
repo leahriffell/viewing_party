@@ -14,12 +14,11 @@ RSpec.describe 'Movies detail page' do
       end
     end
 
-    xit 'I click create a viewing party, I am taken to the new event page' do
+    it 'I click create a viewing party, I am taken to the new event page' do
       VCR.use_cassette('show_movie_details') do
-        # this test will need to be reactiviated once we have the party page working
         visit(movie_path('524'))
         click_button('Create Viewing Party')
-        expect(current_path).to eq(party_create_path)
+        expect(current_path).to eq(new_party_path)
       end
     end
 
@@ -32,7 +31,6 @@ RSpec.describe 'Movies detail page' do
       end
     end
 
-# should these be dynamic here? @movie[:vote_average]
     it 'I see the movies user score' do
       VCR.use_cassette('show_movie_details') do
         visit(movie_path('524'))
