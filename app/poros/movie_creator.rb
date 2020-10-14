@@ -27,30 +27,30 @@ class MovieCreator
     @id = attr[:id]
   end
 
-  def release_year(date)
-    if release_date != ''
-      Date.parse(release_date).year
-    else
-      return 'n/a'
-    end
-  end
+  # def release_year(date)
+  #   if release_date != ''
+  #     Date.parse(release_date).year
+  #   else
+  #     return 'n/a'
+  #   end
+  # end
 
-  def total_runtime(runtime)
-    hours = runtime / 60
-    remaining = runtime % 60
-    "#{hours}h #{remaining}m"
-  end
+  # def total_runtime(runtime)
+  #   hours = runtime / 60
+  #   remaining = runtime % 60
+  #   "#{hours}h #{remaining}m"
+  # end
 
-  def first_ten_cast(cast_array)
-    require 'pry'; binding.pry
-    cast_array[0..9].map do |cast|
-      "#{cast.name} as #{cast.character}"
-    end
-  end
+  # def first_ten_cast(cast_array)
+  #   require 'pry'; binding.pry
+  #   cast_array[0..9].map do |cast|
+  #     "#{cast.name} as #{cast.character}"
+  #   end
+  # end
 
-  def display_genres(genre_array)
-    genre_array.map do |genre|
-      genre[:name]
-    end
-  end
+  # def display_genres(genre_array)
+  #   genre_array.map do |genre|
+  #     genre[:name]
+  #   end
+  # end
 end

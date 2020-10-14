@@ -12,10 +12,10 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie_object = Movie.new
-    @movie = MovieFacade.movie_details(params[:id])
-    @movie_cast = MovieFacade.movie_cast(params[:id])
-    @movie_reviews = MovieFacade.movie_reviews(params[:id])
+    @movie = MovieFacade.get_movie_details(params[:id])
+    # @movie = MovieFacade.movie_details(params[:id])
+    # @movie_cast = MovieFacade.movie_cast(params[:id])
+    # @movie_reviews = MovieFacade.movie_reviews(params[:id])
   end
 
   def fetch_movies(request_type)

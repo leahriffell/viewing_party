@@ -4,25 +4,31 @@
   <div id="runtime"><p>Runtime: <%= @movie.total_runtime(@movie.runtime) %></p></div>
 
 <h4>Overview:</h4>
-  <div id="overview"><p><%= @movie.overview %></p></div>
+  <div id="overview">
+    <p><%= @movie.overview %></p>
+  </div>
 
 <h4>Cast</h4>
 <section id="cast">
   <ol>
-    <% @movie.first_ten_cast(@movie_cast).each do |cast| %>
-      <div id="<%= cast %>"><li><%= cast %></li>
+    <% @movie.cast.each do |cast| %>
+      <li>
+        <%= cast.name %> as <%= cast.character %>
+      </li>
     <% end %>
   </ol>
 </section>
 
 <h4>Reviews</h4>
 <section id="reviews">
-  <p>Number of Reviews: <%= @movie_reviews.count %></p>
+  <p>Number of Reviews: <%= @movie.reviews.count %></p>
   <ol>
-    <% @movie_reviews.each do |review| %>
-      <li>Author: <%= review.author %>
-      <p><%= review.url %></p>
-      <p><%= review.content %></p></li>
+    <% @movie.reviews.each do |review| %>
+      <li>
+        <p><%= review.author %></p>
+        <p><%= review.url %></p>
+        <p><%= review.content %></p>
+      </li>
     <% end %>
   </ol>
 </section>
