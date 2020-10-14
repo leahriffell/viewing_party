@@ -6,7 +6,17 @@ RSpec.describe 'Dashboard page' do
       @user1 = FactoryBot.create(:user)
       @user2 = FactoryBot.create(:user)
       @user3 = FactoryBot.create(:user)
+
+      @movie = Movie.create!(id: 524, title: 'Casino')
+      @party = FactoryBot.create(:party)
+
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
+    end
+
+    it 'Can see that a welcome message that displays my email' do
+      visit dashboard_path
+
+      expect(page).to have_content("Logged in as: #{@user1.email}")
     end
 
     it 'Can click a button to discover movies page' do
@@ -113,12 +123,36 @@ RSpec.describe 'Dashboard page' do
       end
     end
 
+    it "I am able to see any parties that I've been invited to" do
+      PartyUser.create!(party_id: @party.id, user_id: @user1.id)
+
+      visit dashboard_path
+      within(first(".party")) do
+        expect(page).to have_content('Casino')
+        expect(page).to have_content('guest')
+      end
+    end
+
+    it "I am able to see any parties that I am hosting" do
+      PartyUser.create!(party_id: @party.id, user_id: @user1.id, attendee_type: 0)
+
+      visit dashboard_path
+      within(first(".party")) do
+        expect(page).to have_content('Casino')
+        expect(page).to have_content('host')
+      end
+    end
+
     describe 'That has not been invited to any parties' do
       it 'Do not see any parties on my dashboard' do
-        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
         visit dashboard_path
 
-        expect(page).to_not have_css('.viewing-parties')
+        expect(page).to have_content("You don't have any parties planned yet. Discover movies and plan one!")
+        expect(page).to_not have_css('.party')
+
+        click_link('Discover movies')
+
+        expect(current_path).to eq(discover_path)
       end
     end
   end

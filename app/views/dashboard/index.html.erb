@@ -2,26 +2,28 @@
 
 <%= button_to 'Discover Movies', movies_path, method: :get %>
 
+<h2>Viewing Parties</h2>
 <% if current_user.any_parties? %>
   <section class='viewing-parties'>
-    <h2>Viewing Parties</h2>
     <% current_user.parties.each do |party| %>
-      <div class='party'>
-        <h3><%= Movie.find(party.movie_id).title %></h3>
-        <p><%= party.party_date.strftime("%B %e, %Y") %></p>
-        <p><%= party.start_time %></p>
-        <p>My status: <%= current_user.party_status(party.id) %></p>
-        <% if party.any_guests? %>
-          <h4>Guests:</h4>
-          <ul>
-            <% party.invitees.each do |invitee| %>
-              <li><%= invitee.email %></li>
-            <% end %>
-          </ul>
+    <div class='party'>
+      <h3><%= Movie.find(party.movie_id).title %></h3>
+      <p><%= party.party_date.strftime("%B %e, %Y") %></p>
+      <p><%= party.start_time %></p>
+      <p>My status: <%= current_user.party_status(party.id) %></p>
+      <% if party.any_guests? %>
+      <h4>Guests:</h4>
+      <ul>
+        <% party.invitees.each do |invitee| %>
+        <li><%= invitee.email %></li>
         <% end %>
-      </div>  
-    <% end %>
+      </ul>
+      <% end %>
+    </div>
   </section>
+  <% end %>
+<% else %>
+  <h3>You don't have any parties planned yet. <a href="/discover">Discover movies</a> and plan one!</h3>
 <% end %>
 
 <section class='friends'>
