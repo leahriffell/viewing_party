@@ -46,7 +46,7 @@ rails s
 - Run with $ bundle exec rspec. All tests should be passing.
 
 ## Database Schema
-<img src="app/assets/images/db_schema.png" width="400">
+<img src="app/assets/images/db_schema.png" width="700">
 
 ## Authors
 - Daniel Halverson | [github](https://github.com/dhalverson) | [linkedin](https://www.linkedin.com/in/daniel-halverson/)
