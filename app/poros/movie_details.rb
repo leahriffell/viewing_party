@@ -21,23 +21,33 @@ class MovieDetails
     @reviews = []
   end
 
-  def release_year(date)
-    if release_date != ''
-      Date.parse(release_date).year
+  def release_year(date)  
+    if no_release_date?(date)
+      nil
     else
-      return 'n/a'
+      Date.parse(date).year
     end
   end
 
   def total_runtime(runtime)
-    hours = runtime / 60
-    remaining = runtime % 60
-    "#{hours}h #{remaining}m"
+    if runtime.nil?
+      0
+    else
+      hours = runtime / 60
+      remaining = runtime % 60
+      "#{hours}h #{remaining}m"
+    end
   end
 
   def display_genres(genre_array)
     genre_array.map do |genre|
       genre[:name]
     end
+  end
+
+  private
+
+  def no_release_date?(date)
+    date.empty?
   end
 end

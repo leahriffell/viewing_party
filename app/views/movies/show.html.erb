@@ -1,4 +1,8 @@
-<div id="title"><h1><%= @movie.title %><span class="unbold"> (<%= @movie.release_year(@movie.release_date) %>)</span></h1></div>
+<% if @movie.release_date.nil? %>
+  <div id="title"><h1><%= @movie.title %></h1></div>
+<% else %>
+  <div id="title"><h1><%= @movie.title %><span class="unbold"> (<%= @movie.release_year(@movie.release_date) %>)</span></h1></div>
+<% end %>  
   <div id="user-score"><p>User Score: <%= @movie.vote_average %></p></div>
   <div id="genres"><p>Genre(s): <%= @movie.display_genres(@movie.genres).join(', ') %></p></div>
   <div id="runtime"><p>Runtime: <%= @movie.total_runtime(@movie.runtime) %></p></div>

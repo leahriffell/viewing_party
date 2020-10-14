@@ -39,7 +39,7 @@ describe Party, type: :model do
 
         PartyUser.create(party_id: @party2.id, user_id: @user3.id)
 
-        expect(@party1.invitees).to eq([@user2, @user3])
+        expect(@party1.invitees).to eq([@user2, @user3].sort)
       end
     end
 

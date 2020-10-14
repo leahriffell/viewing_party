@@ -31,11 +31,24 @@ RSpec.describe 'MovieDetails' do
         runtime: 179,
         overview: 'Award winning movie about a guy eating a hamburger'
       }
+      attr2 = {
+        title: 'The Divorcing',
+        vote_average: 10,
+        release_date: '',
+        genres: [{id: 80, name: 'Crime'}, {id: 99, name: 'Drama'}],
+        runtime: 0,
+        overview: 'Award winning movie about a divorce'
+      }
       @movie = MovieDetails.new(attr)
+      @movie2 = MovieDetails.new(attr2)
     end
 
     it 'can display the release year' do
       expect(@movie.release_year('2020-10-10')).to eq(2020)
+    end
+
+    it 'can not display anything if the release year is empty' do
+      expect(@movie2.release_year('')).to eq(nil)
     end
 
     it 'can display genres' do
@@ -44,6 +57,10 @@ RSpec.describe 'MovieDetails' do
 
     it 'can display runtime in hours and minutes' do
       expect(@movie.total_runtime(179)).to eq('2h 59m')
+    end
+
+    it 'displays 0 if the runtime is nil' do
+      expect(@movie2.total_runtime(0)).to eq('0h 0m')
     end
   end
 end

@@ -19,7 +19,7 @@ class Party < ApplicationRecord
 
     user_relation.map do |relation|
       relation
-    end
+    end.sort
   end
 
   def any_guests?
