@@ -1,0 +1,224 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/724089?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 13 Oct 2020 22:42:56 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 8064efce63b52d0889d69a823f040eb4
+      X-Memc-Age:
+      - '305'
+      X-Memc-Expires:
+      - '21295'
+      Etag:
+      - W/"f73f4f2b7371251f2a4c7a666d2d79c5"
+      Last-Modified:
+      - Tue, 13 Oct 2020 22:42:56 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 e7ff4a714a3b1f464db9c76ee954a565.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - PeATiy2lnsYpF5LQ2Ak9VzVxQgKhPTatsQOwrlm5RqzRnwrNHanu4g==
+      Age:
+      - '17291'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/jtAI6OJIWLWiRItNSZoWjrsUtmi.jpg","belongs_to_collection":{"id":729322,"name":"Gabriel''s
+        Inferno Collection","poster_path":null,"backdrop_path":null},"budget":0,"genres":[{"id":10749,"name":"Romance"}],"homepage":"https://watch.passionflix.com/watch/f299fa17-5a2b-4fee-b53a-a4651747431b","id":724089,"imdb_id":"tt11641654","original_language":"en","original_title":"Gabriel''s
+        Inferno Part II","overview":"Professor Gabriel Emerson finally learns the
+        truth about Julia Mitchell''s identity, but his realization comes a moment
+        too late. Julia is done waiting for the well-respected Dante specialist to
+        remember her and wants nothing more to do with him. Can Gabriel win back her
+        heart before she finds love in another''s arms?","popularity":13.855,"poster_path":"/pci1ArYW7oJ2eyTo2NMYEKHHiCP.jpg","production_companies":[{"id":92153,"logo_path":"/psjvYkjjgAPtS8utnFYDM8t8yi7.png","name":"PassionFlix","origin_country":"US"}],"production_countries":[],"release_date":"2020-07-31","revenue":0,"runtime":105,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"","title":"Gabriel''s
+        Inferno Part II","video":false,"vote_average":8.9,"vote_count":883}'
+  recorded_at: Wed, 14 Oct 2020 03:31:07 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/724089/credits?api_key=MOVIES_SECRET_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - ce0a2a50ec2f08730264b4164ae0dc5d
+      X-Memc-Age:
+      - '7973'
+      X-Memc-Expires:
+      - '13627'
+      Last-Modified:
+      - Tue, 13 Oct 2020 16:09:59 GMT
+      Date:
+      - Tue, 13 Oct 2020 22:42:56 GMT
+      Cache-Control:
+      - public, max-age=21600
+      Etag:
+      - W/"7dc5114a3d99860abe3acdfee47b2d56"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 28d79637e27f11e3ab19a9515e273a5b.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - xoCw1P25JLryeoODnw_24tBEGeac0I6aLtCUXacfUMmhfCpbVSRn9g==
+      Age:
+      - '17291'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":724089,"cast":[{"cast_id":1,"character":"Julia Mitchell","credit_id":"5f25dbe72d8ef30035d4c8d8","gender":1,"id":1312450,"name":"Melanie
+        Zanetti","order":1,"profile_path":"/lbUQ7ilvBtWMU23reKsHg3jRmsf.jpg"},{"cast_id":2,"character":"Gabriel
+        Emerson","credit_id":"5f25dbff0231f200381c6aca","gender":2,"id":544002,"name":"Giulio
+        Berruti","order":2,"profile_path":"/ktPKniWGVkm6eBG7a2R7WGd96kZ.jpg"},{"cast_id":3,"character":"Paul
+        Norris","credit_id":"5f25dec27d41aa0035679e49","gender":0,"id":2345991,"name":"James
+        Andrew Fraser","order":3,"profile_path":null},{"cast_id":4,"character":"Christa
+        Peterson","credit_id":"5f25dedf8d1b8e00336b32dd","gender":1,"id":2595115,"name":"Margaux
+        Brooke","order":4,"profile_path":"/leLl5l6KnjMdg5O48FhDfB7GquI.jpg"},{"cast_id":5,"character":"Paulina","credit_id":"5f25def0d9403500355868e0","gender":1,"id":2267910,"name":"Agnes
+        Albright","order":5,"profile_path":"/a1UVXkIFONmwjr0Cxydc0jQHPFq.jpg"},{"cast_id":6,"character":"Professor
+        Tara Chakravartty","credit_id":"5f25df10dbbb420033e0416b","gender":1,"id":109024,"name":"Purva
+        Bedi","order":6,"profile_path":"/oppODJvFwISpFnOfhSc2sB2b4Zq.jpg"},{"cast_id":7,"character":"Soraya","credit_id":"5f25df26d94035003757ec12","gender":1,"id":206423,"name":"Sahar
+        Bibiyan","order":7,"profile_path":"/7SlWvJbXlnwbMeJSWMdzmI8wRAC.jpg"},{"cast_id":8,"character":"Professor
+        Robert Mwangi","credit_id":"5f25df45869e7500385c715d","gender":0,"id":1784954,"name":"Cedric
+        Cannon","order":8,"profile_path":null},{"cast_id":9,"character":"Professor
+        Jeremy Martin","credit_id":"5f25df5ce194b00038906133","gender":2,"id":1326237,"name":"Ned
+        Van Zandt","order":9,"profile_path":"/lJK2Bk79xhP133piZ03p4d6rsD0.jpg"}],"crew":[{"credit_id":"5f275762e267de0036001dd5","department":"Camera","gender":2,"id":22143,"job":"Director
+        of Photography","name":"Denis Maloney","profile_path":null},{"credit_id":"5f25e0067d41aa003567a0bd","department":"Production","gender":1,"id":41654,"job":"Casting","name":"Lindsay
+        Chag","profile_path":null},{"credit_id":"5f25df960231f200371b0336","department":"Directing","gender":0,"id":935563,"job":"Director","name":"Tosca
+        Musk","profile_path":"/usR5NspRlWgXKUe9qVsCtTCpe4l.jpg"},{"credit_id":"5f25dfc57c6de300361c794e","department":"Production","gender":0,"id":935563,"job":"Executive
+        Producer","name":"Tosca Musk","profile_path":"/usR5NspRlWgXKUe9qVsCtTCpe4l.jpg"},{"credit_id":"5f25e0212ac49900356637ce","department":"Art","gender":0,"id":1412043,"job":"Production
+        Design","name":"Traci Hays","profile_path":null},{"credit_id":"5f25dff2d940350035586c0e","department":"Editing","gender":0,"id":1572781,"job":"Editor","name":"Margie
+        Goodspeed","profile_path":null},{"credit_id":"5f25dfb47c6de300351c5dfa","department":"Production","gender":0,"id":1845009,"job":"Producer","name":"Michael
+        Buttiglieri","profile_path":null},{"credit_id":"5f275793869e750036680f1f","department":"Writing","gender":0,"id":2693030,"job":"Novel","name":"Sylvain
+        Reynard","profile_path":null}]}'
+  recorded_at: Wed, 14 Oct 2020 03:31:07 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/724089/reviews?api_key=MOVIES_SECRET_KEY&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '69'
+      Connection:
+      - keep-alive
+      Date:
+      - Tue, 13 Oct 2020 22:42:57 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - bf1cc79b7d1dffdf642f30174a05dbbd
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '21600'
+      Last-Modified:
+      - '2020-09-25 04:10:03 +0000'
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 824a5d9ed02451bcb68b15ae5991dce0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - mIS6LtzSX8gzBBBTiug6kXySKRY4k0JlFA92QMIp7067DH11-sX9sw==
+      Age:
+      - '17290'
+    body:
+      encoding: UTF-8
+      string: '{"id":724089,"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Wed, 14 Oct 2020 03:31:07 GMT
+recorded_with: VCR 6.0.0
