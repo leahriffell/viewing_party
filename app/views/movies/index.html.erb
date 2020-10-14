@@ -6,6 +6,10 @@
 
 <%= render 'movie_search' %>
 
-<section class='movie-results'>
-  <%= render partial: 'movie_list' %>
-</section>
+<% if @movies.nil? %>
+  <h3>No movies matched your search.</h3>
+<% else %>
+  <section class='movie-results'>
+    <%= render partial: 'movie_list' %>
+  </section>
+<% end %>

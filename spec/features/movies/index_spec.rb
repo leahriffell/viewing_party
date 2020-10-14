@@ -85,6 +85,18 @@ RSpec.describe 'Movies page' do
         end
       end
 
+      it 'displays no results message when no movie results are found' do
+        VCR.use_cassette('no_results_keyword_search', allow_playback_repeats: true) do
+          visit discover_path
+          fill_in :keyword_search, with: 'asdf'
+          click_button('Find Movies')
+
+          expect(current_path).to eq(movies_path)
+          expect(page).to have_content('Search Results')
+          expect(page).to have_content('No movies matched your search.')
+        end
+      end
+
       describe 'I am shown search results even when' do
         it 'search terms include 2 words' do
           VCR.use_cassette('two_keyword_search') do
@@ -102,11 +114,12 @@ RSpec.describe 'Movies page' do
           VCR.use_cassette('one_page_results') do
             visit discover_path
 
-            fill_in :keyword_search, with: 'star wars'
+            fill_in :keyword_search, with: 'mean girls'
             click_button('Find Movies')
 
             expect(current_path).to eq(movies_path)
             expect(page).to have_content('Search Results')
+            expect(page).to have_content('Mean Girls')
           end
         end
       end

@@ -57,6 +57,13 @@ RSpec.describe 'Welcome page' do
       expect(page).to_not have_button ('Log in')
       expect(page).to_not have_link ('New to Viewing Party? Register Here')
     end
+
+    it 'I can link to my dashboard' do      
+      visit root_path
+      
+      click_link('Go to dashboard')
+      expect(current_path).to eq(dashboard_path)
+    end
   end
 
   describe 'As a visitor' do 

@@ -44,7 +44,7 @@ class MoviesController < ApplicationController
   end
 
   def conn
-    Faraday.new(url: "https://api.themoviedb.org")
+    Faraday.new(url: 'https://api.themoviedb.org')
   end
 
   def parse(response)

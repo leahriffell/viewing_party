@@ -26,7 +26,7 @@ class User < ApplicationRecord
   end
 
   def friends_with?(friend)
-    # friends.includes(friend) error when using AR method 
+    # friends.includes(friend) error when using AR method
     friends.include?(friend)
   end
 end

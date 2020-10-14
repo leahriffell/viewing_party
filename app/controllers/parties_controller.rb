@@ -12,6 +12,7 @@ class PartiesController < ApplicationController
     party = Party.create(party_params)
     if party.save
       valid_party(party)
+      party.invite(invited_users) if invited_users.size > 1
     else
       invalid_party(party, movie.id)
     end
@@ -20,7 +21,11 @@ class PartiesController < ApplicationController
   private
 
   def party_params
-    params.require(:party).permit(:duration, :party_date, :start_time, :movie_id)
+    params.require(:party).permit(:duration, :party_date, :start_time, :movie_id, :party_users)
+  end
+
+  def invited_users
+    params[:party][:party_users]
   end
 
   def conn
