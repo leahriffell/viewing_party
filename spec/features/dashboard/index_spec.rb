@@ -112,6 +112,15 @@ RSpec.describe 'Dashboard page' do
         expect(page).to_not have_content("#{@user1.email}")
       end
     end
+
+    describe 'That has not been invited to any parties' do
+      it 'Do not see any parties on my dashboard' do
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
+        visit dashboard_path
+
+        expect(page).to_not have_css('.viewing-parties')
+      end
+    end
   end
 
   describe 'As an unauthenticated user' do

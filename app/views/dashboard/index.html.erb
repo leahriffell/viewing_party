@@ -12,9 +12,12 @@
         <p><%= party.start_time %></p>
         <p><%= current_user.party_status(party.id) %></p>
         <% if party.any_guests? %>
-          <% party.invitees.each do |invitee| %>
-            <%= invitee.email %>
-          <% end %>
+          <h6>Guests:</h6>
+          <ul>
+            <% party.invitees.each do |invitee| %>
+              <li><%= invitee.email %></li>
+            <% end %>
+          </ul>
         <% end %>
       </div>  
     <% end %>
