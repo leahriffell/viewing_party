@@ -8,7 +8,7 @@
   <%= f.number_field :duration, value: @movie[:runtime] %><br>
 
   <%= f.label :party_date %>
-  <%= f.date_field :party_date, min: Date.today%><br>
+  <%= f.date_select :party_date, min: Date.today, include_blank: true, defaul: nil, start_year: Date.current.year, order: [:day, :month, :year] %><br>
 
   <%= f.label :start_time %>
   <%= f.text_field :start_time, placeholder: 'Ex: 5:00 pm' %><br>
