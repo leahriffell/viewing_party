@@ -1,6 +1,6 @@
 # Viewing Party
 
-<img src="app/assets/images/logo.png" width="400">
+<img src="app/assets/images/logo.png" width="600">
 
 Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friends.
 [View live app](https://elmers-viewing-party.herokuapp.com/)
