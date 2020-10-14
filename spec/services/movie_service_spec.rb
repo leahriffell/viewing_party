@@ -38,4 +38,59 @@ RSpec.describe MovieService do
       expect(first_result[:vote_average]).to be_a(Float)
     end
   end
+
+    it 'can fetch movie details' do
+      VCR.use_cassette('show movie details') do
+        movie = MovieService.movie_details(524)
+        expect(movie).to be_a(Hash)
+
+        expect(movie).to have_key :genres
+        expect(movie[:genres]).to be_an(Array)
+
+        expect(movie).to have_key :overview
+        expect(movie[:overview]).to be_a(String)
+
+        expect(movie).to have_key :release_date
+        expect(movie[:release_date]).to be_a(String)
+
+        expect(movie).to have_key :runtime
+        expect(movie[:runtime]).to be_an(Integer)
+
+        expect(movie).to have_key :title
+        expect(movie[:title]).to be_a(String)
+
+        expect(movie).to have_key :vote_average
+        expect(movie[:vote_average]).to be_a(Float)
+      end
+    end
+
+    it 'can fetch cast details' do
+      VCR.use_cassette('show cast details') do
+        cast = MovieService.movie_cast(524)
+        results = cast[:cast]
+        expect(cast).to be_a(Hash)
+        expect(results).to be_an(Array)
+
+        expect(results.first).to have_key :character
+        expect(results.first[:character]).to be_a(String)
+
+        expect(results.first).to have_key :name
+        expect(results.first[:name]).to be_a(String)
+      end
+    end
+
+    it 'can fetch review details' do
+      VCR.use_cassette('show review details') do
+        cast = MovieService.movie_reviews(524)
+        results = cast[:cast]
+        expect(cast).to be_a(Hash)
+        expect(results).to be_an(Array)
+
+        expect(results.first).to have_key :character
+        expect(results.first[:character]).to be_a(String)
+
+        expect(results.first).to have_key :name
+        expect(results.first[:name]).to be_a(String)
+      end
+    end
 end
