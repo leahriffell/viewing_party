@@ -17,10 +17,7 @@
           <p><%= msg %></p>
         </div>
       <% end %>
-      <% if current_user %>
-        <%= "Logged in as: #{current_user.email}" %>
-        <%= link_to "Go to dashboard", dashboard_path %>
-      <% end %>
+      <%= "Logged in as: #{current_user.email}" if current_user %>
     </header>
     <%= yield %>
     <footer>

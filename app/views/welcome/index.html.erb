@@ -1,3 +1,7 @@
+<% if current_user %>
+  <%= link_to "Go to dashboard", dashboard_path %>
+<% end %>
+
 <h1>Welcome to Viewing Party!</h1>
 
 <a href="/"><%= image_tag "logo.png", alt: "logo", id: "welcome-logo" %></a>
