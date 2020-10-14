@@ -5,4 +5,12 @@ class Party < ApplicationRecord
 
   validates :party_date, presence: true
   validates :start_time, presence: true
+
+  def invite(user_ids)
+    user_ids.each do |user_id|
+      if user_id.length != 0
+        users << User.find(user_id)
+      end
+    end
+  end
 end
