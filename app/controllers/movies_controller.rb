@@ -26,25 +26,25 @@ class MoviesController < ApplicationController
     end
   end
 
-  private
+  # private
 
-  def language(language)
-    "language=#{language}"
-  end
+  # def language(language)
+  #   "language=#{language}"
+  # end
 
-  def exclude_adult
-    'include_adult=false'
-  end
+  # def exclude_adult
+  #   'include_adult=false'
+  # end
 
-  def movies_api_key
-    ENV['MOVIES_API_KEY']
-  end
+  # def movies_api_key
+  #   ENV['MOVIES_API_KEY']
+  # end
 
-  def conn
-    Faraday.new(url: "https://api.themoviedb.org")
-  end
+  # def conn
+  #   Faraday.new(url: "https://api.themoviedb.org")
+  # end
 
-  def parse(response)
-    JSON.parse(response.body, symbolize_names: true)
-  end
+  # def parse(response)
+  #   JSON.parse(response.body, symbolize_names: true)
+  # end
 end
