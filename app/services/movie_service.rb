@@ -9,7 +9,22 @@ class MovieService
     parse(response)
   end
 
-private
+  def self.movie_details(id)
+    response = movie_show_endpoint(id)
+    parse(response)
+  end
+
+  def self.movie_cast(id)
+    response = movie_cast_endpoint(id)
+    parse(response)
+  end
+
+  def self.movie_reviews(id)
+    response = movie_review_endpoint(id)
+    parse(response)
+  end
+
+  private_class_method
 
   def self.language(language)
     "language=#{language}"
@@ -38,5 +53,17 @@ private
 
   def self.keyword_search_endpoint(page_num, keywords)
     conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&#{exclude_adult}&page=#{page_num}&query=#{keywords}")
+  end
+
+  def self.movie_show_endpoint(id)
+    conn.get("3/movie/#{id}?api_key=#{movies_api_key}")
+  end
+
+  def self.movie_cast_endpoint(id)
+    conn.get("3/movie/#{id}/credits?api_key=#{movies_api_key}")
+  end
+
+  def self.movie_review_endpoint(id)
+    conn.get("3/movie/#{id}/reviews?api_key=#{movies_api_key}&#{language('en-US')}")
   end
 end

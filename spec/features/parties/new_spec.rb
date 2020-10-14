@@ -175,18 +175,6 @@ RSpec.describe 'Create Viewing Party page' do
         expect(page).to have_content("Party date can't be blank and Start time can't be blank")
       end
     end
-
-    xit 'Cannot create viewing party when date in the past is entered' do
-      VCR.use_cassette('show_movie_details') do
-        click_button('Create Party')
-
-        expect(current_path).to eq(new_party_path)
-        select 'November', :from => "party_party_date_2i"
-        select 11, :from => "party_party_date_3i"
-        fill_in 'party[start_time]', with: '7:34 PM'
-        expect(current_path).to eq(new_party_path)
-      end
-    end
   end
 
   describe 'As an unauthenticated user' do

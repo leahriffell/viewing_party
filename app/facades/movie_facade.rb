@@ -1,52 +1,47 @@
 class MovieFacade
-  def self.top_movies_endpoint(page_num)
-    sort_by = 'vote_average.desc'
-    conn.get("3/discover/movie?api_key=#{movies_api_key}&#{language('en-US')}&sort_by=#{sort_by}&#{exclude_adult}&page=#{page_num}&vote_count.gte=300")
-  end
-
-  def self.keyword_search_endpoint(page_num, keywords)
-    conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&#{exclude_adult}&page=#{page_num}&query=#{keywords}")
+  def self.get_movie_details(id)
+    movie = movie_details(id)
+    movie.cast = movie_cast(id)
+    movie.reviews = movie_reviews(id)
+    movie
   end
 
   def self.keyword_search(keywords)
     moviespg1 = MovieService.keyword_search(1, keywords)[:results]
-    movies1 = moviespg1.map { |movie_data| MovieCreator.new(movie_data) } unless moviespg1.nil?
+    movies1 = moviespg1.map { |movie_data| MovieDetails.new(movie_data) } unless moviespg1.nil?
     moviespg2 = MovieService.keyword_search(2, keywords)[:results]
-    movies2 = moviespg2.map { |movie_data| MovieCreator.new(movie_data) } unless moviespg2.nil?
+    movies2 = moviespg2.map { |movie_data| MovieDetails.new(movie_data) } unless moviespg2.nil?
     
     format_object_array(movies1, movies2)
   end
 
   def self.top_movies
     movies1 = MovieService.top_movies(1)[:results].map do |movie_data|
-      MovieCreator.new(movie_data)
+      MovieDetails.new(movie_data)
     end
     movies2 = MovieService.top_movies(2)[:results].map do |movie_data|
-      MovieCreator.new(movie_data)
+      MovieDetails.new(movie_data)
     end
     movies1.concat(movies2).flatten
   end
 
-  private
+  private_class_method
 
-  def self.language(language)
-    "language=#{language}"
+  def self.movie_details(id)
+    movie_details = MovieService.movie_details(id)
+    MovieDetails.new(movie_details)
   end
 
-  def self.exclude_adult
-    'include_adult=false'
+  def self.movie_cast(id)
+    MovieService.movie_cast(id)[:cast][0..9].map do |cast_data|
+      CastDetails.new(cast_data)
+    end
   end
 
-  def self.movies_api_key
-    ENV['MOVIES_API_KEY']
-  end
-
-  def self.conn
-    Faraday.new(url: 'https://api.themoviedb.org')
-  end
-
-  def self.parse(response)
-    JSON.parse(response.body, symbolize_names: true)
+  def self.movie_reviews(id)
+    MovieService.movie_reviews(id)[:results].map do |review_data|
+      ReviewDetails.new(review_data)
+    end
   end
 
   def self.format_object_array(movies1, movies2)
