@@ -13,6 +13,12 @@ RSpec.describe 'Dashboard page' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
     end
 
+    it 'Can see that a welcome message that displays my email' do
+      visit dashboard_path
+
+      expect(page).to have_content("Logged in as: #{@user1.email}")
+    end
+
     it 'Can click a button to discover movies page' do
       VCR.use_cassette('top_movies') do
         visit dashboard_path
@@ -141,7 +147,12 @@ RSpec.describe 'Dashboard page' do
       it 'Do not see any parties on my dashboard' do
         visit dashboard_path
 
-        expect(page).to_not have_css('.viewing-parties')
+        expect(page).to have_content("You don't have any parties planned yet. Discover movies and plan one!")
+        expect(page).to_not have_css('.party')
+
+        click_link('Discover movies')
+
+        expect(current_path).to eq(discover_path)
       end
     end
   end
