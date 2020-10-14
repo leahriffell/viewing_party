@@ -1,5 +1,4 @@
 class MovieService
-
   def self.keyword_search(page_num, keywords)
     response = keyword_search_endpoint(page_num, keywords)
     parse(response)
@@ -40,7 +39,7 @@ private
   end
 
   def self.conn
-    Faraday.new(url: "https://api.themoviedb.org")
+    Faraday.new(url: 'https://api.themoviedb.org')
   end
 
   def self.parse(response)
@@ -53,7 +52,7 @@ private
   end
 
   def self.keyword_search_endpoint(page_num, keywords)
-      conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&#{exclude_adult}&page=#{page_num}&query=#{keywords}")
+    conn.get("3/search/movie?api_key=#{movies_api_key}&#{language('en-US')}&#{exclude_adult}&page=#{page_num}&query=#{keywords}")
   end
 
   def self.movie_show_endpoint(id)

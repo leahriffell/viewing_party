@@ -51,7 +51,7 @@ RSpec.describe 'Movies page' do
             expect(page).to have_css('.vote_avg')
             VCR.use_cassette('top_result_first_movie_details') do
               page.find('.title').click
-              rescue Selenium::WebDriver::Error::StaleElementReferenceError 
+              rescue Selenium::WebDriver::Error::StaleElementReferenceError
                 sleep 1
               retry
               expect(page).to have_button('Create Viewing Party for Movie')
@@ -76,12 +76,24 @@ RSpec.describe 'Movies page' do
             expect(page).to have_css('.vote_avg')
             page.find('.title').click
             VCR.use_cassette('dog_search_first_movie_details', allow_playback_repeats: true) do
-              rescue Selenium::WebDriver::Error::StaleElementReferenceError 
+              rescue Selenium::WebDriver::Error::StaleElementReferenceError
                 sleep 1
               retry
               expect(page).to have_button('Create Viewing Party for Movie')
             end
           end
+        end
+      end
+
+      it 'displays no results message when no movie results are found' do
+        VCR.use_cassette('no_results_keyword_search', allow_playback_repeats: true) do
+          visit discover_path
+          fill_in :keyword_search, with: 'asdf'
+          click_button('Find Movies')
+
+          expect(current_path).to eq(movies_path)
+          expect(page).to have_content('Search Results')
+          expect(page).to have_content('No movies matched your search.')
         end
       end
 
@@ -102,11 +114,12 @@ RSpec.describe 'Movies page' do
           VCR.use_cassette('one_page_results') do
             visit discover_path
 
-            fill_in :keyword_search, with: 'star wars'
+            fill_in :keyword_search, with: 'mean girls'
             click_button('Find Movies')
 
             expect(current_path).to eq(movies_path)
             expect(page).to have_content('Search Results')
+            expect(page).to have_content('Mean Girls')
           end
         end
       end

@@ -1,17 +1,23 @@
 <h1>Viewing Party Details</h1>
 
-<%= form_with model: @party, url: parties_path, local: true do |f| %>
-  <span>Movie Title:</span>
-  <%= @movie[:title] %><br>
+<h2><%= "Viewing party for: #{@movie[:title]}" %></h2>
 
+<%= form_with model: @party, url: parties_path, local: true do |f| %>
   <%= f.label :duration %>
   <%= f.number_field :duration, value: @movie[:runtime] %><br>
 
   <%= f.label :party_date %>
-  <%= f.date_field :party_date, min: Date.today%><br>
+  <%= f.date_select :party_date, min: Date.today, include_blank: true, defaul: nil, start_year: Date.current.year, order: [:day, :month, :year] %><br>
 
   <%= f.label :start_time %>
   <%= f.text_field :start_time, placeholder: 'Ex: 5:00 pm' %><br>
+
+  <% if current_user.friends? %>
+    <h4>Select which friends you'd like to invite:</h4>
+    <%= f.collection_check_boxes :party_users, current_user.friends, :id, :email do |b| %>
+      <%= b.check_box + b.label %><br>
+    <% end %>
+  <% end %>
 
   <%= f.hidden_field :movie_id, value: @movie[:id] %>
   <%= f.hidden_field :movie_title, value: @movie[:title] %>
