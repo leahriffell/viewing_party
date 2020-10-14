@@ -6,6 +6,10 @@ RSpec.describe 'Create Viewing Party page' do
       @user1 = FactoryBot.create(:user)
       @user2 = FactoryBot.create(:user)
       @user3 = FactoryBot.create(:user)
+      @user4 = FactoryBot.create(:user)
+
+      @user1.add_friend(@user2)
+      @user1.add_friend(@user3)
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user1)
 
@@ -64,6 +68,9 @@ RSpec.describe 'Create Viewing Party page' do
       select 'November', :from => "party_party_date_2i"
       select 12, :from => "party_party_date_3i"     
       fill_in 'party[start_time]', with: '9:30 PM'
+      within("#party_party_users_#{@user2.id}") do 
+        check
+      end
       click_button('Create Party')
 
       within(first(".party")) do
@@ -71,6 +78,7 @@ RSpec.describe 'Create Viewing Party page' do
         expect(page).to have_content('November 12, 2021')
         expect(page).to have_content('9:30 PM')
         expect(page).to have_content('host')
+        expect(page).to have_content("#{@user2.email}")
       end
     end
 
@@ -80,6 +88,12 @@ RSpec.describe 'Create Viewing Party page' do
       select 'January', :from => "party_party_date_2i"
       select 11, :from => "party_party_date_3i"      
       fill_in 'party[start_time]', with: '8:30 PM'
+      within("#party_party_users_#{@user2.id}") do 
+        check
+      end
+      within("#party_party_users_#{@user3.id}") do 
+        check
+      end
       click_button('Create Party')
 
       within(first(".party")) do
@@ -87,6 +101,8 @@ RSpec.describe 'Create Viewing Party page' do
         expect(page).to have_content('January 11, 2021')
         expect(page).to have_content('8:30 PM')
         expect(page).to have_content('host')
+        expect(page).to have_content("#{@user2.email}")
+        expect(page).to have_content("#{@user3.email}")
       end
     end
 
@@ -128,10 +144,6 @@ RSpec.describe 'Create Viewing Party page' do
         click_button('Create Party')
 
         expect(current_path).to eq(new_party_path)
-
-        # page.assert_no_selector 1990, :from => "party_party_date_1i"
-
-        # select 1990, :from => "party_party_date_1i"
         select 'November', :from => "party_party_date_2i"
         select 11, :from => "party_party_date_3i"
         fill_in 'party[start_time]', with: '7:34 PM'
