@@ -9,17 +9,12 @@ class MovieFacade
   end
 
   def self.keyword_search(keywords)
-    movies_pg_1 = MovieService.keyword_search(1, keywords)[:results]
-    movies1 = movies_pg_1.map {|movie_data| MovieCreator.new(movie_data)} if movies_pg_1 != nil
-    movies_pg_2 = MovieService.keyword_search(2, keywords)[:results]
-    movies2 = movies_pg_2.map {|movie_data| MovieCreator.new(movie_data)} if movies_pg_2 != nil
-    if movies1.empty? && movies2.empty?
-      nil
-    elsif movies2.empty?
-      movies1
-    else 
-      movies1.concat(movies2).flatten
-    end
+    moviespg1 = MovieService.keyword_search(1, keywords)[:results]
+    movies1 = moviespg1.map { |movie_data| MovieCreator.new(movie_data) } unless moviespg1.nil?
+    moviespg2 = MovieService.keyword_search(2, keywords)[:results]
+    movies2 = moviespg2.map { |movie_data| MovieCreator.new(movie_data) } unless moviespg2.nil?
+    
+    format_object_array(movies1, movies2)
   end
 
   def self.top_movies
@@ -52,5 +47,15 @@ class MovieFacade
 
   def self.parse(response)
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def self.format_object_array(movies1, movies2)
+    if movies1.empty? && movies2.empty?
+      nil
+    elsif movies2.empty?
+      movies1
+    else
+      movies1.concat(movies2).flatten
+    end
   end
 end
