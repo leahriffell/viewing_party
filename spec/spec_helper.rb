@@ -18,6 +18,7 @@ SimpleCov.start 'rails' do
   add_filter '/jobs/'
   add_filter '/channels/'
   add_filter '/mailers/'
+  add_filter '/controllers/'
 end
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
