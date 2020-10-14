@@ -25,7 +25,7 @@ class MovieFacade
     movies1.concat(movies2).flatten
   end
 
-  private
+  private_class_method
 
   def self.movie_details(id)
     movie_details = MovieService.movie_details(id)

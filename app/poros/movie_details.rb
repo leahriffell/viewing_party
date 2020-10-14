@@ -21,7 +21,7 @@ class MovieDetails
     @reviews = []
   end
 
-  def release_year(date)  
+  def release_year(date)
     if no_release_date?(date)
       nil
     else

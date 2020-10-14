@@ -13,9 +13,6 @@ class MoviesController < ApplicationController
 
   def show
     @movie = MovieFacade.get_movie_details(params[:id])
-    # @movie = MovieFacade.movie_details(params[:id])
-    # @movie_cast = MovieFacade.movie_cast(params[:id])
-    # @movie_reviews = MovieFacade.movie_reviews(params[:id])
   end
 
   def fetch_movies(request_type)
@@ -25,26 +22,4 @@ class MoviesController < ApplicationController
       @movies = MovieFacade.keyword_search(params[:keyword_search])
     end
   end
-
-  # private
-
-  # def language(language)
-  #   "language=#{language}"
-  # end
-
-  # def exclude_adult
-  #   'include_adult=false'
-  # end
-
-  # def movies_api_key
-  #   ENV['MOVIES_API_KEY']
-  # end
-
-  # def conn
-  #   Faraday.new(url: "https://api.themoviedb.org")
-  # end
-
-  # def parse(response)
-  #   JSON.parse(response.body, symbolize_names: true)
-  # end
 end

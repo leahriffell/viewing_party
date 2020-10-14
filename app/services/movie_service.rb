@@ -24,7 +24,7 @@ class MovieService
     parse(response)
   end
 
-private
+  private_class_method
 
   def self.language(language)
     "language=#{language}"
