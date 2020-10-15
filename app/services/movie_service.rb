@@ -24,6 +24,10 @@ class MovieService
     parse(response)
   end
 
+  def self.trending_movies
+    parse(trending_endpoint)
+  end
+
   private_class_method
 
   def self.language(language)
@@ -61,5 +65,9 @@ class MovieService
 
   def self.movie_review_endpoint(id)
     conn.get("3/movie/#{id}/reviews?api_key=#{ENV['MOVIES_API_KEY']}&#{language('en-US')}")
+  end
+
+  def self.trending_endpoint
+    conn.get("3/trending/movie/week?api_key=#{ENV['MOVIES_API_KEY']}&#{language('en-US')}")
   end
 end
