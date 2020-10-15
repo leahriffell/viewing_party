@@ -1,5 +1,7 @@
-<% if params[:top_40] || !params[:top_40] && !params[:keyword_search] %>
+<% if params[:top_40] || !params[:top_40] && !params[:keyword_search] && !params[:trending] %>
   <h1>Top Movies</h1>
+<% elsif params[:trending] %>
+  <h1>Trending Movies</h1>
 <% else %>
   <h1>Search Results</h1>
 <% end %>

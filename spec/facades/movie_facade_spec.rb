@@ -52,6 +52,7 @@ RSpec.describe 'Movie Facade' do
       expect(search_results.first).to be_a(MovieDetails)
       expect(search_results.first.title).to be_a(String)
       expect(search_results.first.vote_average).to be_an(Float)
+      expect(search_results.count).to be(20)
     end
   end
 end

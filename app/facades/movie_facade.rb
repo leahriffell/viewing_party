@@ -26,7 +26,7 @@ class MovieFacade
   end
 
   def self.trending_movies
-    trending = MovieService.trending_movies[:results].map do |movie_data|
+    trending = MovieService.trending_movies[:results][0..19].map do |movie_data|
       MovieDetails.new(movie_data)
     end
   end
