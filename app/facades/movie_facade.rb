@@ -25,6 +25,12 @@ class MovieFacade
     movies1.concat(movies2).flatten
   end
 
+  def self.trending_movies
+    trending = MovieService.trending_movies[:results].map do |movie_data|
+      MovieDetails.new(movie_data)
+    end
+  end
+
   private_class_method
 
   def self.movie_details(id)
