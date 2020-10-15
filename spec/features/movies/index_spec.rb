@@ -18,7 +18,7 @@ RSpec.describe 'Movies page' do
 
     it 'when I click button to find top movies, I am redirected to movies page with top movies' do
       VCR.use_cassette('top_movies') do
-        visit discover_path
+        visit movies_path
 
         click_button('Find Top Rated Movies')
 
@@ -35,6 +35,30 @@ RSpec.describe 'Movies page' do
         click_button('Find Movies')
         expect(current_path).to eq(movies_path)
         expect(page).to have_content('Search Results')
+      end
+    end
+
+    it 'Can click a button to discover movies page' do
+      VCR.use_cassette('top_movies') do
+        visit dashboard_path
+        click_button('Discover Movies')
+
+        expect(current_path).to eq(movies_path)
+        expect(page).to have_content('Top Movies')
+        expect(page).to have_css('.movie', count: 40)
+
+      end
+    end
+
+    it "Can click a button to see this week's trending movies" do
+      VCR.use_cassette('top_movies') do
+        visit movies_path
+        VCR.use_cassette('trending_movies') do
+          click_button('Trending Movies')
+          expect(current_path).to eq(movies_path)
+          expect(page).to have_content("Trending Movies")
+          expect(page).to have_css('.movie', count: 20)
+        end
       end
     end
 

@@ -2,8 +2,10 @@ class MoviesController < ApplicationController
   before_action :require_user
 
   def index
-    if params[:top_40] || !params[:top_40] && !params[:keyword_search]
+    if params[:top_40] || !params[:top_40] && !params[:keyword_search] && !params[:trending]
       fetch_movies('top')
+    elsif params[:trending]
+      @movies = MovieFacade.trending_movies
     elsif params[:keyword_search] != ''
       fetch_movies('search')
     else

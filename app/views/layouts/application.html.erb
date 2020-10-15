@@ -12,14 +12,17 @@
 
   <body>
     <header>
+      <a href="/"><%= image_tag "logo.png", alt: "logo", id: "nav-logo" %></a>
       <% flash.each do |name, msg| %>
         <div class= "<%=name%>-flash">
           <p><%= msg %></p>
         </div>
       <% end %>
-      <%= "Logged in as: #{current_user.email}" if current_user %>
+      <p class='logged-in-notification'><%= "Logged in as: #{current_user.email}" if current_user %></p>
     </header>
     <%= yield %>
+
+    <br><br><br>
     <footer>
       <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="The MovieDB Logo" width="75px" style="margin:10px" >
       <div>

@@ -42,4 +42,17 @@ RSpec.describe 'Movie Facade' do
       expect(movies.vote_average).to be_a(Float)
     end
   end
+
+  it "can fetch the week's trending movies" do
+    VCR.use_cassette('trending_movies') do
+      search_results = MovieFacade.trending_movies
+
+      expect(search_results.first).to be_a(MovieDetails)
+      expect(search_results).to be_an(Array)
+      expect(search_results.first).to be_a(MovieDetails)
+      expect(search_results.first.title).to be_a(String)
+      expect(search_results.first.vote_average).to be_an(Float)
+      expect(search_results.count).to be(20)
+    end
+  end
 end

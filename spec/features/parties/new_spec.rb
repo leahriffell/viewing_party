@@ -143,6 +143,24 @@ RSpec.describe 'Create Viewing Party page' do
       expect(page).to_not have_content("Select which friends you'd like to invite")
     end
 
+    it 'Can create a viewing party when user has no friends' do
+      fill_in 'party[duration]', with: '100'
+      select 2021, :from => "party_party_date_1i"
+      select 'November', :from => "party_party_date_2i"
+      select 11, :from => "party_party_date_3i"
+      fill_in 'party[start_time]', with: '8:30 PM'
+      click_button('Create Party')
+
+      expect(current_path).to eq(dashboard_path)
+
+      within(first(".party")) do
+        expect(page).to have_content('Alien Contact: The Pascagoula UFO Encounter')
+        expect(page).to have_content('November 11, 2021')
+        expect(page).to have_content('8:30 PM')
+        expect(page).to have_content('host')
+      end
+    end
+
     it 'Cannot create viewing party when no date is entered' do
       VCR.use_cassette('show_movie_details') do
         fill_in 'party[duration]', with: '100'

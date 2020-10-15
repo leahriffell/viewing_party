@@ -2,13 +2,10 @@
   <%= link_to "Go to dashboard", dashboard_path %>
 <% end %>
 
+<a href="/"><%= image_tag "logo.png", alt: "logo", id: "welcome-logo" %></a>
 <h1>Welcome to Viewing Party!</h1>
 
-<a href="/"><%= image_tag "logo.png", alt: "logo", id: "welcome-logo" %></a>
-
 <h2>Explore movies and create viewing parties to watch flix with your friends</h2>
-
-<h4>Search for a movie, click create party, add details, then invite friends!</h4>
 
 <section class="login">
   <% if !current_user %>
