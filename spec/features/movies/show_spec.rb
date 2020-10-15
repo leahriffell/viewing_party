@@ -109,5 +109,16 @@ RSpec.describe 'Movies detail page' do
         end
       end
     end
+
+    it 'The recommended movies are links to their respective show pages' do
+      VCR.use_cassette('show_recommendation_details') do
+        visit(movie_path('524'))
+        within '#recommendations' do
+          expect(page).to have_link('Raging Bull')
+          expect(page).to have_link('Heat')
+          expect(page).to have_link('Cape Fear')
+        end
+      end
+    end
   end
 end
