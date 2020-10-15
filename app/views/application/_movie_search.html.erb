@@ -1,4 +1,6 @@
 <section class='search'>
+  <h3>Find a movie:</h3>
+  
   <%= button_to 'Find Top Rated Movies', movies_path, method: :get, params: {top_40: true} %>
   <br>
   <%= button_to 'Trending Movies', movies_path, method: :get, params: {trending: true} %>
