@@ -13,7 +13,7 @@ class MovieService
     response = movie_show_endpoint(id)
     parse(response)
   end
-
+  
   def self.movie_cast(id)
     response = movie_cast_endpoint(id)
     parse(response)
