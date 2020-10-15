@@ -25,6 +25,7 @@ RSpec.describe 'Dashboard page' do
         click_button('Discover Movies')
 
         expect(current_path).to eq(movies_path)
+        expect(page).to have_content('Top Movies')
       end
     end
 

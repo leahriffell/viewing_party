@@ -108,4 +108,23 @@ RSpec.describe MovieService do
       expect(results.first[:title]).to be_a(String)
     end
   end
+  
+  it "can fetch the week's trending movies" do
+    VCR.use_cassette('trending_movies') do
+      search_results = MovieService.trending_movies
+      trending = search_results[:results]
+
+      expect(search_results).to be_a(Hash)
+      expect(trending).to be_an(Array)
+
+      expect(trending.first).to have_key :id
+      expect(trending.first[:id]).to be_an(Integer)
+
+      expect(trending.first).to have_key :title
+      expect(trending.first[:title]).to be_an(String)
+
+      expect(trending.first).to have_key :vote_average
+      expect(trending.first[:vote_average]).to be_an(Float)
+    end
+  end
 end

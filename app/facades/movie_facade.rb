@@ -12,7 +12,6 @@ class MovieFacade
     movies1 = moviespg1.map { |movie_data| MovieDetails.new(movie_data) } unless moviespg1.nil?
     moviespg2 = MovieService.keyword_search(2, keywords)[:results]
     movies2 = moviespg2.map { |movie_data| MovieDetails.new(movie_data) } unless moviespg2.nil?
-    
     format_object_array(movies1, movies2)
   end
 
@@ -24,6 +23,12 @@ class MovieFacade
       MovieDetails.new(movie_data)
     end
     movies1.concat(movies2).flatten
+  end
+
+  def self.trending_movies
+    MovieService.trending_movies[:results][0..19].map do |movie_data|
+      MovieDetails.new(movie_data)
+    end
   end
 
   private_class_method

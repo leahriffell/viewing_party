@@ -12,7 +12,7 @@ class PartiesController < ApplicationController
     party = Party.create(party_params)
     if party.save
       valid_party(party)
-      party.invite(invited_users) if invited_users.size > 1
+      party.invite(invited_users) if invited_users && invited_users.size > 1
     else
       invalid_party(party, movie.id)
     end
