@@ -3,6 +3,7 @@ class MovieFacade
     movie = movie_details(id)
     movie.cast = movie_cast(id)
     movie.reviews = movie_reviews(id)
+    movie.recommendations = movie_recommendations(id)
     movie
   end
 
@@ -41,6 +42,12 @@ class MovieFacade
   def self.movie_reviews(id)
     MovieService.movie_reviews(id)[:results].map do |review_data|
       ReviewDetails.new(review_data)
+    end
+  end
+
+  def self.movie_recommendations(id)
+    MovieService.movie_recommendations(id)[:results][0..2].map do |recommendation_data|
+      RecommendationDetails.new(recommendation_data)
     end
   end
 

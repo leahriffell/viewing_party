@@ -7,7 +7,8 @@ class MovieDetails
               :overview,
               :id
   attr_accessor :cast,
-                :reviews
+                :reviews,
+                :recommendations
 
   def initialize(attr)
     @title = attr[:title]
@@ -19,6 +20,7 @@ class MovieDetails
     @id = attr[:id]
     @cast = []
     @reviews = []
+    @recommendations = []
   end
 
   def release_year(date)

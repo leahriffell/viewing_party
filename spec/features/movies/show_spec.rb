@@ -98,5 +98,16 @@ RSpec.describe 'Movies detail page' do
         expect(current_path).to eq(new_party_path)
       end
     end
+
+    it 'I see a list of other recommended movies' do
+      VCR.use_cassette('show_recommendation_details') do
+        visit(movie_path('524'))
+        within '#recommendations' do
+          expect(page).to have_content('Raging Bull')
+          expect(page).to have_content('Heat')
+          expect(page).to have_content('Cape Fear')
+        end
+      end
+    end
   end
 end

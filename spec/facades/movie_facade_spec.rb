@@ -40,6 +40,8 @@ RSpec.describe 'Movie Facade' do
       expect(movies.runtime).to be_an(Integer)
       expect(movies.title).to be_a(String)
       expect(movies.vote_average).to be_a(Float)
+      expect(movies.recommendations).to be_an(Array)
+      expect(movies.recommendations.first.title).to be_an(String)
     end
   end
 end

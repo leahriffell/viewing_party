@@ -24,6 +24,11 @@ class MovieService
     parse(response)
   end
 
+  def self.movie_recommendations(id)
+    response = movie_recommendation_endpoint(id)
+    parse(response)
+  end
+
   private_class_method
 
   def self.language(language)
@@ -65,5 +70,9 @@ class MovieService
 
   def self.movie_review_endpoint(id)
     conn.get("3/movie/#{id}/reviews?api_key=#{movies_api_key}&#{language('en-US')}")
+  end
+
+  def self.movie_recommendation_endpoint(id)
+    conn.get("3/movie/#{id}/recommendations?api_key=#{movies_api_key}&#{language('en-US')}&page=1")
   end
 end

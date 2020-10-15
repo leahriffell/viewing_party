@@ -37,4 +37,11 @@
   </ol>
 </section>
 
+<h4>Recommendations</h4>
+<section id="recommendations">
+  <p>Recommended Movies: <% @movie.recommendations.each do |recommendation| %>
+    <%= recommendation.title %>
+  <% end %>
+</section>
+
 <%= button_to 'Create Viewing Party', "/parties/new", method: :get, params: { movie_id: @movie.id } %>

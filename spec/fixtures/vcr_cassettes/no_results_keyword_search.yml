@@ -34,23 +34,25 @@ http_interactions:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
       Date:
-      - Wed, 14 Oct 2020 19:20:31 GMT
+      - Thu, 15 Oct 2020 01:50:49 GMT
       Etag:
       - 8e6292c3d9056c0d08bd7f939021844e
       Cache-Control:
       - public, max-age=120
       X-Cache:
-      - RefreshHit from cloudfront
+      - Hit from cloudfront
       Via:
-      - 1.1 23d87d8c2ce38e34462e6c134d187eeb.cloudfront.net (CloudFront)
+      - 1.1 0e018abb74f4918cb6e427c3e0a7ee33.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - TZoPY2UV-1b3_xneB4hj8-ir7RtPJShHZeZE0wVKZhAZ_5b5szLVBA==
+      - Kg_yuUF4OB5FWEUKE-ADu7ViBe3RsUizk4tHzRBDafyDJeofdSNYrA==
+      Age:
+      - '84'
     body:
       encoding: UTF-8
       string: '{"page":1,"total_results":0,"total_pages":0,"results":[]}'
-  recorded_at: Wed, 14 Oct 2020 19:20:32 GMT
+  recorded_at: Thu, 15 Oct 2020 01:52:13 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=MOVIES_SECRET_KEY&include_adult=false&language=en-US&page=2&query=asdf
@@ -85,21 +87,23 @@ http_interactions:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
       Date:
-      - Wed, 14 Oct 2020 19:20:32 GMT
+      - Thu, 15 Oct 2020 01:50:49 GMT
       Etag:
       - 847c9b2b23a1f3c816131f8d9cafb05d
       Cache-Control:
       - public, max-age=120
       X-Cache:
-      - RefreshHit from cloudfront
+      - Hit from cloudfront
       Via:
-      - 1.1 23d87d8c2ce38e34462e6c134d187eeb.cloudfront.net (CloudFront)
+      - 1.1 ed8294655bb258e13bfb027c25483ddb.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - 8O7ZfKiZKUuIf7cUgiakWYCnJdz1D53BEZey7RQePHW9esAAfz6wvw==
+      - 8QdPuelIyh3oLHC_OvzejzcoH7YaQVKCFScg2TjdhOorQir6MAnHIA==
+      Age:
+      - '85'
     body:
       encoding: UTF-8
       string: '{"page":2,"total_results":0,"total_pages":0,"results":[]}'
-  recorded_at: Wed, 14 Oct 2020 19:20:32 GMT
+  recorded_at: Thu, 15 Oct 2020 01:52:14 GMT
 recorded_with: VCR 6.0.0
