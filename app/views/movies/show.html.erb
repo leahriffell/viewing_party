@@ -37,4 +37,14 @@
   </ol>
 </section>
 
+<h4>Recommendations</h4>
+  <section id="recommendations">
+    <p>Movies similar to <%= @movie.title %>:</p>
+    <ol>
+      <% @movie.recommendations.each do |recommendation| %>
+        <li><%= link_to recommendation.title, movie_path(recommendation.id) %></li>
+      <% end %>
+    </ol>
+  </section>
+
 <%= button_to 'Create Viewing Party', "/parties/new", method: :get, params: { movie_id: @movie.id } %>

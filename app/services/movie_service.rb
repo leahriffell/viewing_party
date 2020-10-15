@@ -24,6 +24,11 @@ class MovieService
     parse(response)
   end
 
+  def self.movie_recommendations(id)
+    response = movie_recommendation_endpoint(id)
+    parse(response)
+  end
+
   def self.trending_movies
     parse(trending_endpoint)
   end
@@ -69,5 +74,9 @@ class MovieService
 
   def self.trending_endpoint
     conn.get("3/trending/movie/week?api_key=#{ENV['MOVIES_API_KEY']}&#{language('en-US')}")
+  end
+
+  def self.movie_recommendation_endpoint(id)
+    conn.get("3/movie/#{id}/recommendations?api_key=#{ENV['MOVIES_API_KEY']}&#{language('en-US')}&page=1")
   end
 end

@@ -40,7 +40,7 @@ RSpec.describe MovieService do
   end
 
   it 'can fetch movie details' do
-    VCR.use_cassette('show movie details') do
+    VCR.use_cassette('show_movie_details') do
       movie = MovieService.movie_details(524)
       expect(movie).to be_a(Hash)
 
@@ -65,7 +65,7 @@ RSpec.describe MovieService do
   end
 
   it 'can fetch cast details' do
-    VCR.use_cassette('show cast details') do
+    VCR.use_cassette('show_cast_details') do
       cast = MovieService.movie_cast(524)
       results = cast[:cast]
       expect(cast).to be_a(Hash)
@@ -80,7 +80,7 @@ RSpec.describe MovieService do
   end
 
   it 'can fetch review details' do
-    VCR.use_cassette('show review details') do
+    VCR.use_cassette('show_review_details') do
       reviews = MovieService.movie_reviews(524)
       results = reviews[:results]
       expect(reviews).to be_a(Hash)
@@ -97,6 +97,18 @@ RSpec.describe MovieService do
     end
   end
 
+  it 'can fetch recommended movies' do
+    VCR.use_cassette('show_recommendation_details') do
+      recommendations = MovieService.movie_recommendations(524)
+      results = recommendations[:results]
+      expect(recommendations).to be_a(Hash)
+      expect(results).to be_an(Array)
+
+      expect(results.first).to have_key :title
+      expect(results.first[:title]).to be_a(String)
+    end
+  end
+  
   it "can fetch the week's trending movies" do
     VCR.use_cassette('trending_movies') do
       search_results = MovieService.trending_movies
