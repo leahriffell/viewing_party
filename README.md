@@ -1,15 +1,12 @@
 # Viewing Party
 
+![rails-badge](https://img.shields.io/badge/Rails-5.2.4-informational?style=flat-square) ![ruby-badge](https://img.shields.io/badge/Ruby-2.5.3-informational?style=flat-square) ![build-badge](https://img.shields.io/travis/leahriffell/viewing_party/main?style=flat-square) ![closed-pr-badge](https://img.shields.io/github/issues-pr-closed-raw/My-Solar-Garden/front_end_rails?style=flat-square)
+
 <img src="app/assets/images/logo.png" width="600">
 
 Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friends.
-[View live app](https://elmers-viewing-party.herokuapp.com/)
 
-## Learning goals:
-- Consume multiple endpoints from JSON API that requires authentication
-- Implement a self-referential relationship in ActiveRecord
-- Require basic authentication 
-- Stack: Rails, PostgreSQL, Heroku, Travis CI, RuboCop, bcrypt 
+#####[View live app](https://elmers-viewing-party.herokuapp.com/)
 
 ## Readme Content
 - [Getting Started](#getting-started)
