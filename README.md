@@ -6,7 +6,7 @@
 
 Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friends.
 
-#####[View live app](https://elmers-viewing-party.herokuapp.com/)
+**[View live app](https://elmers-viewing-party.herokuapp.com/)**
 
 ## Readme Content
 - [Getting Started](#getting-started)
